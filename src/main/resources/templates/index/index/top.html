@@ -1,0 +1,140 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<nav th:fragment="topMenu(parenttitle,isribbon)">
+    <div id="fh5co-header">
+        <header id="fh5co-header-section">
+            <div class="container" id="bianse">
+                <div class="nav-header">
+                    <h1 id="fh5co-logo">
+                        <button type="button" class=" btn-w-m menubtn"
+                                style="border-radius:0px;padding:0 20px;border:0px;border-right:0.3px ridge #777;background:transparent;font-size:20px;">
+                            <i class="fa fa-navicon " style="color:white"></i></button>  <div id="hamburgermenu">
+                        <ul class="sf-menu" id="fh5co-primary-menu" style="width:200px">
+                            <li  style="float:none;display: inline;margin-left: 0; padding-left: 0;">
+                                <a href="index.html" class="menu2">最新活动<i style="float:right" class="fa fa-chevron-right"></i></a></li>
+                            <li style="float:none">
+                                <a href="portfolio.html" class="fh5co-sub-ddown menu3 hover-red">支持与服务<i style="float:right" class="fa fa-chevron-right"></i></a>
+                            </li>
+                            <li style="float:none">
+                                <a href="services.html" class="fh5co-sub-ddown menu4 hover-red">解决方案<i style="float:right" class="fa fa-chevron-right"></i></a>
+                            </li>
+                            <li style="float:none">
+                                <a href="services.html" class="fh5co-sub-ddown menu5 hover-red">体验中心<i style="float:right" class="fa fa-chevron-right"></i></a>
+                            </li>
+                            <li style="float:none">
+                                <a href="services.html" class="fh5co-sub-ddown menu6 hover-red">下载中心<i style="float:right" class="fa fa-chevron-right"></i></a>
+                            </li>
+                            <li style="float:none">
+                                <a href="services.html" class="fh5co-sub-ddown menu7 hover-red">合作伙伴<i style="float:right" class="fa fa-chevron-right"></i></a>
+                            </li>
+                            <li style="float:none;padding-top:300px;">
+                                <a href="services.html" class="fh5co-sub-ddown" style="padding:0em 1em">售前咨询热线</a>
+                            </li>
+                            <li style="float:none;">
+                                <a href="services.html" class="fh5co-sub-ddown" style="padding:0em 1em">400-775-0300</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+
+                        <div id="hamburgermenu2">
+
+                        </div>
+
+
+
+
+                        <a href="/login">企牛牛</a><a style="font-size:15px;font-weight:500">直营一站式服务平台</a></h1>
+                    <nav id="fh5co-menu-wrap" role="navigation">
+                        <ul class="sf-menu" id="fh5co-primary-menu">
+                            <li>
+                            <div class="dark">
+                                <form action="#">
+	            <span>
+					<input type="text" name="search" value="" class="search rounded id_search" placeholder="网站建设" autofocus />
+	            </span>
+                                </form>
+                            </div>
+                            </li>
+                            <li >
+                                <a href="index.html">咨询中心</a></li>
+                            <li>
+                                <a href="portfolio.html" class="fh5co-sub-ddown">控制台</a>
+                            </li>
+                            <li>
+                                <a href="services.html" class="fh5co-sub-ddown">400-775-0300</a>
+                            </li>
+                            <li th:if="${isribbon eq false}">
+                                <a>分公司登录</a>
+                            </li>
+                            <li th:if="${isribbon eq false}">
+                                <a>会员登录</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!--<hr style="width:100%;margin-top:0px;margin-bottom:0px;border:0.3px ridge #4e5358">-->
+                </div>
+                <div class="nav-header" style="border-top:0.3px ridge #777;border-bottom:0.3px ridge #777">
+                    <!-- START #fh5co-menu-wrap -->
+                    <nav id="fh5co-menu-wrap" role="navigation" style="float:left">
+                        <ul class="sf-menu" id="fh5co-primary-menu">
+                            <li class="active">
+                                <a href="index.html">为何选择企牛牛</a>
+                            </li>
+                            <li>
+                                <a href="portfolio.html" class="fh5co-sub-ddown">最新活动</a>
+                            </li>
+                            <li>
+                                <a href="services.html" class="fh5co-sub-ddown">支持与服务</a>
+                                <!--<ul class="fh5co-sub-menu">-->
+                                    <!--<li><a href="left-sidebar.html">Web Development</a></li>-->
+                                    <!--<li><a href="right-sidebar.html">Branding &amp; Identity</a></li>-->
+                                    <!--<li>-->
+                                        <!--<a href="#" class="fh5co-sub-ddown">Free HTML5</a>-->
+                                        <!--&lt;!&ndash;<ul class="fh5co-sub-menu">&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<li><a href="#">Build</a></li>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<li><a href="#">Work</a></li>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<li><a href="#">Light</a></li>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<li><a href="#">Relic</a></li>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<li><a href="#">Display</a></li>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;<li><a href="#">Sprint</a></li>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                                    <!--</li>-->
+                                    <!--<li><a href="#">UI Animation</a></li>-->
+                                    <!--<li><a href="#">Copywriting</a></li>-->
+                                    <!--<li><a href="#">Photography</a></li>-->
+                                <!--</ul>-->
+                            </li>
+                            <li><a href="about.html">解决方案</a>   <ul class="fh5co-sub-menu animated fadeIn" style="width:830px">
+                                <li style="float:left"><a href="left-sidebar.html">智慧园区解决方案</a></li>
+                                <li style="float:left"><a href="right-sidebar.html">智慧商圈解决方案</a></li>
+                                <li style="float:left"><a href="#" class="fh5co-sub-ddown">智慧会务解决方案</a></li>
+                                <li style="float:left"><a href="#">智慧政务解决方案</a></li>
+                                <li style="float:left"><a href="#">企业培训解决方案</a></li>
+                                <li style="float:left"><a href="#">教育解决方案</a></li>
+                            </ul></li>
+                            <li><a href="blog.html">体验中心</a></li>
+                            <li><a href="contact.html">下载中心</a></li>
+                            <li><a href="contact.html">合作伙伴</a></li>
+                        </ul>
+                    </nav>
+                    <ul th:if="${isribbon eq true}"  id="fh5co-primary-menu" style="float:right;margin-bottom:0.5em">
+                        <li  style="margin-right:20px;list-style:none;">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#"><image style="width:30px;margin-top:6px" th:src="@{{path}static/index/images/admin.png(path=${rootPath})}" class="fh5co-sub-ddown "></image></a>
+                            <ul class="fh5co-sub-menu2 dropdown-setting dropdown-menu" style="right:0;left:auto" role="menu" >
+                                <li  >
+                                    <a th:text="${parenttitle}"></a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul th:if="${isribbon eq false}" class="sf-menu" >
+                        <button type="button" class="btn btn-w-m btn-danger"  style="border-radius:0px;background:#f0114a;font-size:20px;">免费注册</button>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    </div>
+</nav>

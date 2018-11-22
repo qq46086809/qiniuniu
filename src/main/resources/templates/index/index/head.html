@@ -1,0 +1,33 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head(titles,links,styles)" >
+    <meta charset="utf-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta property="og:title" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="og:description" content=""/>
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:image" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <link rel="stylesheet" type="text/css" th:href="@{{path}static/index/css/animate.css(path=${rootPath})}">
+    <link rel="stylesheet" type="text/css" th:href="@{{path}static/index/css/icomoon.css(path=${rootPath})}">
+    <link rel="stylesheet" type="text/css" th:href="@{{path}static/index/css/bootstrap.css(path=${rootPath})}">
+    <link rel="stylesheet" type="text/css" th:href="@{{path}static/index/css/magnific-popup.css(path=${rootPath})}">
+    <link rel="stylesheet" type="text/css" th:href="@{{path}static/index/css/superfish.css(path=${rootPath})}">
+    <link rel="stylesheet" type="text/css" th:href="@{{path}static/index/css/style.css(path=${rootPath})}">
+    <link rel="stylesheet" type="text/css" th:href="@{{path}static/index/css/font-awesome.css(path=${rootPath})}">
+    <script th:src="@{{path}static/index/js/modernizr-2.6.2.min.js(path=${rootPath})}"></script>
+    <link rel="shortcut icon" th:href="${rootPath}">
+	<link rel="icon" th:href="${rootPath}" type="image/x-icon">
+	<th:block th:replace="${titles}" />
+	<!-- 替换新的links-->
+    <th:block th:replace="${links}" />
+    <!-- 替换新的${styles}-->
+	 <th:block th:replace="${styles}" />
+</head>
