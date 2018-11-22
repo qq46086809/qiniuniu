@@ -1,0 +1,171 @@
+Index: src/main/resources/templates/index/index/top.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/resources/templates/index/index/top.html	(revision 4c1cfb2e961b5d00c2c82559f8ed9c6d2e62b787)
++++ src/main/resources/templates/index/index/top.html	(date 1542867699598)
+@@ -34,18 +34,9 @@
+                             </li>
+                         </ul>
+                     </div>
+-
+-
+-
+-
+-
+                         <div id="hamburgermenu2">
+ 
+                         </div>
+-
+-
+-
+-
+                         <a href="/login">企牛牛</a><a style="font-size:15px;font-weight:500">直营一站式服务平台</a></h1>
+                     <nav id="fh5co-menu-wrap" role="navigation">
+                         <ul class="sf-menu" id="fh5co-primary-menu">
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(revision 4c1cfb2e961b5d00c2c82559f8ed9c6d2e62b787)
++++ .idea/modules.xml	(date 1542867490319)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/initial_version_of_springboot.iml" filepath="$PROJECT_DIR$/initial_version_of_springboot.iml" />
++      <module fileurl="file://$PROJECT_DIR$/qiniuniu.iml" filepath="$PROJECT_DIR$/qiniuniu.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/resources/templates/index/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/resources/templates/index/index.html	(revision 4c1cfb2e961b5d00c2c82559f8ed9c6d2e62b787)
++++ src/main/resources/templates/index/index.html	(date 1542867699569)
+@@ -1006,9 +1006,8 @@
+     </div>
+ </div>
+ 
+-
+-            <div th:replace="index/index/footer :: footer">
+-            </div>
++<div th:replace="index/index/side :: side"></div>
++            <div th:replace="index/index/footer :: footer"></div>
+ <div th:include="index/index/js :: onload_js">
+ </div>
+ <script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
+Index: initial_version_of_springboot.iml
+===================================================================
+--- initial_version_of_springboot.iml	(revision 4c1cfb2e961b5d00c2c82559f8ed9c6d2e62b787)
++++ qiniuniu.iml	(date 1542867604232)
+@@ -10,6 +10,7 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="commons-beanutils-1.8.3" level="project" />
+     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.0.0.RELEASE" level="project" />
+     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.0.0.RELEASE" level="project" />
+     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:2.0.0.RELEASE" level="project" />
+@@ -121,6 +122,5 @@
+     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
+     <orderEntry type="library" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
+     <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.15" level="project" />
+-    <orderEntry type="library" name="commons-beanutils-1.8.3" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/compiler.xml	(revision 4c1cfb2e961b5d00c2c82559f8ed9c6d2e62b787)
++++ .idea/compiler.xml	(date 1542867490293)
+@@ -6,11 +6,11 @@
+         <sourceOutputDir name="target/generated-sources/annotations" />
+         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+         <outputRelativeToContentRoot value="true" />
+-        <module name="initial_version_of_springboot" />
++        <module name="qiniuniu" />
+       </profile>
+     </annotationProcessing>
+     <bytecodeTargetLevel>
+-      <module name="initial_version_of_springboot" target="1.8" />
++      <module name="qiniuniu" target="1.8" />
+     </bytecodeTargetLevel>
+   </component>
+ </project>
+\ No newline at end of file
+Index: src/main/resources/static/index/css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/resources/static/index/css/style.css	(revision 4c1cfb2e961b5d00c2c82559f8ed9c6d2e62b787)
++++ src/main/resources/static/index/css/style.css	(date 1542868603180)
+@@ -2041,4 +2041,43 @@
+ 
+ .news2, .news3{
+ display:none;
+-}
+\ No newline at end of file
++}
++
++.containers{
++position:fixed;
++bottom:2%;
++right:0;
++z-index:999;
++   max-width:60px;
++   background:auto;
++   margin:40px auto;
++   padding:10px 0px 20px 0px;
++}
++.links2{
++   font-size: 18px;
++       font-weight: 300;
++       background: #da2d5a;
++       filter: alpha(opacity=70);
++       -moz-opacity: 0.70;
++       opacity: 0.7;
++       padding: 0px 20px 0px 17px;
++       text-align: center;
++       position: relative;
++       height: 240px;
++       line-height: 22px;
++       margin-top: 10px;
++       overflow: hidden;
++       width: 88%;
++       margin-left: 5%;
++       cursor: pointer;
++}
++
++.link-text{
++color:#eeeeee;
++}
++
++
++
++
++
++
+Index: src/main/resources/templates/index/index/side.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/resources/templates/index/index/side.html	(date 1542868650681)
++++ src/main/resources/templates/index/index/side.html	(date 1542868650681)
+@@ -0,0 +1,6 @@
++<html lang="en" xmlns:th="http://www.thymeleaf.org">
++<div  th:fragment="side" class="containers">
++        <div class="links2">
++            <div class="text"><a class="link-text fa fa-wechat"  href="http://www.microom.cn/service/zhaopin.php">招贤纳士</a></div>
++        </div>
++</div>

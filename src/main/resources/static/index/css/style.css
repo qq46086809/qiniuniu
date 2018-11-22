@@ -2042,3 +2042,42 @@ display:block;
 .news2, .news3{
 display:none;
 }
+
+.containers{
+position:fixed;
+bottom:2%;
+right:0;
+z-index:999;
+   max-width:60px;
+   background:auto;
+   margin:40px auto;
+   padding:10px 0px 20px 0px;
+}
+.links2{
+   font-size: 18px;
+       font-weight: 300;
+       background: #da2d5a;
+       filter: alpha(opacity=70);
+       -moz-opacity: 0.70;
+       opacity: 0.7;
+       padding: 0px 20px 0px 17px;
+       text-align: center;
+       position: relative;
+       height: 240px;
+       line-height: 22px;
+       margin-top: 10px;
+       overflow: hidden;
+       width: 88%;
+       margin-left: 5%;
+       cursor: pointer;
+}
+
+.link-text{
+color:#eeeeee;
+}
+
+
+
+
+
+
