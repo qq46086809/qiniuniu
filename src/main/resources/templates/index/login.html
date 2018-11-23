@@ -1,10 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title>登录</title>
+    <link rel="stylesheet" th:href="@{{path}static/index/css/login.css(path=${rootPath})}">
+    <style type="text/css">
+            ul,li{
+            list-style: none;
+        }
+    </style>
 </head>
 <body>
+<div  th:fragment="side" class="containers" style="top:10%">
+    <div class="links2" style="height:192px;">
+        <div class="text">
+            <div class="link-div">
+                <i class="fa fa-wechat color-white"></i>
+                <a class="link-text" >咨询</a> </div>
+            <div class="link-div3">
+                <i class="fa fa-paper-plane-o color-white"></i>
+                <a class="link-text" >发布需求</a></div>
+        </div>
+    </div>
+</div>
+<div class="nav-header" style="border-bottom:0.3px ridge #dddddd;height:56px;">
+    <h1 id="fh5co-logo" style="margin-left: 68px;margin-top: 15px;">
+        <a href="/login" style="color:#323232">企牛牛</a><a style="font-size:15px;font-weight:500;color:#323232;margin-left:10px;">直营一站式服务平台</a></h1>
+    <nav id="fh5co-menu-wrap" role="navigation">
+        <ul class="sf-menu" id="fh5co-primary-menu" style="padding-right:10px;">
+            <li>
+                <a style="color:#323232;cursor:pointer;margin-top:5px;">首页</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="login clearfix">
+    <div class="login-image-box float-left">
+        <img src="/static/index/images/login.jpg" alt="" style="float:left">
+        <div class="login-box">
+        <h4 style="padding:40px 40px 40px 90px;font-weight:600;">密码登录</h4>
+            <form th:action="@{/adminlogin}"  method="post" id="loginForm">
+        <!-- 用户名 -->
+        <div class="login-username clearfix">
+            <input type="hidden" name="loginway" id="loginway" value="0" />
+            <input class="float-left login-input" type="text"  name="username" id="username" placeholder="用户名" required>
+        </div>
+        <!-- 密码 -->
+        <div class="login-password clearfix">
+            <input class="float-left login-input" type="password"  name="password" id="password"  placeholder="请输入密码" required>
+        </div>
+        <button   onclick="severCheck()" class="login-login">
+            <span class="">登录</span>
+        </button>
+            </form>
+            <div> <p style="margin-left:200px;margin-top:10px">
+                <a style="margin-left:20px;color:#999;cursor:pointer;">忘记密码</a>
+                <a  style="margin-left:30px;color:#999;cursor:pointer;">免费注册</a></p></div>
+            <div style="margin-top:70px;margin-left:92px;"><p>其他登录方式 :
+            <img src="/static/index/images/wx.png" style="margin-left:10px">
+                <img src="/static/index/images/qq.png" style="margin-left:10px">
+            </p></div>
+        </div>
+    </div>
 
+</div>
+<footer class="login-footer">
+    <div style="margin-top:45px;">
+        <div class="fh5co-copyright text-center">
+            <p style="font-size:15px">上海市普陀区真南路620号同济科技园二楼</p>
+            <p style="font-size:15px">Copyright&copy; 2014-2018同年(上海)网络科技有限公司 All Rights Reserved 沪ICP备15041206-3</p>
+            <p style="font-size:15px">沪公网安备31010702003728号</p>
+        </div>
+    </div>
+</footer>
+<script src="/static/index/js/base64.js"></script>
+<script>
+    		function severCheck(){
+			$("#loginForm").submit();
+		}
+    </script>
 </body>
 </html>

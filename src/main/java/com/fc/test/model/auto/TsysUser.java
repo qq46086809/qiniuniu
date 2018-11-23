@@ -9,6 +9,17 @@ public class TsysUser implements Serializable {
 
     private String password;
 
+    private String loginway;
+
+    public String getLoginway() {
+        return loginway;
+    }
+
+    public void setLoginway(String loginway) {
+        this.loginway = loginway;
+    }
+
+
     private static final long serialVersionUID = 1L;
 
     public String getId() {

@@ -51,38 +51,71 @@ public class HomeController extends BaseController{
 	public ModelAndView login(TsysUser user,RedirectAttributes redirectAttributes,boolean rememberMe,Model model) {
 		ModelAndView view =new ModelAndView();
 		 String userName = user.getUsername();
+		 String loginway = user.getLoginway();
 		 Subject currentUser = SecurityUtils.getSubject();
-		 if(!currentUser.isAuthenticated()) {
-			 UsernamePasswordToken token =new UsernamePasswordToken(userName,user.getPassword());
-			 try {
-				 if(rememberMe) {
-					 token.setRememberMe(true);
+		 if(loginway.equals("1")){
+			 if(!currentUser.isAuthenticated()) {
+				 UsernamePasswordToken token =new UsernamePasswordToken(userName,user.getPassword());
+				 try {
+					 if(rememberMe) {
+						 token.setRememberMe(true);
+					 }
+					 currentUser.login(token);
+
+					 setTitle(model, new TitleVo("欢迎页面", "首页", true,"欢迎进入", true, false));
+
+					 view.setViewName("redirect:/adminlogin");
+				 }catch (UnknownAccountException uae) {
+					 logger.info("对用户[" + userName + "]进行登录验证..验证未通过,未知账户");
+					 redirectAttributes.addFlashAttribute("message", "未知账户");
+				 } catch (IncorrectCredentialsException ice) {
+					 logger.info("对用户[" + userName + "]进行登录验证..验证未通过,错误的凭证");
+					 redirectAttributes.addFlashAttribute("message", "用户名或密码不正确");
+				 } catch (LockedAccountException lae) {
+					 logger.info("对用户[" + userName + "]进行登录验证..验证未通过,账户已锁定");
+					 redirectAttributes.addFlashAttribute("message", "账户已锁定");
+				 } catch (ExcessiveAttemptsException eae) {
+					 logger.info("对用户[" + userName + "]进行登录验证..验证未通过,错误次数过多");
+					 redirectAttributes.addFlashAttribute("message", "用户名或密码错误次数过多");
+				 } catch (AuthenticationException ae) {
+					 logger.info("对用户[" + userName + "]进行登录验证..验证未通过,堆栈轨迹如下");
+					 ae.printStackTrace();
+					 redirectAttributes.addFlashAttribute("message", "用户名或密码不正确");
 				 }
-				 currentUser.login(token);
-				 
-				 setTitle(model, new TitleVo("欢迎页面", "首页", true,"欢迎进入", true, false));
-					
-				 view.setViewName("redirect:admin/index");
-			 }catch (UnknownAccountException uae) {
-		            logger.info("对用户[" + userName + "]进行登录验证..验证未通过,未知账户");
-		            redirectAttributes.addFlashAttribute("message", "未知账户");
-		        } catch (IncorrectCredentialsException ice) {
-		            logger.info("对用户[" + userName + "]进行登录验证..验证未通过,错误的凭证");
-		            redirectAttributes.addFlashAttribute("message", "用户名或密码不正确");
-		        } catch (LockedAccountException lae) {
-		            logger.info("对用户[" + userName + "]进行登录验证..验证未通过,账户已锁定");
-		            redirectAttributes.addFlashAttribute("message", "账户已锁定");
-		        } catch (ExcessiveAttemptsException eae) {
-		            logger.info("对用户[" + userName + "]进行登录验证..验证未通过,错误次数过多");
-		            redirectAttributes.addFlashAttribute("message", "用户名或密码错误次数过多");
-		        } catch (AuthenticationException ae) {
-		            logger.info("对用户[" + userName + "]进行登录验证..验证未通过,堆栈轨迹如下");
-		            ae.printStackTrace();
-		            redirectAttributes.addFlashAttribute("message", "用户名或密码不正确");
-		        }
+			 }
+			 view.setViewName("redirect:/adminlogin");
+			 return view;
+		 }else{
+			 if(!currentUser.isAuthenticated()) {
+				 UsernamePasswordToken token =new UsernamePasswordToken(userName,user.getPassword());
+				 try {
+					 if(rememberMe) {
+						 token.setRememberMe(true);
+					 }
+					 currentUser.login(token);
+
+					 setTitle(model, new TitleVo("欢迎页面", userName, true,"欢迎进入", true, true));
+
+					 view.setViewName("redirect:/QnRoot");
+				 }catch (IncorrectCredentialsException ice) {
+					 logger.info("对用户[" + userName + "]进行登录验证..验证未通过,错误的凭证");
+					 redirectAttributes.addFlashAttribute("message", "用户名或密码不正确");
+				 } catch (LockedAccountException lae) {
+					 logger.info("对用户[" + userName + "]进行登录验证..验证未通过,账户已锁定");
+					 redirectAttributes.addFlashAttribute("message", "账户已锁定");
+				 } catch (ExcessiveAttemptsException eae) {
+					 logger.info("对用户[" + userName + "]进行登录验证..验证未通过,错误次数过多");
+					 redirectAttributes.addFlashAttribute("message", "用户名或密码错误次数过多");
+				 } catch (AuthenticationException ae) {
+					 logger.info("对用户[" + userName + "]进行登录验证..验证未通过,堆栈轨迹如下");
+					 ae.printStackTrace();
+					 redirectAttributes.addFlashAttribute("message", "用户名或密码不正确");
+				 }
+			 }
+			 view.setViewName("redirect:/QnRoot");
+			 return view;
 		 }
-		 view.setViewName("redirect:/adminlogin");
-		 return view;
+
 		 
 	}
 	
