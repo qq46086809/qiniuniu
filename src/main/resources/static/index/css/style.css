@@ -364,12 +364,15 @@ figure {
   content: "\e922";
   color: rgba(255, 255, 255, 0.5);
 }
-#fh5co-primary-menu > li > ul li {
+
+
+#fh5co-primary-menu > li > ul {
   position: relative;
-  background: #DDDDDD;
-  border-radius: 5px;
-  margin-left: 1px;
+
+
 }
+
+
 #fh5co-primary-menu > li > ul li > .sf-with-ul:after {
   border: none !important;
   font-family: 'icomoon';
