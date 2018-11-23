@@ -17,6 +17,15 @@ jQuery(function(){
     });
 
 
+(function(){
+    $(".cards-2").removeClass("animated");
+    $(".cards-3").removeClass(" animated");
+    $(".cards-4").removeClass(" animated");
+    $(".cards-5").removeClass(" animated");
+    $(".cards-6").removeClass("animate-box fadeInUp animated");
+})();
+
+
 	function cards1(){
 	$(".cards-1").attr("style","display:block");
     $(".cards-2").attr("style","display:none");
@@ -24,16 +33,20 @@ jQuery(function(){
     $(".cards-4").attr("style","display:none");
     $(".cards-5").attr("style","display:none");
     $(".cards-6").attr("style","display:none");
+
 	}
 	function cards2(){
+        $(".cards-2").addClass(" fadeInUp animated");
 	$(".cards-1").attr("style","display:none");
     $(".cards-2").attr("style","display:block");
     $(".cards-3").attr("style","display:none");
     $(".cards-4").attr("style","display:none");
     $(".cards-5").attr("style","display:none");
     $(".cards-6").attr("style","display:none");
+
 	}
     function cards3(){
+        $(".cards-3").addClass(" fadeInUp animated");
 	$(".cards-1").attr("style","display:none");
     $(".cards-2").attr("style","display:none");
     $(".cards-3").attr("style","display:block");
@@ -42,6 +55,7 @@ jQuery(function(){
     $(".cards-6").attr("style","display:none");
 	}
     function cards4(){
+        $(".cards-4").addClass(" fadeInUp animated");
 	$(".cards-1").attr("style","display:none");
     $(".cards-2").attr("style","display:none");
     $(".cards-3").attr("style","display:none");
@@ -50,6 +64,7 @@ jQuery(function(){
     $(".cards-6").attr("style","display:none");
 	}
     function cards5(){
+        $(".cards-5").addClass(" fadeInUp animated");
 	$(".cards-1").attr("style","display:none");
     $(".cards-2").attr("style","display:none");
     $(".cards-3").attr("style","display:none");
@@ -58,6 +73,7 @@ jQuery(function(){
     $(".cards-6").attr("style","display:none");
 	}
     function cards6(){
+        $(".cards-6").addClass(" fadeInUp animated");
 	$(".cards-1").attr("style","display:none");
     $(".cards-2").attr("style","display:none");
     $(".cards-3").attr("style","display:none");

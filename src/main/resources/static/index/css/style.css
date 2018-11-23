@@ -246,6 +246,9 @@ figure {
 .sf-menu li.active a {
   color: #fff;
 }
+.button-register button:hover{
+  color: grey;
+}
 
 .sf-menu ul li:hover,
 .sf-menu ul li.sfHover {
@@ -363,6 +366,9 @@ figure {
 }
 #fh5co-primary-menu > li > ul li {
   position: relative;
+  background: #DDDDDD;
+  border-radius: 5px;
+  margin-left: 1px;
 }
 #fh5co-primary-menu > li > ul li > .sf-with-ul:after {
   border: none !important;
@@ -424,6 +430,7 @@ figure {
   border-left: 8px solid transparent;
   content: '';
 }
+
 
 
 .fh5co-sub-menu2:after {
@@ -1828,7 +1835,7 @@ input::-webkit-input-placeholder {
 .banner-engine .banner-text{display:none}
 .banner-engine .banner-text1{font-size:50px;line-height:50px;color:#fff}
 .banner-engine .banner-text2{margin-top:28px;font-size:20px;line-height:20px;color:#e4e7eb}
-.banner-engine .banner-link-button{display:inline-block;border:1px solid #fff;margin-top:54px;width:160px;height:44px;line-height:42px;text-align:center;font-size:16px;color:#fff}
+.banner-engine .banner-link-button{display:inline-block;border:1px solid #fff;width:160px;height:44px;line-height:42px;text-align:center;font-size:16px;color:#fff}
 .banner-engine .banner-link-button:hover{background:#fff;color:#333;border:1px solid #fff}
 .banner-ul li{display:none;height:100%;width:100%;float:left}
 .banner-engine .banner-ul li{z-index:-1;position:absolute;left:0;top:0;display:block;height:100%;width:100%;float:left}
@@ -1903,6 +1910,12 @@ to { transform:rotate(360deg);}
 .box2Con:hover .box2Tit{ transform:translateY(300%);}
 .box2Con:hover .box2HovBg{ opacity:1; transform:translateY(0%);}
 .box2Con:hover .box2Hov h4,.box2Con:hover .box2Item{ opacity:1; transform:translateY(0%); transition:all 0.4s ease 0.3s;}
+.box2Con .box2HovBg .box2Hov .box2Item{
+  padding-top: 20px;
+}
+.box2Con .box2HovBg .box2Hov .box2Item button{
+  margin-top: 30px;
+}
 .row-btn{
 display:block;
 margin:0 auto;
@@ -1926,6 +1939,7 @@ height:150px;
 display:none;
 }
 
+
 .high-sec{
 margin-top:100px;
  cursor:pointer;
@@ -1934,9 +1948,20 @@ margin-top:100px;
 .cards-2,.cards-3,.cards-4,.cards-5,.cards-6{
 display:none;
 }
+.box-download{
+    position: relative;
+    height: 740px;
+}
+.box-download-div{
+    position: absolute;
+}
+
 
 .cards-1{
 display:block;
+}
+.box-tongji{
+  margin-top: 50px;
 }
 
 .bg-gray{
@@ -1952,6 +1977,9 @@ color:#eeeeee;
 line-height:3.1;
 font-weight:600;
 font-size:25px;
+}
+.tongji li{
+  margin-left: 2px;
 }
 
 .blog-gray{
@@ -2082,6 +2110,9 @@ border-bottom: 1px solid #eeeeee;
     width: 26px;
     height: 67px;
 }
+.links2 a:hover {
+  color: #adadad!important;
+}
 
 .link-div2{
 border-bottom: 1px solid #eeeeee;
@@ -2101,6 +2132,14 @@ border-bottom: 1px solid #eeeeee;
 
 .color-white{
 color:#eeeeee;
+}
+
+#footer ul{
+  display: inline-block;
+  height: 220px;
+}
+.telephone{
+  font-size: 27px;
 }
 
 
