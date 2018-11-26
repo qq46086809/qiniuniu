@@ -5,13 +5,13 @@ jQuery(function(){
     });
 
     $(".high-sec").mouseenter(function(index, element) {
-            $(this).stop(true, true).animate({top: "-=100px"}, 500);
-             $(this).find(".chanpin").stop(true, true).animate({height: "+=100px"}, 500);
+            $(this).stop(true, true).animate({top: "-=50px"}, 500);
+             $(this).find(".chanpin").stop(true, true).animate({height: "+=50px"}, 500);
              $(this).find(".btn-none").attr("style","display:block")
         });
             $(".high-sec").mouseleave(function(index, element) {
-                    $(this).stop(true, true).animate({top: "+=100px"}, 500);
-                      $(this).find(".chanpin").stop(true, true).animate({height: "-=100px"}, 500);
+                    $(this).stop(true, true).animate({top: "+=50px"}, 500);
+                      $(this).find(".chanpin").stop(true, true).animate({height: "-=50px"}, 500);
                        $(this).find(".btn-none").attr("style","display:none")
                 });
     });
