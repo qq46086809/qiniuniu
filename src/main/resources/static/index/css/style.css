@@ -29,11 +29,36 @@ a {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  text-decoration:none;
 }
 a:hover {
   text-decoration: none !important;
-  color: #ef6249 !important;
+  /*color: #ef6249 !important;*/
+  color: red;
 }
+a:link{text-decoration:none; }
+
+a:visited{text-decoration:none; }
+
+a:active{text-decoration:none;}
+
+#register:hover{
+  color: #fff;
+}
+
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow:none;
+}
+
+
 
 p, ul, ol {
   margin-bottom: 1.5em;
@@ -55,17 +80,33 @@ figure {
 
 ::-webkit-selection {
   color: #fcfcfc;
-  background: #ef6249;
+  /*background: #ef6249;*/
+  background: red;
 }
 
 ::-moz-selection {
   color: #fcfcfc;
-  background: #ef6249;
+  /*background: #ef6249;*/
+  background: red;
 }
+
+
+.search-box{
+  margin-left: -40px;
+}
+
+.skyblue-back{
+ /* width:821px;
+  height: 20px;
+  margin-left: -7px;
+  margin-top: -10px;*/
+  background-image: url("/static/index/images/bg.PNG");
+}
+
 
 ::selection {
   color: #fcfcfc;
-  background: #ef6249;
+  background: red;
 }
 
 #fh5co-header {
@@ -222,6 +263,9 @@ figure {
 .sf-menu li.active a:hover, .sf-menu li.active a:focus {
   color: #b81444;
 }
+.sf-menu li{
+  /*margin-top: 20px;*/
+}
 
 .sf-menu li,
 .sf-menu ul li,
@@ -247,7 +291,7 @@ figure {
   color: #fff;
 }
 .button-register button:hover{
-  color: grey;
+  /*color: grey;*/
 }
 
 .sf-menu ul li:hover,
@@ -366,10 +410,23 @@ figure {
 }
 
 
-#fh5co-primary-menu > li > ul {
+#fh5co-primary-menu > li > ul li{
   position: relative;
 
+}
 
+#fh5co-primary-menu > li > ul li a::selection {
+  color: #ef6249;
+  /*background: #ef6249;*/
+}
+
+
+
+#fh5co-primary-menu .fh5co-sub-menu{
+  /*background: #9dc8e2;*/
+}
+#fh5co-primary-menu .fh5co-sub-menu li a:focus{
+  color:#ef6249;!important;
 }
 
 
@@ -396,7 +453,7 @@ figure {
 
 #fh5co-primary-menu .fh5co-sub-menu {
   padding: 10px 7px 10px;
-  background: #fff;
+  /*background: #fff;*/
   left: 0;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -557,8 +614,9 @@ margin-left:2%
 }
 .services {
   padding: 40px 20px 20px 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
+
 .services span {
   margin-bottom: 30px;
   width: 80px;
@@ -1243,11 +1301,20 @@ font-size:15px;
 .btn.btn-lg {
   padding: 18px 36px !important;
 }
-.btn:hover, .btn:active, .btn:focus {
- color:#f0114a;
- border-color:#f0114a;
- background-color:#fff;
+
+.box2List .btn:hover,.btn:active,.btn:focus{
+  border-color:transparent;
 }
+
+
+
+.btn:hover, .btn:active, .btn:focus {
+   color:#f0114a;
+   border-color:#f0114a;
+   background-color:#fff;
+}
+
+
 
 .btn-primary {
   background: #ef6249;
@@ -1828,9 +1895,9 @@ input::-webkit-input-placeholder {
 .clearfix:after,.clearfix:before{display:table;line-height:0;content:""}
 .clearfix:after{clear:both}
 
-.banner-cloudapp{background:url(../images/banner1.jpg) center center no-repeat;}
+/*.banner-cloudapp{background:url(../images/banner1.jpg) center center no-repeat;}
 .banner-cps{background:url(../images/banner1.jpg) center center no-repeat;}
-.banner-trust{background:url(../images/banner1.jpg) center center no-repeat;}
+.banner-trust{background:url(../images/banner1.jpg) center center no-repeat;}*/
 
 .banner-engine{height:500px;position:relative;overflow:hidden;}
 .banner-engine .banner-ul{position:relative;width:100%;height:500px}
@@ -1844,15 +1911,30 @@ input::-webkit-input-placeholder {
 .banner-engine .banner-ul li{z-index:-1;position:absolute;left:0;top:0;display:block;height:100%;width:100%;float:left}
 .banner-engine .banner-ul li:first-child{z-index:initial}
 
-.banner-point{display:none;position:absolute;bottom:48px;left:0;width:100%;height:18px;line-height:18px}
+/*.banner-point{display:none;position:absolute;bottom:48px;left:0;width:100%;height:18px;line-height:18px}*/
+.banner-point{display:none;position:relative;bottom:48px;left:0;width:100%;height:18px;line-height:18px}
+.banner-area{
+  position: absolute;
+  top:-250px;
+  left: -25px;
+  width: 30px;
+
+
+}
 .banner-engine .banner-point{display:block}
 
 .slider-main{display:none;position:relative;margin:0 auto;min-width:1200px;max-width:1200px}
 .banner-engine .slider-main{display:block}
 .slider-text{position:absolute;margin-top:214px}
-.banner-area{width:100%;text-align:center}
+/*.banner-area{width:100%;text-align:center}*/
 .banner-area li{margin:0 15px;display:inline-block;width:10px;height:10px;background:url(../images/pagination_02.png) no-repeat}
-.banner-area li.active{background:url(../images/pagination_01.png) no-repeat}
+.banner-area li.active{
+  height: 40px;
+  background: white;
+  border-radius: 5px;
+  /*background:url(../images/pagination_01.png) no-repeat*/
+
+}
 
 
 .box1CenBg{ background:url(/static/index/images/panel1.jpg) center top no-repeat; background-size:cover; min-height:607px; overflow:hidden; position:relative;}
@@ -1964,7 +2046,7 @@ display:none;
 display:block;
 }
 .box-tongji{
-  margin-top: 50px;
+  margin-top: -20px;
 }
 
 .bg-gray{
@@ -1981,23 +2063,26 @@ line-height:3.1;
 font-weight:600;
 font-size:25px;
 }
-.tongji li{
-  margin-left: 2px;
+.dc-scroll,.fr li{
+  margin-left: 10px;
 }
 
 .blog-gray{
 float:left;
 height:80px;
-width:648px;
-margin-left:10%;
+width:700px;
+margin-left:8%;
 }
 .blog-gray2{
 height:80px;
-width:667px;
-margin-left:50%;
+width:705px;
+margin-left:54%;
+}
+.blog-gray2 .dc-scroll{
+  margin-right: 0px;
 }
 
-.dc-scroll{height:59px;overflow:hidden;margin-top:10px}
+.dc-scroll{padding:0;height:59px;overflow:hidden;margin-top:10px;margin-right: 35px;}
 .dc-scroll li{width:45px;height:59px;float:left;font:56px simhei;font-weight:600;line-height:59px;text-align:center;position:relative}
 .dc-scroll li div{position:absolute;width:100%;height:100%;background:url(/static/index/images/baiban.png) no-repeat;background-size:100% 100%}
 .dc-scroll .s-top{transform:translateY(-100%)}
@@ -2114,7 +2199,8 @@ border-bottom: 1px solid #eeeeee;
     height: 67px;
 }
 .links2 a:hover {
-  color: #adadad!important;
+  /*color: #adadad!important;*/
+  color:#eeeeee;
 }
 
 .link-div2{
