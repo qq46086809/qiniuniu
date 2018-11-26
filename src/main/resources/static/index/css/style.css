@@ -626,9 +626,17 @@ margin-left:2%
 .menu_curson{
  cursor:pointer;
 }
-.menu_curson h3:hover{
+.menu_curson:hover h3{
  color:#f0114a;
 }
+.menu_curson:hover p{
+  color:#f0114a;
+}
+
+/*.menu_curson p:hover{
+  color:#f0114a;
+}*/
+
 .services {
   padding: 40px 20px 20px 20px;
   margin-bottom: 10px;
@@ -1113,7 +1121,7 @@ margin-left:2%
 }
 
 .fh5co-blog {
-  margin-bottom: 60px;
+  margin-bottom: 34px;
 }
 .fh5co-blog a img {
   width: 100%;
@@ -1668,6 +1676,9 @@ font-size:23px;
 
 .row-bottom-padded-md {
   padding-bottom: 4em;
+}
+.row-bottom-padded-md p{
+  margin-bottom: 15px;
 }
 
 
