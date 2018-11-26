@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title th:text=${title}></title>
+    <link rel="stylesheet" th:href="@{{path}static/index/css/business.css(path=${rootPath})}">
+    <style type="text/css">
+    </style>
+</head>
+<style>
+    ul,li{
+            list-style: none;
+        }
+
+        .total-police-alert{
+	width: 500px;
+	height: 90px;
+	padding: 10px;
+	margin: 100px auto 0;
+	font: 36px "华文楷体";
+	line-height: 90px;
+	color: #fff;
+	box-shadow: -2px 2px 10px #000;
+	background-color: rgba(81,167,229,1.00);
+	border-radius: 10px;
+        }
+        .fl{
+            float:left;
+        }
+        .fr{
+            float:right;
+        }
+
+
+</style>
+<body style="min-width:1500px">
+<div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
+</div>
+
+<div class="banner-engine">
+    <ul class="banner-ul clearfix" id="slider-back">
+        <li style="background:url(/static/index/images/about1.jpg) center center no-repeat;"></li>
+        <li style="background:url(/static/index/images/about1.jpg) center center no-repeat;"></li>
+        <li style="background:url(/static/index/images/about1.jpg) center center no-repeat;"></li>
+    </ul>
+    <!-- 对应banner文字 -->
+    <div class="slider-main banner-div">
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="business-text1">智慧商圈解决方案</p>
+                <p class=" business-text2">智慧商圈以微信公众号作为"智慧商圈"线上服务的统一入口，结合微信支付、微信优惠券等系统，围绕百姓的衣食住行，深入商圈线下业务场景，实现整体
+                    服务能力的移动化、社交化、便捷化，提高商圈的商业能力和服务能力。企牛牛致力于为传统行家解决从线下到线上，涵盖营销、服务、支付、客户管理的闭环，端到端的解决方案，以满足传统商户的移动化、智慧化需求。</p>
+                <a class="banner-link-button" href="#">在线咨询</a>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="business-text1">智慧商圈解决方案</p>
+                <p class=" business-text2">智慧商圈以微信公众号作为"智慧商圈"线上服务的统一入口，结合微信支付、微信优惠券等系统，围绕百姓的衣食住行，深入商圈线下业务场景，实现整体
+                    服务能力的移动化、社交化、便捷化，提高商圈的商业能力和服务能力。企牛牛致力于为传统行家解决从线下到线上，涵盖营销、服务、支付、客户管理的闭环，端到端的解决方案，以满足传统商户的移动化、智慧化需求。</p>
+                <a class="banner-link-button" href="#">在线咨询</a>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="business-text1">智慧商圈解决方案</p>
+                <p class=" business-text2">智慧商圈以微信公众号作为"智慧商圈"线上服务的统一入口，结合微信支付、微信优惠券等系统，围绕百姓的衣食住行，深入商圈线下业务场景，实现整体
+                    服务能力的移动化、社交化、便捷化，提高商圈的商业能力和服务能力。企牛牛致力于为传统行家解决从线下到线上，涵盖营销、服务、支付、客户管理的闭环，端到端的解决方案，以满足传统商户的移动化、智慧化需求。</p>
+                <a class="banner-link-button" href="#">在线咨询</a>
+            </div>
+        </div>
+    </div>
+    <!-- banner索引 -->
+    <div class="banner-point">
+        <div class="auto">
+            <ul class="banner-area" id="slider-btn">
+                <li class="active" data-delay="12000"></li>
+                <li data-delay="8000"></li>
+                <li data-delay="8000"></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container button-demo menu-bottom">
+    <div class="row">
+        <div class="col-md-12 business-left text-center animate-box">
+            <div class="col-md-1  ">
+                <div class="business-services">
+                    <a class="on-about">逻辑架构</a>
+                </div>
+            </div>
+            <div class="col-md-1  ">
+                <div class="business-services">
+                    <a class="on-about">优势商圈</a>
+                </div>
+            </div>
+            <div class="col-md-1  ">
+                <div class="business-services">
+                    <a class="on-about">线上服务</a>
+                </div>
+            </div>
+            <div class="col-md-1  ">
+                <div class="business-services">
+                    <a class="on-about">商圈与用户互动</a>
+                </div>
+            </div>
+            <div class="col-md-1   ">
+                <div class="business-services">
+                    <a class="on-about">促销活动</a>
+                </div>
+            </div>
+            <div class="col-md-1  ">
+                <div class="business-services">
+                    <a class="on-about">会员积分</a>
+                </div>
+            </div>
+            <div class="col-md-1  ">
+                <div class="business-services">
+                    <a class="on-about">优惠活动</a>
+                </div>
+            </div>
+            <div class="col-md-1  ">
+                <div class="business-services">
+                    <a class="on-about">商圈背景</a>
+                </div>
+            </div>
+            <div class="col-md-1  ">
+                <div class="business-services">
+                    <a class="on-about">预约点餐</a>
+                </div>
+            </div>
+            <div class="col-md-1  ">
+                <div class="business-services">
+                    <a class="on-about">小票寻宝</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="animate-box">
+    <div class="container button-demo ">
+        <div class="row">
+            <div class="text-center">
+                <p class="business-one-menu">智慧商圈商业模式逻辑架构</p>
+            </div>
+            <div class="col-md-8 business-row">
+                <div class="col-md-8">
+                    <image src="/static/index/images/business.jpg" width="100%"/>
+                </div>
+                <div class="col-md-4 text-left">
+                    <p class="business-menu">智慧商圈解决方案</p>
+                    <p class="business-desc">智慧商圈以微信公众号作为"智慧商圈"线上服务的统一入口，结合微信支付、微信优惠券等系统，围绕百姓的衣食住行，深入商圈线下业务场景，实现整体
+                        服务能力的移动化、社交化、便捷化，提高商圈的商业能力和服务能力。</p>
+                    <p class="business-desc"> 企牛牛致力于为传统行家解决从线下到线上，涵盖营销、服务、支付、客户管理的闭环，端到端的解决方案，以满足传统商户的移动化、智慧化需求。</p>
+                    <button class="btn btn-blue btn-center business-btn-margin">方案咨询</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="animate-box">
+    <div class="container button-demo ">
+        <div class="row">
+            <div class="text-center">
+                <p class="business-one-menu">智慧商圈是新时代的产物体验和服务 是线下商圈不可替代的优势</p>
+            </div>
+            <div class="col-md-8 business-row">
+                <div class="col-md-3 ">
+                    <div class="div-shadow">
+                        <div class="text-center div-gray">
+                            <p class="fa fa-user fa-2x gray-icon"></p>
+                            <p class="gray-menu">个性化营销</p>
+                        </div>
+                        <div class="div-white">
+                            <div class="div-white-desc">
+                                <p class="div-white-desc-p">让客户随时随地获取服务，如商圈内的优惠信息、活动信息、人流信息、停车位信息、折扣信息等</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="div-shadow">
+                        <div class="text-center div-gray">
+                            <p class="fa fa-user fa-2x gray-icon"></p>
+                            <p class="gray-menu">用户粘度高</p>
+                        </div>
+                        <div class="div-white">
+                            <div class="div-white-desc">
+                                <p class="div-white-desc-p">
+                                    让客户随时参与与商户的互动，提高用户的活跃度、忠诚度、转化率，提高商户的服务能力及销售额和利润，活跃整个商圈的氛围</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="div-shadow">
+                        <div class="text-center div-gray">
+                            <p class="fa fa-user fa-2x gray-icon"></p>
+                            <p class="gray-menu">精准直达</p>
+                        </div>
+                        <div class="div-white">
+                            <div class="div-white-desc">
+                                <p class="div-white-desc-p">微信让信息发布直达用户，更加有效和精准、快速，并且行程量化，消息轻松触达用户身边</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="div-shadow">
+                        <div class="text-center div-gray">
+                            <p class="fa fa-user fa-2x gray-icon"></p>
+                            <p class="gray-menu">支付与社交融合</p>
+                        </div>
+                        <div class="div-white">
+                            <div class="div-white-desc">
+                                <p class="div-white-desc-p">微信支付有效的为商户提供二次营销的能力，支付完成后轻松分享朋友圈，有效利用社交链关系</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="animate-box">
+    <div class="container button-demo ">
+        <div class="row">
+            <div class="text-center">
+                <p class="business-one-menu">微信公众号是智慧商圈其中一个入口商圈应用公众号用户提供线上服务</p>
+            </div>
+            <div class="col-md-8 business-row">
+                <div class="col-md-3 ">
+                    <div class="div-red">
+                        <div class="div-card">
+                            <div class="col-md-4">
+                                <p class="fa fa-user fa-4x card-icon"></p>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="business-card-title">商圈信息展示</p>
+                                <p class="business-card-desc">展示商圈的整体概貌、商圈介绍、360度虚拟逛街、上架导航服务</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 ">
+                    <div class="div-red">
+                        <div class="div-card">
+                            <div class="col-md-4">
+                                <p class="fa fa-user fa-4x card-icon"></p>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="business-card-title">商圈信息展示</p>
+                                <p class="business-card-desc">包括商家列表，商家介绍及商家信息详情</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="div-red">
+                        <div class="div-card">
+                            <div class="col-md-4">
+                                <p class="fa fa-user fa-4x card-icon"></p>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="business-card-title">促销服务</p>
+                                <p class="business-card-desc">包括优惠券的展示和发放</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="div-red">
+                        <div class="div-card">
+                            <div class="col-md-4">
+                                <p class="fa fa-user fa-4x card-icon"></p>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="business-card-title">活动服务</p>
+                                <p class="business-card-desc">用户可以参与扫码活动或者扫一扫活动</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 business-row">
+                <div class="col-md-3 ">
+                    <div class="div-red">
+                        <div class="div-card">
+                            <div class="col-md-4">
+                                <p class="fa fa-user fa-4x card-icon"></p>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="business-card-title">餐饮服务</p>
+                                <p class="business-card-desc">用户通过公众号进行商圈餐饮商家的点餐预定、排号和消费</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="div-red">
+                        <div class="div-card">
+                            <div class="col-md-4">
+                                <p class="fa fa-user fa-4x card-icon"></p>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="business-card-title">智慧停车</p>
+                                <p class="business-card-desc">包括停车导航、停车优惠券、停车费微信支付</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 ">
+                    <div class="div-red">
+                        <div class="div-card">
+                            <div class="col-md-4">
+                                <p class="fa fa-user fa-4x card-icon"></p>
+                            </div>
+                            <div class="col-md-8">
+                                <p class="business-card-title">会员服务</p>
+                                <p class="business-card-desc">包括会员卡服务和积分服务</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container animate-box business-sop">
+    <div class="row">
+        <div class="col-md-8 business-left  animate-box business-bottom">
+            <p class="sop-title">质量管理体系 SOP MOC 5A管理模式</p>
+            <p class="sop-desc">我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服体验与品质，无论您是何种行业身处何处；我们都能提供贴心完善的服务。
+                我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服体验与品质，无论您是何种行业身处何处；我们都能提供贴心完善的服务。
+                我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服体验与品质，无论您是何种行业身处何处；我们都能提供贴心完善的服务。</p>
+            <div class="col-md-3  business-text-center">
+                <div class="sop-border">
+                    <p class="sop-border-text-title">质量管理体系</p>
+                    <image src="/static/index/images/sop-border.jpg"/>
+                    <p class="sop-border-text-desc">我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服</p>
+                </div>
+            </div>
+            <div class="col-md-3  business-text-center">
+                <div class="sop-border">
+                    <p class="sop-border-text-title">SOP</p>
+                    <image src="/static/index/images/sop-border.jpg"/>
+                    <p class="sop-border-text-desc">我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服</p>
+                </div>
+            </div>
+            <div class="col-md-3  business-text-center">
+                <div class="sop-border">
+                    <p class="sop-border-text-title">MOC</p>
+                    <image src="/static/index/images/sop-border.jpg"/>
+                    <p class="sop-border-text-desc">我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服</p>
+                </div>
+            </div>
+            <div class="col-md-3  business-text-center">
+                <div class="sop-border">
+                    <p class="sop-border-text-title">5A管理模式</p>
+                    <image src="/static/index/images/sop-border.jpg"/>
+                    <p class="sop-border-text-desc">我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container title-demo">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center ">
+            <p class="business-one-menu">企牛牛服务综合、基石、宗旨、客户服务标准(响应时间、反馈)</p>
+            <p class="business-two-menu">我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质</p>
+            <div class="col-md-4 ">
+                <div class="content-v cover-view-pink">
+                    <p class="v-title">企牛牛五大基石</p>
+                    <p class="v-desc">正直，笃行，责任，进取，创新</p>
+                </div>
+                <hr style="margin-top: 13px;border-top:1px solid #E2E3E4;"/>
+            </div>
+            <div class="col-md-4 ">
+                <div class="content-v cover-view-pink">
+                    <p class="v-title">企牛牛服务宗旨</p>
+                    <p class="v-desc">为企业提供多方位专业技术支持，直营模式提供高品质服务</p>
+                </div>
+                <hr style="margin-top: 13px;border-top:1px solid #E2E3E4;"/>
+            </div>
+            <div class="col-md-4 ">
+                <div class="content-v cover-view-pink">
+                    <p class="v-title">企牛牛客户服务标准</p>
+                    <p class="v-desc">自研标准化操作流程，提高服务效率，提升产品品质</p>
+                </div>
+                <hr style="margin-top: 13px;border-top:1px solid #E2E3E4;"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container title-demo">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center ">
+            <p class="business-one-menu">大客户经理职责</p>
+            <p class="business-two-menu">我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质
+                我们提供客服创新易用的解决方案的同时给与客服最贴心的服务，提升客户体验与品质</p>
+            <div class="col-md-3">
+                <button class="btn btn-default business-build">大客户经理职责</button>
+            </div>
+            <div class="col-md-3 business-dev ">
+                <button class="btn btn-default business-build">大客户经理职责</button>
+            </div>
+            <div class="col-md-3 ">
+                <button class="btn btn-default business-build">大客户经理职责</button>
+            </div>
+            <div class="col-md-3 business-dev ">
+                <button class="btn btn-default business-build">大客户经理职责</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container button-demo" style="margin-top:130px">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center ">
+            <p class="business-one-menu">新闻动态</p>
+            <p class="business-two-menu">新闻行业动态尽在企牛牛，关注企牛牛，了解最新资讯动态</p>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-8 col-md-offset-2  animate-box">
+    <div class="row row-bottom-padded-sd">
+        <div class="col-lg-4 col-md-4 news-row">
+            <div class=" fh5co-blog">
+                <a href="#"><img class="img-responsive" src="/static/index/images/news1.jpg" alt=""></a>
+                <div class="blog-text"
+                     style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                    <div class="prod-title">
+                        <p class="news-desc"><a class="news-desc-a" href="#">国美进军黄金珠宝行业 国内首家"一站式购金"平台发布...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 news-row">
+            <div class="fh5co-blog ">
+                <a href="#"><img class="img-responsive" src="/static/index/images/news1.jpg" alt=""></a>
+                <div class="blog-text"
+                     style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                    <div class="prod-title">
+                        <p class="news-desc"><a class="news-desc-a" href="#">法制日报:保护崔永元 也是保护人们对法律的信任</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 news-row">
+            <div class="fh5co-blog">
+                <a href="#"><img class="img-responsive" src="/static/index/images/news1.jpg" alt=""></a>
+                <div class="blog-text"
+                     style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                    <div class="prod-title">
+                        <p class="news-desc"><a class="news-desc-a" href="#">抗癌药入医保民众买得到吗？国家医保局释疑</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container button-demo animate-box logo-bottom">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+            <button class="btn btn-default">查看更多+</button>
+            <p class="one-menu">合作伙伴</p>
+            <p style="font-size:14px">致力成为值得信赖的服务商</p>
+            <p style="font-size:14px">创意H5设计、咨询 | 网站建设、运维 | 微信公众号开发 | 小程序开发</p>
+            <div class="col-md-2 col-sm-2">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2 logo-line">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2 logo-line">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2 logo-line">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2 logo-line">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2 logo-line">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+            <div class="col-md-2 col-sm-2 logo-line">
+                <image src="/static/index/images/logo-list.jpg"/>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div th:replace="index/index/side :: side"></div>
+<div th:replace="index/index/footer :: footer"></div>
+<div th:include="index/index/js :: onload_js">
+</div>
+<script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
+<script type="text/javascript" src="/static/index/js/public.js"></script>
+<script type="text/javascript">
+$(function() {
+    var d = $("#slider-btn li");
+    var j = $("#slider-back li");
+    var a = $(".banner-text");
+    var h = $(".slider-text");
+    var e = $(".banner-txt a");
+    var i = 0;
+    d.each(function(l) {
+        $(this).mouseover(function() {
+            f(l)
+        });
+        $(this).data("index")
+    });
+    function f(l) {
+        i = l;
+        d.eq(l).addClass("active").siblings().removeClass();
+        var m = a.eq(l);
+        var n = m.children();
+        m.siblings(".banner-text").stop(true).fadeOut(100);
+        m.show();
+        n.each(function() {
+            var o = $(this);
+            o.css({
+                display: "block",
+                opacity: 0,
+                top: o.data("start_top") || 0,
+                left: o.data("start_left") || 0
+            });
+            o.stop(true).delay(400).animate({
+                display: "none",
+                opacity: 1,
+                top: o.data("to_top"),
+                left: o.data("to_left")
+            },
+            1200);
+            if (o.data("class") !== undefined) {
+                o.removeClass(o.data("class"));
+                setTimeout(function() {
+                    o.addClass(o.data("class"))
+                },
+                0)
+            }
+        });
+        j.eq(l).siblings().stop().animate({
+            opacity: 0
+        },
+        600);
+        j.eq(l).stop().animate({
+            opacity: 1
+        },
+        600)
+    }
+    function g() {
+        i++;
+        if (i == d.length) {
+            i = 0
+        }
+        f(i)
+    }
+    var c = null;
+    var b = $("#slider-btn");
+    var k = function() {
+        var l = b.find(".active");
+        c = setTimeout(function() {
+            g();
+            k()
+        },
+        l.data("delay") || 8000)
+    };
+    k();
+    d.hover(function() {
+        clearInterval(c)
+    },
+    function() {
+        k()
+    });
+    f(0)
+});
+
+</script>
+</body>
+</html>

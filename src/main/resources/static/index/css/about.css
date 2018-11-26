@@ -1,0 +1,238 @@
+.about-text1{
+color:#dddddd;
+font-size:25px;
+}
+.about-text2{
+color:#dddddd;
+}
+
+.banner-div{
+text-align:center;
+}
+
+.about-text{
+margin-left:34%
+}
+.title-list{
+width:13.6%;
+}
+
+.on-about{
+color:#555;
+font-weight:600;
+cursor:pointer;
+}
+
+.about-left{
+margin-left:18.5%
+}
+
+.about-services{
+padding:22px 0px 17px 0px;
+margin-bottom:30px;
+}
+
+.text-left{
+text-align:left
+}
+
+.pinpai-menu{
+margin-left:10px;
+    font-weight: 600;
+    color: #333333;
+    margin-top: 10px;
+    margin-bottom: 0.5em;
+}
+
+.pinpai-desc{
+font-size: 15px;
+    line-height: 2.0;
+    color: #666666;
+}
+
+.qiye-desc{
+font-size: 15px;
+    line-height: 3.0;
+    color: #666666;
+}
+
+
+.about-two-menu{
+font-size:15px;
+color:#666666;
+line-height:1.4;
+}
+
+.about-one-menu{
+color:#555555;
+font-size:20px;
+}
+
+.about-min{
+margin-top:10%;
+padding-left:0px;
+padding-right:0px;
+}
+
+.about-info{
+width:100%;
+margin-top:44%;
+}
+
+.about-sop{
+background:#313131;
+}
+
+.sop-title{
+margin-top:70px;
+color:#dddddd;
+font-size:18px;
+text-align:center
+}
+
+.sop-desc{
+color:#dddddd;
+font-size:15px;
+text-align:center;
+line-height:2.0
+}
+
+.sop-border{
+background:#373737;
+height:340px
+}
+
+
+.about-text-center{
+text-align:center;
+}
+
+.sop-border-text-title{
+margin-bottom:47px;
+color:#eeeeee;
+font-weight:600;
+padding-top:50px;
+font-size:17px;
+}
+
+.sop-border-text-desc{
+    width: 80%;
+    margin-left: 10%;
+color:#999999;
+line-height:2.0;
+margin-top:50px;
+font-size:12px;
+}
+
+.about-bottom{
+margin-bottom:60px;
+}
+
+     .content-v {
+                 box-sizing: border-box;
+                 position: relative;
+                 height:180px;
+                 border: 1px solid #E2E3E4;
+             }
+
+             .content-v::before {
+             width: 0;
+                 height: 0;
+                 content: "";
+                 background: white;
+                 position: absolute;
+                 left: 226px;
+                 top: 179px;
+                 border-left: solid 35px transparent;
+                 border-top: solid 20px #ccc;
+                 border-right: solid 23px transparent;
+             }
+
+             .content-v::after {
+              width: 0;
+                  height: 0;
+                  content: "";
+                  position: absolute;
+                  left: 226px;
+                  top: 178px;
+                  border-left: solid 35px transparent;
+                  border-top: solid 20px white;
+                  border-right: solid 23px transparent;
+             }
+
+
+
+
+
+             .content-v2 {
+                              box-sizing: border-box;
+                              position: relative;
+                              height:180px;
+                              border: 1px solid #E2E3E4;
+                              border-top:5px solid #ff2c63;
+                          }
+
+                          .content-v2::before {
+                          width: 0;
+                              height: 0;
+                              content: "";
+                              background: white;
+                              position: absolute;
+                              left: 226px;
+                              top: 175px;
+                              border-left: solid 35px transparent;
+                              border-top: solid 20px #ccc;
+                              border-right: solid 23px transparent;
+                          }
+
+                          .content-v2::after {
+                           width: 0;
+                               height: 0;
+                               content: "";
+                               position: absolute;
+                               left: 226px;
+                               top: 174px;
+                               border-left: solid 35px transparent;
+                               border-top: solid 20px white;
+                               border-right: solid 23px transparent;
+                          }
+
+
+
+             .v-title{
+                font-size: 18px;
+                color: #777;
+                font-weight: 600;
+                text-align: left;
+                padding: 42px 10px 0px 43px;
+             }
+
+                  .v-desc{
+                              text-align: left;
+                              padding:0px 0px 11px 43px;
+                          }
+
+
+                          .about-build{
+                              border: 0;
+                              line-height: 2.5;
+                              background: transparent;
+                          }
+
+                          .about-dev{
+                            background: #ccc;
+                          }
+
+
+                           .about-build:hover{
+                                                       color:#67d1a3;
+                                                       background:transparent;
+                                                    }
+
+                                                      .about-build:focus{
+                                                                                                           color:#67d1a3;
+                                                                                                           background:transparent;
+                                                                                                        outline: none;
+                                                                                                        border-color: transparent;
+                                                                                                        box-shadow:none;
+                                                                                                        }

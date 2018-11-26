@@ -1,9 +1,10 @@
-<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <!-- JavaScript -->
-<div  th:fragment="onload_js">
+<div th:fragment="onload_js">
     <script type="text/javascript">
 	window.rootPath="[[${rootPath}]]";
-	</script>
+
+    </script>
     <script type="text/javascript" th:src="@{{path}static/index/js/jquery.min.js(path=${rootPath})}"></script>
     <script type="text/javascript" th:src="@{{path}static/index/js/jquery.easing.1.3.js(path=${rootPath})}"></script>
     <script type="text/javascript" th:src="@{{path}static/index/js/bootstrap.min.js(path=${rootPath})}"></script>
@@ -11,8 +12,10 @@
     <script type="text/javascript" th:src="@{{path}static/index/js/jquery.stellar.min.js(path=${rootPath})}"></script>
     <script type="text/javascript" th:src="@{{path}static/index/js/hoverIntent.js(path=${rootPath})}"></script>
     <script type="text/javascript" th:src="@{{path}static/index/js/superfish.js(path=${rootPath})}"></script>
-    <script type="text/javascript" th:src="@{{path}static/index/js/jquery.magnific-popup.min.js(path=${rootPath})}"></script>
-    <script type="text/javascript" th:src="@{{path}static/index/js/magnific-popup-options.js(path=${rootPath})}"></script>
+    <script type="text/javascript"
+            th:src="@{{path}static/index/js/jquery.magnific-popup.min.js(path=${rootPath})}"></script>
+    <script type="text/javascript"
+            th:src="@{{path}static/index/js/magnific-popup-options.js(path=${rootPath})}"></script>
     <script type="text/javascript" th:src="@{{path}static/index/js/main.js(path=${rootPath})}"></script>
     <script type="text/javascript" th:src="@{{path}static/index/js/jquery.color.js(path=${rootPath})}"></script>
     <script type="text/javascript" th:src="@{{path}static/index/js/menu.js(path=${rootPath})}"></script>

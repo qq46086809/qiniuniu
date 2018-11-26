@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" 
+<html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
 <head th:replace="admin/common/html/head :: head(~{::title},~{::link},~{::style})">
 
-<title th:text=${title}></title>
-<!-- 这儿引用单独的css link -->
-<link rel="stylesheet" th:href="@{{path}static/admin/assets/js/button/ladda/ladda.min.css(path=${rootPath})}">
-<style type="text/css">
+    <title th:text=${title}></title>
+    <!-- 这儿引用单独的css link -->
+    <link rel="stylesheet" th:href="@{{path}static/admin/assets/js/button/ladda/ladda.min.css(path=${rootPath})}">
+    <style type="text/css">
 /**
 *这里写单独的css样式
 */
-</style>
+
+    </style>
 
 </head>
 
@@ -20,13 +21,11 @@
 <div th:replace="admin/common/html/topMenu :: topMenu(${isribbon})">
 </div>
 <!-- 结束顶部通用 -->
-   
+
 <!-- 左边菜单栏通用 -->
 <div th:replace="admin/common/html/leftMenu :: leftMenu">
 </div>
 <!-- 结束左边菜单栏通用 -->
-
-
 
 
 <!-- ###############################代码编写出############################### -->
@@ -77,22 +76,17 @@
 <!-- ###############################代码编写出############################### -->
 
 
-
-
-
-
-
 <!-- 右侧隐藏滑块内容 -->
 <div th:include="admin/common/html/rightHide :: rightHide">
-    
+
 </div>
-   <!-- END 右侧隐藏滑块内容-->
+<!-- END 右侧隐藏滑块内容-->
 
 <!-- 通用js -->
 <div th:include="admin/common/html/js :: onload_js">
-   
+
 </div>
-    
+
 <script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
 
 </body>

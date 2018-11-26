@@ -8,24 +8,26 @@
             ul,li{
             list-style: none;
         }
+
     </style>
 </head>
 <body>
-<div  th:fragment="side" class="containers" style="top:10%">
+<div th:fragment="side" class="containers" style="top:10%">
     <div class="links2" style="height:192px;">
         <div class="text">
             <div class="link-div">
                 <i class="fa fa-wechat color-white"></i>
-                <a class="link-text" >咨询</a> </div>
+                <a class="link-text">咨询</a></div>
             <div class="link-div3">
                 <i class="fa fa-paper-plane-o color-white"></i>
-                <a class="link-text" >发布需求</a></div>
+                <a class="link-text">发布需求</a></div>
         </div>
     </div>
 </div>
 <div class="nav-header" style="border-bottom:0.3px ridge #dddddd;height:56px;">
     <h1 id="fh5co-logo" style="margin-left: 68px;margin-top: 15px;">
-        <a href="/login" style="color:#323232">企牛牛</a><a style="font-size:15px;font-weight:500;color:#323232;margin-left:10px;">直营一站式服务平台</a></h1>
+        <a href="/login" style="color:#323232">企牛牛</a><a
+            style="font-size:15px;font-weight:500;color:#323232;margin-left:10px;">直营一站式服务平台</a></h1>
     <nav id="fh5co-menu-wrap" role="navigation">
         <ul class="sf-menu" id="fh5co-primary-menu" style="padding-right:10px;">
             <li>
@@ -38,26 +40,28 @@
     <div class="login-image-box float-left">
         <img src="/static/index/images/login.jpg" alt="" style="float:left">
         <div class="login-box">
-        <h4 style="padding:40px 40px 40px 90px;font-weight:600;">密码登录</h4>
-            <form th:action="@{/adminlogin}"  method="post" id="loginForm">
-        <!-- 用户名 -->
-        <div class="login-username clearfix">
-            <input type="hidden" name="loginway" id="loginway" value="0" />
-            <input class="float-left login-input" type="text"  name="username" id="username" placeholder="用户名" required>
-        </div>
-        <!-- 密码 -->
-        <div class="login-password clearfix">
-            <input class="float-left login-input" type="password"  name="password" id="password"  placeholder="请输入密码" required>
-        </div>
-        <button   onclick="severCheck()" class="login-login">
-            <span class="">登录</span>
-        </button>
+            <h4 style="padding:40px 40px 40px 90px;font-weight:600;">密码登录</h4>
+            <form th:action="@{/adminlogin}" method="post" id="loginForm">
+                <!-- 用户名 -->
+                <div class="login-username clearfix">
+                    <input type="hidden" name="loginway" id="loginway" value="0"/>
+                    <input class="float-left login-input" type="text" name="username" id="username" placeholder="用户名"
+                           required>
+                </div>
+                <!-- 密码 -->
+                <div class="login-password clearfix">
+                    <input class="float-left login-input" type="password" name="password" id="password"
+                           placeholder="请输入密码" required>
+                </div>
+                <button onclick="severCheck()" class="login-login">
+                    <span class="">登录</span>
+                </button>
             </form>
-            <div> <p style="margin-left:200px;margin-top:10px">
+            <div><p style="margin-left:200px;margin-top:10px">
                 <a style="margin-left:20px;color:#999;cursor:pointer;">忘记密码</a>
-                <a  style="margin-left:30px;color:#999;cursor:pointer;">免费注册</a></p></div>
+                <a style="margin-left:30px;color:#999;cursor:pointer;">免费注册</a></p></div>
             <div style="margin-top:70px;margin-left:92px;"><p>其他登录方式 :
-            <img src="/static/index/images/wx.png" style="margin-left:10px">
+                <img src="/static/index/images/wx.png" style="margin-left:10px">
                 <img src="/static/index/images/qq.png" style="margin-left:10px">
             </p></div>
         </div>
@@ -78,6 +82,7 @@
     		function severCheck(){
 			$("#loginForm").submit();
 		}
-    </script>
+
+</script>
 </body>
 </html>

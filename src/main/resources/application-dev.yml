@@ -1,13 +1,13 @@
 #dev环境  mysql7.0
-spring :
-  datasource :
-      driverClassName : com.mysql.jdbc.Driver
-      url : jdbc:mysql://192.168.123.102:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&autoReconnect=true&useSSL=false
-      username : riqing
-      password : asdf123
-      hikari:
-        maxLifetime: 1765000
-        maximumPoolSize: 15
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.123.102:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&autoReconnect=true&useSSL=false
+    username: riqing
+    password: asdf123
+    hikari:
+      maxLifetime: 1765000
+      maximumPoolSize: 15
 
 #mysql 8.0
 #spring :
