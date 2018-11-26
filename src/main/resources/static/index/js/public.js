@@ -14,6 +14,29 @@ jQuery(function(){
                       $(this).find(".chanpin").stop(true, true).animate({height: "-=50px"}, 500);
                        $(this).find(".btn-none").attr("style","display:none")
                 });
+                 $(".cover-view-pink").mouseenter(function(index, element) {
+                                             $(this).removeClass("content-v");
+                                                $(this).addClass("content-v2");
+                                        });
+                                         $(".cover-view-pink").mouseleave(function(index, element) {
+                                                                      $(this).removeClass("content-v2");
+                                                                       $(this).addClass("content-v");
+                                                                });
+
+                                            $(".div-shadow").mouseenter(function(index, element) {
+                                            $(this).attr("style","transition:0.5s;-moz-box-shadow:0px 0px 18px #757575; -webkit-box-shadow:0px 0px 18px #757575; box-shadow:0px 0px 18px #757575;");
+                                                                   });
+
+                                                                    $(".div-shadow").mouseleave(function(index, element) {
+                                            $(this).attr("style","transition:0.5s;-moz-box-shadow:0px 0px 0px #333333; -webkit-box-shadow:0px 0px 0px #333333; box-shadow:0px 0px 0px #333333;");
+                                                                                                                      });
+                                         $(".div-red").mouseenter(function(index, element) {
+                                                                    $(this).attr("style","border:1px solid #ff2c63");
+                                                                                           });
+
+                                           $(".div-red").mouseleave(function(index, element) {
+                                                                                         $(this).attr("style","transition:0.5s;border:");
+                                                     });
     });
 
 
