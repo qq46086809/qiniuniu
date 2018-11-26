@@ -87,10 +87,11 @@ background:#313131;
 }
 
 .sop-title{
-margin-top:70px;
-color:#dddddd;
-font-size:18px;
-text-align:center
+margin-top: 45px;
+    color: #eeeeee;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
 }
 
 .sop-desc{
@@ -335,4 +336,9 @@ margin-bottom:60px;
               line-height: 160px;
                   float: right;
                   margin-bottom: 0.5em;
+              }
+
+
+              .jindu-left{
+              margin-left:17%;
               }
