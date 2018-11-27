@@ -64,8 +64,7 @@ a:active{text-decoration:none;}
 
 
 .button-center{
-  margin-left: 97px!important;
-  margin-top: 20px!important;
+  margin-top: 30px!important;
 }
 /*
 
@@ -119,6 +118,10 @@ figure {
 
 .search-box{
   margin-left: -30px;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 
 .skyblue-back{
@@ -1133,9 +1136,11 @@ margin-left:2%
 }
 
 .fh5co-blog {
-  width: 360px;
-  height: 670px;
+ /* width: 360px;
+  height: 638px;*/
   /*margin-bottom: 170px;*/
+  /*padding-bottom:227px;*/
+  padding-bottom:246px;
 }
 .fh5co-blog1 {
 
@@ -1145,7 +1150,9 @@ margin-left:2%
 .fh5co-blog a img {
   width: 100%;
 }
-
+.prod-title{
+  margin-top: -5px;
+}
 
 .fh5co-blog .blog-text {
   margin-bottom: 30px;
@@ -1279,7 +1286,7 @@ margin-left:2%
 #footer .fh5co-copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 40px !important;
-  padding: 3em;
+  padding: 2em;
   width: 75%;
   margin-left:14.5%;
   float: left;
@@ -1983,14 +1990,29 @@ input::-webkit-input-placeholder {
 .banner-engine .slider-main{display:block}
 .slider-text{position:absolute;margin-top:214px}
 /*.banner-area{width:100%;text-align:center}*/
-.banner-area li{margin:0 15px;display:inline-block;width:10px;height:10px;background:url(../images/pagination_02.png) no-repeat}
+.banner-area li{
+  margin:0 15px;
+  display:inline-block;
+  width:10px;
+  height:10px;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid white;
+
+  transition:height 2s;
+  -moz-transition:height 2s; /* Firefox 4 */
+  -webkit-transition:height 2s; /* Safari and Chrome */
+  -o-transition:height 2s; /* Opera */
+
+}
+
 .banner-area li.active{
   height: 40px;
   background: white;
   border-radius: 5px;
-  /*background:url(../images/pagination_01.png) no-repeat*/
 
 }
+
 
 
 .box1CenBg{ background:url(/static/index/images/panel1.jpg) center top no-repeat; background-size:cover; min-height:607px; overflow:hidden; position:relative;}
@@ -2104,7 +2126,7 @@ display:none;
 display:block;
 }
 .box-tongji{
-  margin-top: -120px;
+  margin-top: -110px;
 }
 
 .bg-gray{
@@ -2149,6 +2171,9 @@ margin-left:54%;
 color:#da2d5b
 }
 
+.news-title{
+  margin-top: 10px;
+}
 .news-list{
 width:50%;
 margin-left:25%;

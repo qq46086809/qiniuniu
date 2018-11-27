@@ -37,6 +37,7 @@ jQuery(function(){
         $(this).attr("style","transition:0.2s;-moz-box-shadow:0px 0px 0px #333333; -webkit-box-shadow:0px 0px 0px #333333; box-shadow: 0px 0px 0px #333333;");
     });
 
+
    /* $(".div-shadow").mouseleave(function(index, element) {
         $(this).attr("style","transition:0.2s;-moz-box-shadow:0px 0px 0px #333333; -webkit-box-shadow:0px 0px 0px #333333; box-shadow: 0px 0px 0px #333333;");
     });*/
