@@ -46,6 +46,9 @@ a:active{text-decoration:none;}
 #register:hover{
   color: #fff;
 }
+.news-tab a:hover{
+  color: red!important;
+}
 
 
 .btn:focus,
@@ -57,6 +60,12 @@ a:active{text-decoration:none;}
   outline: none;
   border-color: transparent;
   box-shadow:none;
+}
+
+
+.button-center{
+  margin-left: 97px!important;
+  margin-top: 20px!important;
 }
 /*
 
@@ -1124,8 +1133,15 @@ margin-left:2%
 }
 
 .fh5co-blog {
-  margin-bottom: 34px;
+  width: 360px;
+  height: 670px;
+  /*margin-bottom: 170px;*/
 }
+.fh5co-blog1 {
+
+  margin-bottom: 20px;
+}
+
 .fh5co-blog a img {
   width: 100%;
 }
@@ -1231,7 +1247,7 @@ margin-left:2%
 #footer .float {
   float: left;
   padding:0px 0 0 50px;
-  margin-right: 50px;
+  margin-right: 39px;
 }
 #footer ul {
   padding: 0;
@@ -2057,7 +2073,7 @@ border:1px solid black;
 }
 
 .chanpin{
-height:170px;
+height:220px;
 }
 
 .btn-none{
@@ -2106,7 +2122,7 @@ font-weight:600;
 font-size:25px;
 }
 .dc-scroll,.fr li{
-  margin-left: 10px;
+  margin-left: 8px;
 }
 
 .blog-gray{
@@ -2155,7 +2171,7 @@ color:#444!important;
 }
 
 .news-row{
-height:338px;
+height:305px;
 }
 
 .row-bottom-padded-sd{

@@ -6,7 +6,7 @@ jQuery(function(){
 
     $(".high-sec").mouseenter(function(index, element) {
             $(this).stop(true, true).animate({top: "-=50px"}, 500);
-             $(this).find(".chanpin").stop(true, true).animate({height: "+=50px"}, 500);
+             // $(this).find(".chanpin").stop(true, true).animate({height: "+=50px"}, 500);
              $(this).find(".btn-none").attr("style","display:block")
         });
             $(".high-sec").mouseleave(function(index, element) {
@@ -23,13 +23,27 @@ jQuery(function(){
                                                                        $(this).addClass("content-v");
                                                                 });
 
-                                            $(".div-shadow").mouseenter(function(index, element) {
-                                            $(this).attr("style","transition:0.5s;-moz-box-shadow:0px 0px 18px #757575; -webkit-box-shadow:0px 0px 18px #757575; box-shadow:0px 0px 18px #757575;");
+                                           /* $(".div-shadow").mouseenter(function(index, element) {
+                                              $(this).attr("style","transition:0.5s;-moz-box-shadow:0px 0px 18px #757575; -webkit-box-shadow:0px 0px 18px #757575; box-shadow:0px 0px 18px #757575;");
                                                                    });
 
-                                                                    $(".div-shadow").mouseleave(function(index, element) {
-                                            $(this).attr("style","transition:0.5s;-moz-box-shadow:0px 0px 0px #333333; -webkit-box-shadow:0px 0px 0px #333333; box-shadow:0px 0px 0px #333333;");
-                                                                                                                      });
+                                            $(".div-shadow").mouseleave(function(index, element) {
+                                              $(this).attr("style","transition:0.5s;-moz-box-shadow:0px 0px 0px #333333; -webkit-box-shadow:0px 0px 0px #333333; box-shadow:0px 0px 0px #333333;");
+                                                                                                                      });*/
+
+    $(".div-shadow").mouseenter(function(index, element) {
+        $(this).attr("style","transition:0.5s; -moz-box-shadow:2px 3px 3px #757575; -webkit-box-shadow:2px 3px 3px #757575; box-shadow:-0.5px 0 3px #757575,2px 3px 3px #757575;   ");
+    }).mouseleave(function(index, element) {
+        $(this).attr("style","transition:0.2s;-moz-box-shadow:0px 0px 0px #333333; -webkit-box-shadow:0px 0px 0px #333333; box-shadow: 0px 0px 0px #333333;");
+    });
+
+   /* $(".div-shadow").mouseleave(function(index, element) {
+        $(this).attr("style","transition:0.2s;-moz-box-shadow:0px 0px 0px #333333; -webkit-box-shadow:0px 0px 0px #333333; box-shadow: 0px 0px 0px #333333;");
+    });*/
+
+
+
+
                                          $(".div-red").mouseenter(function(index, element) {
                                                                     $(this).attr("style","border:1px solid #ff2c63");
                                                                                            });
