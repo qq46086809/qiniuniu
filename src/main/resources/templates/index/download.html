@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title th:text=${title}></title>
+    <link rel="stylesheet" th:href="@{{path}static/admin/assets/js/button/ladda/ladda.min.css(path=${rootPath})}">
+    <link rel="stylesheet" href="/static/index/css/download.css">
+    <style type="text/css">
+    </style>
+
+</head>
+<style>
+    ul,li{
+        list-style: none;
+    }
+
+    .total-police-alert{
+        width: 500px;
+        height: 90px;
+        padding: 10px;
+        margin: 100px auto 0;
+        font: 36px "华文楷体";
+        line-height: 90px;
+        color: #fff;
+        box-shadow: -2px 2px 10px #000;
+        background-color: rgba(81,167,229,1.00);
+        border-radius: 10px;
+    }
+    .fl{
+        float:left;
+    }
+    .fr{
+        float:right;
+    }
+
+</style>
+<body style="min-width:1500px">
+<div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
+</div>
+
+<div class="banner-engine">
+    <ul class="banner-ul clearfix" id="slider-back">
+        <li class="banner-cloudapp" style="background:url(/static/index/images/banner1.jpg) center center / 100% 500px no-repeat;"></li>
+        <li class="banner-cps" style="background:url(/static/index/images/banner1.jpg) center center / 100% 500px  no-repeat;"></li>
+        <li class="banner-trust" style="background:url(/static/index/images/banner1.jpg) center center / 100% 500px  no-repeat;"></li>
+    </ul>
+    <!-- 对应banner文字 -->
+    <div class="slider-main">
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="banner-text1" >云应用正式222公测</p>
+                <p class=" banner-text2" >提供跨云多平台一站式批量云服务器安全管理服务</p>
+                <a class="banner-link-button" href="#">参与公测</a>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="banner-text1" >CPS推广</p>
+                <p class=" banner-text2" ><span style="color: #ffd400;">5日结算随时提现</span>   现在加入共赢云计算市场蓝海</p>
+                <a class="banner-link-button" href="#">立即加入</a>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="banner-text1" >信任中心</p>
+                <p style="line-height: 36px;" class=" banner-text2" >严格经过16+2维度测试<br/>为您提供合规、可用、安全、可信的云计算服务</p>
+                <a class="banner-link-button" href="#">立即查看</a>
+            </div>
+        </div>
+    </div>
+    <!-- banner索引 -->
+    <div class="banner-point">
+        <div class="auto">
+            <ul class="banner-area animate-box" id="slider-btn">
+                <li class="active" data-delay="12000">
+                </li>
+                <li data-delay="8000"></li>
+                <li data-delay="8000"></li>
+                <li data-delay="8000"></li>
+                <li data-delay="8000"></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container nav-menu" >
+    <div class="row row-bottom-padded-md">
+        <div class="list-title col-md-9 col-md-offset-2" style="margin-left: 14.66667%;">
+            <ul id="download-menu" >
+                <li class="col-md-1" id="recommendLink">
+                    <a>精心推荐</a>
+                    <p>市场自营，心选优品</p>
+                </li>
+                <li class="col-md-1" id="wechatCustomizationLink">
+                    <a>微信定制</a>
+                    <p>量身定制的建站</p>
+                </li>
+                <li class="col-md-1 " id="APPManufacturingLink">
+                    <a>APP制作</a>
+                    <p>移动化时代的必需品</p>
+                </li>
+                <li class="col-md-1" id="WebsiteTemplateLink">
+                    <a>网站模板</a>
+                    <p>精美网站模板</p>
+                </li>
+                <li class="col-md-1" id="MallManufacturingLink">
+                    <a>商城制作</a>
+                    <p>低成本搭建高品质</p>
+                </li>
+                <li class="col-md-1 " id="H5DevelopmentLink">
+                    <a>H5开发</a>
+                    <p>跟随时代的变化</p>
+                </li>
+                <li class="col-md-1" id="SmartServiceLink">
+                    <a >智慧会务</a>
+                    <p>办公更简单化操作</p>
+                </li>
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container downrecommend" >
+    <div class="cards row">
+        <div class="menu-title">
+            <h2 id="recommend">精心推荐</h2>
+            <p>市场企牛牛自营，心选优品，放心购买</p>
+        </div>
+
+    </div>
+    <div class="cards row row-bottom-padded-md">
+
+        <div class="row row-bottom-padded-md">
+            <div class="col-lg-4 col-md-4 high-sec">
+                <div class="fh5co-blog div-shadow  ">
+                    <a href="#"><img src="/static/index/images/download-recomenu1.png" alt=""></a>
+                    <div class="blog-text  ">
+                        <div class="prod-title">
+                            <h3>凡高设计官网开发1<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥200起</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4  high-sec">
+                <div class="fh5co-blog div-shadow">
+                    <a href="#"><img class="" src="/static/index/images/download-recomenu2.png" alt=""></a>
+                    <div class="blog-text  ">
+                        <div class="prod-title">
+                            <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥1500</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 high-sec">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img class="" src="/static/index/images/download-recomenu3.png" alt=""></a>
+                    <div class="blog-text ">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥5400</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+    </div>
+
+</div>
+</div>
+
+<div class="container downrecommend" >
+    <div class="cards row row-bottom-padded-md">
+        <div class="menu-title">
+            <h2 id="wechatCustomization">微信定制</h2>
+            <p>量身定制的建站，一站式服务，给你带来最高逼格的服务和体验</p>
+        </div>
+    </div>
+    <div class="cards row row-bottom-padded-md">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu1.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥200起</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu2.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥1500</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu3.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥5400</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu4.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥3600</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix" style="margin-top: 30px"></div>
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu1.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥200起</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu2.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥1500</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu3.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥5400</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu4.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥3600</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container downrecommend" >
+    <div class="cards row row-bottom-padded-md">
+        <div class="menu-title">
+            <h2 id="APPManufacturing">APP制造</h2>
+            <p>移动化时代的必须品，移动化时代的必需品，移动化时代的必需品，移动化时代的必需品</p>
+        </div>
+    </div>
+    <div class="cards row row-bottom-padded-md">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu1.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥200起</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu2.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥1500</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu3.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥5400</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu4.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥3600</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container downrecommend" >
+    <div class="cards row row-bottom-padded-md">
+        <div class="menu-title">
+            <h2 id="WebsiteTemplate">网站模板</h2>
+            <p>精美的网站模板，企业的必要标配，这里有最好看的模板</p>
+        </div>
+    </div>
+    <div class="cards row row-bottom-padded-md">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu1.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥200起</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu2.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥1500</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu3.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥5400</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu4.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥3600</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container downrecommend" >
+    <div class="cards row row-bottom-padded-md">
+        <div class="menu-title">
+            <h2 id="H5Development">H5开发</h2>
+            <p>跟随时代的潮流变化，适应时代技术的发展趋势</p>
+        </div>
+    </div>
+    <div class="cards row row-bottom-padded-md">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu1.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥200起</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu2.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥1500</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu3.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥5400</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu4.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥3600</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container downrecommend" >
+    <div class="cards row row-bottom-padded-md">
+        <div class="menu-title">
+            <h2 id="MallManufacturing">商城制造</h2>
+            <p>用低成本搭建高质量的商城，省心、省时、省力</p>
+        </div>
+    </div>
+    <div class="cards row row-bottom-padded-md">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu1.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥200起</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu2.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥1500</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu3.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥5400</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu4.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥3600</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container downrecommend" >
+    <div class="cards row row-bottom-padded-md">
+        <div class="menu-title">
+            <h2 id="SmartService">智慧会务</h2>
+            <p>办公更简单化操作，因而让工作更高效</p>
+        </div>
+    </div>
+    <div class="cards row row-bottom-padded-md">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu1.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥200起</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu2.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥1500</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu3.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥5400</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="fh5co-blog  div-shadow">
+                    <a href="#"><img src="/static/index/images/download-menu4.png" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                            <a href="#" class="download-price">¥3600</a>
+                            <a href="#" class="btn btn-default" style="float: right">查看详情</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div th:replace="index/index/side :: side"></div>
+<div th:replace="index/index/footer :: footer"></div>
+<div th:include="index/index/js :: onload_js"></div>
+
+<script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
+<script type="text/javascript" src="/static/index/js/public.js"></script>
+<script>
+    $(function() {
+        var d = $("#slider-btn li");
+        var j = $("#slider-back li");
+        var a = $(".banner-text");
+        var h = $(".slider-text");
+        var e = $(".banner-txt a");
+
+        var i = 0;
+
+
+        d.each(function(l) {
+            $(this).mouseover(function() {
+                f(l)
+            });
+            $(this).data("index")
+        });
+        function f(l) {
+            i = l;
+            d.eq(l).addClass("active").siblings().removeClass();
+
+            var m = a.eq(l);
+            var n = m.children();
+            m.siblings(".banner-text").stop(true).fadeOut(100);
+            m.show();
+            n.each(function() {
+                var o = $(this);
+                o.css({
+                    display: "block",
+                    opacity: 0,
+                    top: o.data("start_top") || 0,
+                    left: o.data("start_left") || 0
+                });
+                o.stop(true).delay(400).animate({
+                        display: "none",
+                        opacity: 1,
+                        top: o.data("to_top"),
+                        left: o.data("to_left")
+                    },
+                    1200);
+                if (o.data("class") !== undefined) {
+                    o.removeClass(o.data("class"));
+                    setTimeout(function() {
+                            o.addClass(o.data("class"))
+                        },
+                        0)
+                }
+            });
+            j.eq(l).siblings().stop().animate({
+                    opacity: 0
+                },
+                600);
+            j.eq(l).stop().animate({
+                    opacity: 1
+                },
+                600)
+        }
+        function g() {
+            i++;
+            if (i == d.length) {
+                i = 0
+            }
+            f(i)
+        }
+        var c = null;
+        var b = $("#slider-btn");
+        var k = function() {
+            var l = b.find(".active");
+            c = setTimeout(function() {
+                    g();
+                    k()
+                },
+                l.data("delay") || 8000)
+        };
+        k();
+        d.hover(function() {
+                clearInterval(c)
+            },
+            function() {
+                k()
+            });
+        f(0)
+    });
+
+    $("#recommendLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#recommend").offset().top }, {duration: 500,easing: "swing"});
+        return false;
+    });
+    $("#wechatCustomizationLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#wechatCustomization").offset().top }, {duration: 1000,easing: "swing"});
+        return false;
+    });
+    $("#APPManufacturingLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#APPManufacturing").offset().top }, {duration: 1500,easing: "swing"});
+        return false;
+    });
+    $("#WebsiteTemplateLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#WebsiteTemplate").offset().top }, {duration: 1500,easing: "swing"});
+        return false;
+    });
+    $("#MallManufacturingLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#MallManufacturing").offset().top }, {duration: 2000,easing: "swing"});
+        return false;
+    });
+    $("#H5DevelopmentLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#H5Development").offset().top }, {duration: 2000,easing: "swing"});
+        return false;
+    });
+
+    $("#SmartServiceLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#SmartService").offset().top }, {duration: 2500,easing: "swing"});
+        return false;
+    });
+
+
+
+
+
+</script>
+
+</body>
+</html>

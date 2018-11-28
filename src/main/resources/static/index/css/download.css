@@ -1,0 +1,69 @@
+#download-menu{
+    /*margin-top: 30px;*/
+    /*margin-left: 14px;*/
+    height: 144px;
+
+}
+#download-menu li{
+
+    text-align: center;
+    float: left;
+}
+#download-menu li:hover{
+    border-bottom: 5px solid red;
+}
+#download-menu li:hover a{
+    color: red;
+}
+#download-menu a{
+    display: block;
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+}
+
+
+
+.list-title .col-md-1{
+    width: 13.55%!important;
+}
+
+.list-title .col-md-1{
+    margin-top: 30px;
+    padding: 30px 0;
+}
+/*.list-title  .active{*/
+    /*border-bottom: 5px solid red;*/
+/*}*/
+.downrecommend .cards{
+    width: 70%;
+    margin-left: 17%;
+}
+.nav-menu .row-bottom-padded-md{
+    padding-bottom: 2em;
+}
+.downrecommend .row-bottom-padded-md{
+    padding-bottom: 1em;
+}
+.downrecommend .blog-text{
+    margin-bottom: 0px;
+}
+.downrecommend .fh5co-blog{
+    padding-bottom: 218px;
+}
+
+.downrecommend .menu-title{
+    border-left: 7px solid red;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+.downrecommend .menu-title h2{
+    display: inline;
+}
+.downrecommend .menu-title p{
+    display: inline;
+}
+.download-price{
+    color: red;
+    font-size: 22px;
+}

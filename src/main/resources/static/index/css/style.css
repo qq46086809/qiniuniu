@@ -103,11 +103,6 @@ figure {
   margin-bottom: 2em;
 }
 
-::-webkit-selection {
-  color: #fcfcfc;
-  /*background: #ef6249;*/
-  background: red;
-}
 
 ::-moz-selection {
   color: #fcfcfc;
@@ -719,7 +714,7 @@ margin-left:2%
 .feature-left .feature-copy h3 {
   font-size: 17px;
   color: #5a5a5a;
-  font-weight:640;
+  font-weight:600;
   margin-bottom: 10px;
 }
 .feature-left .feature-copy p {
@@ -1742,15 +1737,7 @@ font-size:23px;
   top: 0;
 }
 
-.fh5co-loader {
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  background: url(../images/hourglass.svg) center no-repeat #222222;
-}
+
 
 .search-menu {
     border-radius: 4px;
@@ -1778,7 +1765,6 @@ input[type="search"] {
     font-size: 100%;
 }
 input[type="search"] {
-    background: url("images/search-icon.html") no-repeat scroll 9px center #EDEDED;
     border: 1px solid #CCCCCC;
     border-radius: 10em 10em 10em 10em;
     padding: 9px 10px 9px 32px;
@@ -1790,28 +1776,8 @@ input[type="search"]:focus {
     box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
     width: 130px;
 }
-input: -moz-placeholder {
-    color: #999999;
-}
-#demo-b input[type="search"] {
-    color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    padding-left: 10px;
-    width: 15px;
-}
-#demo-b input[type="search"]:hover {
-    background-color: #FFFFFF;
-}
-#demo-b input[type="search"]:focus {
-    background-color: #FFFFFF;
-    color: #000000;
-    cursor: auto;
-    padding-left: 32px;
-    width: 130px;
-}
-#demo-b input: -moz-placeholder {
-    color: rgba(0, 0, 0, 0);
-}
+
+
 .search-hover {
     display: block;
     position: absolute;
@@ -1832,7 +1798,7 @@ input::-webkit-search-decoration, input::-webkit-search-cancel-button {
     display: none;
 }
 input[type=search] {
-    background: url("../img/search-white.png") no-repeat scroll 18px center rgba(0, 0, 0, 0.3);
+    background: url("/static/index/images/search-white.png") no-repeat scroll 18px center rgba(0, 0, 0, 0.3);
     border: 0px solid #DDDDDD;
     padding: 9px 10px 14px 32px;
     -webkit-border-radius: 0;
@@ -1993,16 +1959,16 @@ input::-webkit-input-placeholder {
 .banner-area li{
   margin:0 15px;
   display:inline-block;
-  width:10px;
-  height:10px;
+  width:6px;
+  height:6px;
   background: white;
   border-radius: 5px;
   border: 1px solid white;
 
-  transition:height 2s;
-  -moz-transition:height 2s; /* Firefox 4 */
-  -webkit-transition:height 2s; /* Safari and Chrome */
-  -o-transition:height 2s; /* Opera */
+  transition:height 1s;
+  -moz-transition:height 1s; /* Firefox 4 */
+  -webkit-transition:height 1s; /* Safari and Chrome */
+  -o-transition:height 1s; /* Opera */
 
 }
 
@@ -2041,7 +2007,6 @@ input::-webkit-input-placeholder {
 .box1Bot li a{ display:block; height:100%;}
 .box1BotImgBg{ width:174px; height:174px; border:1px solid #dbdbdb; border-radius:50%; margin:0 auto; position:relative; display:flex; justify-content:center; align-items:center;}
 .box1BotImgBg:after{ display:block; content:""; position:absolute; top:29px; right:15px; width:7px; height:7px; background:#3754a8; border-radius:50%;}
-.box1BotCir{ position:absolute; left:50%; top:50%; width:144px; height:144px; margin-left:-72px; margin-top:-72px; background:url(../images/box1BotCir.png) center center no-repeat; background-size:cover;}
 .box1BotImg{ width:84px; height:84px; background:#3754a8; display:flex; justify-content:center; align-items:center; border-radius:50%; transition:all 0.4s ease 0s;}
 .box1BotH3{ font-size:20px; color:#222222; line-height:150%; padding:10px 0;}
 .box1BotBrief{ font-size:14px; color:#999999; line-height:26px; height:52px; margin:0 0 20px; overflow:hidden;}
@@ -2056,7 +2021,6 @@ input::-webkit-input-placeholder {
 from { transform:rotate(0);}
 to { transform:rotate(360deg);}
 }
-.box2Bg{ background:url(../images/box2Bg.jpg) center top no-repeat; background-size:cover;}
 .box2Bg .title h2,.box2Bg .titleBrief{ color:#FFFFFF;}
 .box2List{width:81%;margin-left:9.5%}
 .box2List li{ padding:0px !important}
@@ -2250,7 +2214,6 @@ top:20%;
 right:0;
 z-index:999;
    max-width:60px;
-   background:auto;
    margin:40px auto;
    padding:10px 0px 20px 0px;
 }
