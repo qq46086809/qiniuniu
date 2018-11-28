@@ -4,6 +4,7 @@
 <head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
     <title>登录</title>
     <link rel="stylesheet" th:href="@{{path}static/index/css/login.css(path=${rootPath})}">
+    <link rel="stylesheet" th:href="@{{path}static/index/css/iCheck/custom.css(path=${rootPath})}">
     <style type="text/css">
             ul,li{
             list-style: none;
@@ -36,7 +37,47 @@
         </ul>
     </nav>
 </div>
-<div class="login clearfix">
+
+
+
+<div class="insert clearfix" id="insertbox" style="display:none" >
+    <div class="login-image-box float-left">
+        <div class="insert-box">
+            <p style="display: inline;float: right;margin-top: 72px; margin-right: 20px;">已有企牛牛账号？<a style="color:#00c2de" onclick="Tologin()">快捷登录></a></p>
+            <h4 class="zhuce">欢迎注册企牛牛</h4>
+            <form th:action="@{/admininsert}" method="post" id="insertForm">
+                <!-- 用户名 -->
+                <div class=" clearfix login-text">
+                    <input class="float-left insert-input" autocomplete="off"  type="text" name="user" id="user" placeholder="设置会员名称"
+                           required>
+                </div>
+                <!-- 密码 -->
+                <div class=" clearfix login-text">
+                    <input class="float-left insert-input" autocomplete="off"  type="password" name="pwd" id="pwd"
+                           placeholder="设置你的登录密码" required>
+                </div>
+                <div class=" clearfix login-text">
+                    <input class="float-left insert-input" autocomplete="off"  type="password" name="check-pwd" id="check-pwd"
+                           placeholder="请再次输入你的密码" required>
+                </div>
+                <div class=" clearfix login-text">
+                    <input class="float-left insert-input" autocomplete="off"  type="password" name="phone" id="phone"
+                           placeholder="请输入手机号" required>
+                </div>
+                <button onclick="Insert()" class="insert-insert">
+                    <span class="">同意条款并注册</span>
+                </button>
+                <div class="col-sm-12" style="text-align:center">
+                    <label class="checkbox-inline i-checks" style="padding-top: 10px;padding-left: 0px;font-size: 14px; color: #00c2de;">
+                        <input type="checkbox" value="option1">《企牛牛网站服务条款》|《法律声明和隐私政策》</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="login clearfix" id="loginbox"  style="display:block">
     <div class="login-image-box float-left">
         <img src="/static/index/images/login.jpg" alt="" style="float:left">
         <div class="login-box">
@@ -45,12 +86,12 @@
                 <!-- 用户名 -->
                 <div class="login-username clearfix">
                     <input type="hidden" name="loginway" id="loginway" value="0"/>
-                    <input class="float-left login-input" type="text" name="username" id="username" placeholder="用户名"
+                    <input class="float-left login-input" autocomplete="off"  type="text" name="username" id="username" placeholder="用户名"
                            required>
                 </div>
                 <!-- 密码 -->
                 <div class="login-password clearfix">
-                    <input class="float-left login-input" type="password" name="password" id="password"
+                    <input class="float-left login-input" autocomplete="off"  type="password" name="password" id="password"
                            placeholder="请输入密码" required>
                 </div>
                 <button onclick="severCheck()" class="login-login">
@@ -59,7 +100,7 @@
             </form>
             <div><p style="margin-left:200px;margin-top:10px">
                 <a style="margin-left:20px;color:#999;cursor:pointer;">忘记密码</a>
-                <a style="margin-left:30px;color:#999;cursor:pointer;">免费注册</a></p></div>
+                <a style="margin-left:30px;color:#999;cursor:pointer;" onclick="Toinsert()">免费注册</a></p></div>
             <div style="margin-top:70px;margin-left:92px;"><p>其他登录方式 :
                 <img src="/static/index/images/wx.png" style="margin-left:10px">
                 <img src="/static/index/images/qq.png" style="margin-left:10px">
@@ -68,6 +109,8 @@
     </div>
 
 </div>
+
+
 <footer class="login-footer">
     <div style="margin-top:45px;">
         <div class="fh5co-copyright text-center">
@@ -77,10 +120,31 @@
         </div>
     </div>
 </footer>
+<script src="/static/index/js/jquery.min.js"></script>
 <script src="/static/index/js/base64.js"></script>
+<script src="/static/index/js/iCheck/icheck.min.js"></script>
 <script>
+ $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+            });
+        });
+
     		function severCheck(){
 			$("#loginForm").submit();
+		}
+
+
+
+		function Tologin(){
+		$("#loginbox").attr("style","display:block")
+			$("#insertbox").attr("style","display:none")
+
+		}
+
+		function Toinsert(){
+		$("#loginbox").attr("style","display:none")
+			$("#insertbox").attr("style","display:block")
 		}
 
 </script>

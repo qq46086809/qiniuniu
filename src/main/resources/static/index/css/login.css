@@ -29,7 +29,6 @@ margin-left: 450px;
     border: 1px solid #dddddd;
     height: 473px;
     width: 500px;
-    margin-top: -25px;
 }
 
 .login-userinfo{
@@ -130,12 +129,72 @@ input[type=checkbox].rember:checked+.lbl::before{
 }
 
 .login-footer{
-background:#12072f;
-margin-top:30px;
-    bottom: 0px;
-    position: fixed;
+background: #12072f;
+    margin-top: 750px;
+    position: absolute;
     width: 100%;
     height: 205px;
 }
 
+input:-webkit-autofill {
+-webkit-box-shadow: 0 0 0px 1000px white inset;
+}
 
+
+.zhuce{
+margin-left: 215px;
+text-align: center;
+    margin-top: 64px;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.login-text{
+text-align:center;
+height: 40px;
+    margin-top: 31px;
+    margin-bottom: 30px;
+}
+
+
+.insert-insert{
+display: block;
+    margin: 0 auto;
+    width: 350px;
+    height: 47px;
+    background-color: #00c2de;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 17px;
+    border: 2px solid;
+    margin-top: 20px;
+}
+
+.insert-input{
+height: 40px;
+    width: 350px;
+    padding-left: 12px;
+    border: 1px solid #d3deec;
+}
+
+.insert-box{
+border: 1px solid #dddddd;
+    height: 539px;
+    width: 950px;
+    margin-top: -25px;
+}
+
+
+.insert{
+box-sizing: border-box;
+    position: absolute;
+    width: 960px;
+    height: 513px;
+    top: 347px;
+    left: 47%;
+    margin-top: -225px;
+    margin-left: -460px;
+    padding: 35px;
+    border-radius: 5px;
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title th:text=${title}></title>
+    <link rel="stylesheet" th:href="@{{path}static/index/css/service.css(path=${rootPath})}">
+    <style type="text/css">
+    </style>
+</head>
+<style>
+    ul,li{
+            list-style: none;
+        }
+
+        .total-police-alert{
+	width: 500px;
+	height: 90px;
+	padding: 10px;
+	margin: 100px auto 0;
+	font: 36px "华文楷体";
+	line-height: 90px;
+	color: #fff;
+	box-shadow: -2px 2px 10px #000;
+	background-color: rgba(81,167,229,1.00);
+	border-radius: 10px;
+        }
+        .fl{
+            float:left;
+        }
+        .fr{
+            float:right;
+        }
+
+
+</style>
+<body style="min-width:1500px">
+<div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
+</div>
+
+<div class="banner-engine">
+    <ul class="banner-ul clearfix" id="slider-back">
+        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
+    </ul>
+    <!-- 对应banner文字 -->
+    <div class="slider-main banner-div">
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="service-text1">技术支持与服务</p>
+                <p class=" service-text2">企牛牛提供适合不同类型企业的支持计划，专业技术服务，企牛牛让业务更高效。</p>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="service-text1">技术支持与服务</p>
+                <p class=" service-text2">企牛牛提供适合不同类型企业的支持计划，专业技术服务，企牛牛让业务更高效。</p>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="service-text1">技术支持与服务</p>
+                <p class=" service-text2">企牛牛提供适合不同类型企业的支持计划，专业技术服务，企牛牛让业务更高效。</p>
+            </div>
+        </div>
+    </div>
+    <!-- banner索引 -->
+    <div class="banner-point">
+        <div class="auto">
+            <ul class="banner-area" id="slider-btn">
+                <li class="active" data-delay="12000"></li>
+                <li data-delay="8000"></li>
+                <li data-delay="8000"></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="col-md-8 service-left  animate-box">
+    <p class="service-remen-title">热门服务</p>
+    <div class="col-md-4" style="padding-left:0px;">
+        <p class="jskf">技术开发</p>
+        <div class="remen-nav">
+            <p class="remen-title">响应式网站开发</p><p class="tehui">限时特惠</p>
+            <p class="remen-desc">一站式服务</p>
+            <p class="price">¥200</p>
+            <p class="price-after">起</p>
+            <button class="btn btn-default price-button">查看详情</button>
+        </div>
+        <div class="feature-left-nav">
+            <a class="menu_curson">
+                <p class="remen-list-title">微信接口开发</p>
+                <p class="remen-list-desc">微信开发，给您最优质的服务</p>
+            </a>
+
+        </div>
+        <div class="feature-left-nav">
+            <a class="menu_curson">
+                <p class="remen-list-title">微网站开发</p>
+                <p class="remen-list-desc">微信官网一站式开发服务</p>
+            </a>
+        </div>
+        <div class="feature-left-nav">
+            <a class="menu_curson">
+                <p class="remen-list-title">APP开发</p>
+                <p class="remen-list-desc">移动端开发服务</p>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <p class="wlyx">网络营销与推广</p>
+        <div class="remen-nav">
+            <p class="remen-title">新媒体软文推广</p><p class="tehui">限时特惠</p>
+            <p class="remen-desc">一站式服务</p>
+            <p class="price">¥0.01</p>
+            <p class="price-after">起</p>
+            <button class="btn btn-default price-button">查看详情</button>
+        </div>
+        <div class="feature-left-nav">
+            <a class="menu_curson">
+                <p class="remen-list-title">新媒体代运营</p>
+                <p class="remen-list-desc">微信开发，给您最优质的服务</p>
+            </a>
+
+        </div>
+        <div class="feature-left-nav">
+            <a class="menu_curson">
+                <p class="remen-list-title">SEO与SEM优化</p>
+                <p class="remen-list-desc">微信官网一站式开发服务</p>
+            </a>
+        </div>
+        <div class="feature-left-nav">
+            <a class="menu_curson">
+                <p class="remen-list-title">掌上魔都/推文推广</p>
+                <p class="remen-list-desc">移动端开发服务</p>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <p class="h5cy">H5创意开发</p>
+        <div class="remen-nav">
+            <p class="remen-title">品牌推广创意开发</p><p class="tehui">限时特惠</p>
+            <p class="remen-desc">一站式服务</p>
+            <p class="price">¥10</p>
+            <p class="price-after">起</p>
+            <button class="btn btn-default price-button">查看详情</button>
+        </div>
+        <div class="feature-left-nav">
+            <a class="menu_curson">
+                <p class="remen-list-title">调查问卷设计开发</p>
+                <p class="remen-list-desc">微信开发，给您最优质的服务</p>
+            </a>
+
+        </div>
+        <div class="feature-left-nav">
+            <a class="menu_curson">
+                <p class="remen-list-title">S互动营销开发</p>
+                <p class="remen-list-desc">微信官网一站式开发服务</p>
+            </a>
+        </div>
+        <div class="feature-left-nav">
+            <a class="menu_curson">
+                <p class="remen-list-title">辅助工具开发</p>
+                <p class="remen-list-desc">移动端开发服务</p>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="col-md-12" style="padding-left:0px;    margin-top: 30px;">
+        <p class="sjsj">视觉设计类服务</p>
+        <div class="col-md-12" style="margin-left:0px;">
+            <div id="wrapper">
+                <div id="left-side" style="width:25%;">
+                    <ul style="padding-left:0px;">
+                        <li class="choose active">
+                           产品设计类交互
+                        </li>
+                        <li class="pay">
+                           UI界面设计
+                        </li>
+                        <li class="wrap">
+                           手绘插画
+                        </li>
+                        <li class="ship">
+                           排版设计
+                        </li>
+                    </ul>
+                </div>
+                <div id="right-side">
+                    <div id="first" class="active">
+                        <div class="col-md-3 warpper-margin">
+                                <a class="wrapper-side-desc">AI</a>
+                                <a class="wrapper-side-desc">数字课件制作</a>
+                                <a class="wrapper-side-desc">H5制作</a>
+                                <a class="wrapper-side-desc">POP设计</a>
+                        </div>
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">VR</a>
+                            <a class="wrapper-side-desc">微电影制作</a>
+                            <a class="wrapper-side-desc">小游戏设计</a>
+                            <a class="wrapper-side-desc">卡通形象设计</a>
+                        </div>
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">VI设计</a>
+                            <a class="wrapper-side-desc">平面设计</a>
+                            <a class="wrapper-side-desc">漫画人物设计</a>
+                            <a class="wrapper-side-desc">MG动画制作</a>
+                        </div>
+                    </div>
+                    <div id="second">
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">AI</a>
+                            <a class="wrapper-side-desc">数字课件制作</a>
+                            <a class="wrapper-side-desc">H5制作</a>
+                            <a class="wrapper-side-desc">POP设计</a>
+                        </div>
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">VR</a>
+                            <a class="wrapper-side-desc">微电影制作</a>
+                            <a class="wrapper-side-desc">小游戏设计</a>
+                            <a class="wrapper-side-desc">卡通形象设计</a>
+                        </div>
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">VI设计</a>
+                            <a class="wrapper-side-desc">平面设计</a>
+                            <a class="wrapper-side-desc">漫画人物设计</a>
+                            <a class="wrapper-side-desc">MG动画制作</a>
+                        </div>
+                    </div>
+                    <div id="third">
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">AI</a>
+                            <a class="wrapper-side-desc">数字课件制作</a>
+                            <a class="wrapper-side-desc">H5制作</a>
+                            <a class="wrapper-side-desc">POP设计</a>
+                        </div>
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">VR</a>
+                            <a class="wrapper-side-desc">微电影制作</a>
+                            <a class="wrapper-side-desc">小游戏设计</a>
+                            <a class="wrapper-side-desc">卡通形象设计</a>
+                        </div>
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">VI设计</a>
+                            <a class="wrapper-side-desc">平面设计</a>
+                            <a class="wrapper-side-desc">漫画人物设计</a>
+                            <a class="wrapper-side-desc">MG动画制作</a>
+                        </div>
+                    </div>
+                    <div id="fourth">
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">AI</a>
+                            <a class="wrapper-side-desc">数字课件制作</a>
+                            <a class="wrapper-side-desc">H5制作</a>
+                            <a class="wrapper-side-desc">POP设计</a>
+                        </div>
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">VR</a>
+                            <a class="wrapper-side-desc">微电影制作</a>
+                            <a class="wrapper-side-desc">小游戏设计</a>
+                            <a class="wrapper-side-desc">卡通形象设计</a>
+                        </div>
+                        <div class="col-md-3 warpper-margin">
+                            <a class="wrapper-side-desc">VI设计</a>
+                            <a class="wrapper-side-desc">平面设计</a>
+                            <a class="wrapper-side-desc">漫画人物设计</a>
+                            <a class="wrapper-side-desc">MG动画制作</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    <div class="col-md-6" style="padding-left:0px;">
+        <p class="ywfw">运维服务</p>
+        <div class="col-md-6 menu-margin">
+            <a class="wrapper-side-menu">VI设计</a>
+            <a class="wrapper-side-menu">平面设计</a>
+            <a class="wrapper-side-menu">漫画人物设计</a>
+            <a class="wrapper-side-menu">MG动画制作</a>
+        </div>
+        <div class="col-md-6 menu-margin">
+            <a class="wrapper-side-menu">VI设计</a>
+            <a class="wrapper-side-menu">平面设计</a>
+            <a class="wrapper-side-menu">漫画人物设计</a>
+            <a class="wrapper-side-menu">MG动画制作</a>
+        </div>
+    </div>
+    <div class="col-md-6" style="padding-left:0px;">
+        <p class="tgfw">推广类服务</p>
+        <div class="col-md-6 menu-margin">
+            <a class="wrapper-side-menu">新媒体代运营</a>
+            <a class="wrapper-side-menu">新媒体软文推广</a>
+            <a class="wrapper-side-menu">朋友圈广告</a>
+            <a class="wrapper-side-menu">多渠道推广</a>
+        </div>
+        <div class="col-md-6 menu-margin">
+            <a class="wrapper-side-menu">搜索排名</a>
+            <a class="wrapper-side-menu">SEO和SEM优化</a>
+            <a class="wrapper-side-menu">掌上魔都/推文推广</a>
+        </div>
+    </div>
+    <div class="col-md-12" style="padding-left:0px;">
+        <p class="hyfw">会员服务</p>
+        <div class="col-md-3 menu-margin">
+            <a class="wrapper-side-menu">签到</a>
+            <a class="wrapper-side-menu">打招呼</a>
+            <a class="wrapper-side-menu">投票</a>
+            <a class="wrapper-side-menu">提问</a>
+        </div>
+        <div class="col-md-3 menu-margin">
+            <a class="wrapper-side-menu">抽奖</a>
+            <a class="wrapper-side-menu">打赏</a>
+            <a class="wrapper-side-menu">名片台</a>
+            <a class="wrapper-side-menu">互动游戏</a>
+        </div>
+        <div class="col-md-3 menu-margin">
+            <a class="wrapper-side-menu">发红包</a>
+            <a class="wrapper-side-menu">大屏幕互动</a>
+            <a class="wrapper-side-menu">数据统计</a>
+            <a class="wrapper-side-menu">物料管理</a>
+        </div>
+        <div class="col-md-3 menu-margin">
+            <a class="wrapper-side-menu">直播</a>
+        </div>
+    </div>
+
+    <div class="col-md-9" style="padding-left:0px;">
+        <p class="zscq">知识产权</p>
+        <div class="col-md-4 menu-margin">
+            <a class="wrapper-side-menu">商标注册</a>
+            <a class="wrapper-side-menu">加急商标注册</a>
+            <a class="wrapper-side-menu">海外商标注册</a>
+            <a class="wrapper-side-menu">商标交易</a>
+        </div>
+        <div class="col-md-4 menu-margin">
+            <a class="wrapper-side-menu">商标设计</a>
+            <a class="wrapper-side-menu">软件著作权</a>
+            <a class="wrapper-side-menu">知识产权延伸</a>
+            <a class="wrapper-side-menu">文字著作权</a>
+        </div>
+        <div class="col-md-4 menu-margin">
+            <a class="wrapper-side-menu">美术著作权</a>
+            <a class="wrapper-side-menu">专利</a>
+            <a class="wrapper-side-menu">版权保护</a>
+            <a class="wrapper-side-menu">版权交易</a>
+        </div>
+    </div>
+
+    <div class="col-md-3" style="padding-left:0px;">
+        <p class="gscs">工商财税</p>
+        <div class="col-md-12 menu-margin">
+            <a class="wrapper-side-menu">代理记账</a>
+            <a class="wrapper-side-menu">税务代办</a>
+            <a class="wrapper-side-menu">财务审计</a>
+        </div>
+
+    </div>
+
+    <div class="col-md-6" style="padding-left:0px;">
+        <p class="ywfw">技术开发</p>
+        <div class="col-md-6 menu-margin">
+            <a class="wrapper-side-menu">微信接口开发</a>
+            <a class="wrapper-side-menu">响应式网站开发</a>
+            <a class="wrapper-side-menu">微网站开发</a>
+            <a class="wrapper-side-menu">APP开发</a>
+        </div>
+        <div class="col-md-6 menu-margin">
+            <a class="wrapper-side-menu">数据可视化后台开发</a>
+            <a class="wrapper-side-menu">管理应用软件开发</a>
+        </div>
+    </div>
+    <div class="col-md-6" style="padding-left:0px;">
+        <p class="tgfw">法律服务</p>
+        <div class="col-md-6 menu-margin">
+            <a class="wrapper-side-menu">认识法律顾问</a>
+            <a class="wrapper-side-menu">电话问顾问</a>
+            <a class="wrapper-side-menu">合同</a>
+            <a class="wrapper-side-menu">股权期权</a>
+        </div>
+        <div class="col-md-6 menu-margin">
+            <a class="wrapper-side-menu">投资金融</a>
+            <a class="wrapper-side-menu">公司经营</a>
+            <a class="wrapper-side-menu">项目合规</a>
+        </div>
+    </div>
+</div>
+<div th:replace="index/index/side :: side"></div>
+<div th:replace="index/index/footer :: footer"></div>
+<div th:include="index/index/js :: onload_js">
+</div>
+<script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
+<script type="text/javascript" src="/static/index/js/public.js"></script>
+<script type="text/javascript" src="/static/index/js/aui.js"></script>
+<script type="text/javascript" src="/static/index/js/service.js"></script>
+<script type="text/javascript">
+$(function() {
+    var d = $("#slider-btn li");
+    var j = $("#slider-back li");
+    var a = $(".banner-text");
+    var h = $(".slider-text");
+    var e = $(".banner-txt a");
+    var i = 0;
+    d.each(function(l) {
+        $(this).mouseover(function() {
+            f(l)
+        });
+        $(this).data("index")
+    });
+    function f(l) {
+        i = l;
+        d.eq(l).addClass("active").siblings().removeClass();
+        var m = a.eq(l);
+        var n = m.children();
+        m.siblings(".banner-text").stop(true).fadeOut(100);
+        m.show();
+        n.each(function() {
+            var o = $(this);
+            o.css({
+                display: "block",
+                opacity: 0,
+                top: o.data("start_top") || 0,
+                left: o.data("start_left") || 0
+            });
+            o.stop(true).delay(400).animate({
+                display: "none",
+                opacity: 1,
+                top: o.data("to_top"),
+                left: o.data("to_left")
+            },
+            1200);
+            if (o.data("class") !== undefined) {
+                o.removeClass(o.data("class"));
+                setTimeout(function() {
+                    o.addClass(o.data("class"))
+                },
+                0)
+            }
+        });
+        j.eq(l).siblings().stop().animate({
+            opacity: 0
+        },
+        600);
+        j.eq(l).stop().animate({
+            opacity: 1
+        },
+        600)
+    }
+    function g() {
+        i++;
+        if (i == d.length) {
+            i = 0
+        }
+        f(i)
+    }
+    var c = null;
+    var b = $("#slider-btn");
+    var k = function() {
+        var l = b.find(".active");
+        c = setTimeout(function() {
+            g();
+            k()
+        },
+        l.data("delay") || 8000)
+    };
+    k();
+    d.hover(function() {
+        clearInterval(c)
+    },
+    function() {
+        k()
+    });
+    f(0)
+});
+
+
+
+</script>
+</body>
+</html>
