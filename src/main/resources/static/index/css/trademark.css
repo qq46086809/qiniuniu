@@ -1,0 +1,102 @@
+#fh5co-header-section{
+    background:#292f36 !important;
+}
+.bgmenu{
+    padding-top: 115px;
+    width: 70%;
+    margin-left: 17%;
+}
+.bgmenu1{
+    padding-top: 50px;
+}
+.menu-pic{
+    border-right: 2px solid rgb(219,221,221);
+    /*margin-right: -26px;*/
+}
+
+.menu-service{
+    /*border-left: 2px solid rgb(219,221,221);*/
+    padding-left: 55px;
+}
+.menu-title{
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.menu-title1{
+    padding: 5px 10px;
+    border-left: 4px solid red;
+}
+.menu-title1 h4{
+
+}
+.bgmenu-serviceamount p{
+    color: #000;
+    font-weight: 400;
+}
+
+.newprice{
+    font-size: 30px;
+    color: red;
+}
+.oldprice{
+    color: gray;
+    margin-left: 20px;
+}
+.bgmenu-text{
+    margin-top: 30px;
+    /*margin: 5px 0;*/
+}
+.bgmenu-text p{
+    display: inline-block;
+    margin-top: 15px;
+}
+.bgmenu-button{
+    margin-top: 49px;
+}
+.bgmenu-lc li{
+    float: left;
+    margin-right: 30px;
+}
+.box2List{
+    width: 58%;
+    margin-left: 21.5%;
+}
+.box2List1{
+    width: 60% !important;
+}
+.box2List1 li{
+    margin-right: 29px;
+}
+.box2List1 p{
+    font-size: 18px;
+    font-weight: 400;
+    color:#333333;
+    margin-top: 20px;
+    text-align: center;
+}
+.box2List2 img{
+    width: 85%;
+}
+.box2List3 li{
+    margin-right: 75px;
+}
+
+.button-demo p{
+    margin-bottom: 0.5em;
+
+}
+.two-menu{
+    font-weight: 500;
+}
+.three-menu{
+    font-weight: 400;
+}
+.four-menu{
+    font-size: 16px;
+    font-weight:400;
+    color:#333333;
+}
+.bgmenu-title{
+    margin-top: 60px;
+}

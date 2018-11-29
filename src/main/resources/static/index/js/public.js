@@ -55,6 +55,15 @@ jQuery(function(){
     });
 
 
+
+$("#returnTop").click(function() {
+    $("html, body").animate({
+        scrollTop: $("#fh5co-header").offset().top }, {duration: 1500,easing: "swing"});
+    return false;
+});
+
+
+
 (function(){
     $(".cards-2").removeClass("animated");
     $(".cards-3").removeClass(" animated");

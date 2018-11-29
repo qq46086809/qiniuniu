@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title th:text=${title}></title>
+    <link rel="stylesheet" th:href="@{{path}static/admin/assets/js/button/ladda/ladda.min.css(path=${rootPath})}">
+    <link rel="stylesheet" href="/static/index/css/trademark.css">
+    <style type="text/css">
+    </style>
+
+</head>
+<style>
+    ul,li{
+        list-style: none;
+    }
+
+    .total-police-alert{
+        width: 500px;
+        height: 90px;
+        padding: 10px;
+        margin: 100px auto 0;
+        font: 36px "华文楷体";
+        line-height: 90px;
+        color: #fff;
+        box-shadow: -2px 2px 10px #000;
+        background-color: rgba(81,167,229,1.00);
+        border-radius: 10px;
+    }
+    .fl{
+        float:left;
+    }
+    .fr{
+        float:right;
+    }
+
+</style>
+<body style="min-width:1500px">
+<div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
+</div>
+
+
+<div class="container">
+    <div class="bgmenu">
+        <div class=" row">
+            <div class="menu-title">
+                <a href="#" style="color: #000;">支持与服务</a> <strong>></strong> <a href="#" style="color: red;">商标设计</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 menu-pic">
+                <div class="container">
+                    <div class="col-md-11 col-sm-10">
+                        <a href="#"><img src="/static/index/images/trademark2.png" style="width: 100%;"></a>
+                    </div>
+                    <div class="col-md-1 col-sm-1" style="  margin-top: 50%;    margin-left: -10px;">
+                        <a class="menu-pic-link"><i class="fa fa-link fa-2x" style="color:#555555"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-8 col-sm-8 menu-service" style="width: 57.66667%;">
+                <div>
+                    <div class=" bgmenu-text">
+                        <h3 style="    margin: -20px 0 18px;">商标设计</h3>
+                        <p style="font-weight: 300; color: #000">为客户提供商标的注册服务，如被驳回，则完全免费为客户再次提供【普通商标注册】服务，或抵扣【商标驳回复审】服务费600元。</p>
+                    </div>
+                    <div class="bgmenu-text">
+                        <a href="#" class="newprice">¥12000</a>
+                        <a href="#" class="oldprice"><s>¥248500</s></a>
+                        <img src="/static/index/images/trademarkflowers.png" style="float:right;" alt="">
+                    </div>
+                    <div class="bgmenu-text">
+                        <p>服务地区：</p>
+                        <a href="#"><p>全国</p></a>
+                        <br>
+                        <p>服务期限：</p>
+                        <a href="#"><p>一次性</p></a>
+                    </div>
+                    <div class=" bgmenu-button" >
+                        <a href="#" class="btn btn-default" >购买使用</a>
+                    </div>
+                    <div class=" bgmenu-text bgmenu-serviceamount">
+                        <p style="    font-size: 17px;">销售量：</p>
+                        <p style="    font-size: 19px;">5879</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="container">
+    <div class="bgmenu bgmenu1">
+        <div class="row">
+            <div class="menu-title menu-title1">
+                <h3 style="font-weight: 400;color: #000">服务内容详情介绍</h3>
+            </div>
+        </div>
+        <div class="row" style="position:relative;">
+            <div class="col-md-12 col-sm-12 ">
+                <a href="#"><img src="/static/index/images/trademarkdesign-menu.png" alt="" class="img-responsive"></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section ">
+            <p class="one-menu">服务流程</p>
+        </div>
+    </div>
+</div>
+<ul class="box2List list-unstyled box2List2 row ">
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignicon1.png" class="img-responsive"></div>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignicon2.png" class="img-responsive"></div>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignicon3.png" class="img-responsive"></div>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignicon4.png" class="img-responsive"></div>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignicon5.png" class="img-responsive"></div>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignicon6.png" class="img-responsive"></div>
+        </div>
+    </li>
+
+</ul>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section ">
+            <p class="one-menu">交付材料</p>
+
+        </div>
+    </div>
+</div>
+<ul class="box2List list-unstyled box2List1 box2List3 row col-md-offset-2">
+
+    <li class="col-xs-12 col-sm-3 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignlist1.png" class="img-responsive"></div>
+            <p>.ai源文件</p>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-3 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignlist2.png" class="img-responsive"></div>
+            <p>.jpg格式图片文件</p>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-3 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignlist3.png" class="img-responsive"></div>
+            <p>.png格式透明图片文件</p>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-3 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkdesignlist4.png" class="img-responsive"></div>
+            <p>.psd源文件</p>
+        </div>
+    </li>
+
+
+</ul>
+
+<div class="container bgmenu-title  button-demo" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2  ">
+            <p class="two-menu">办理步骤及所需时间</p>
+
+            <p class="four-menu">1、咨询右侧客服；</p>
+            <p class="four-menu">2、付款成功后，为您分配专业工程师；</p>
+            <p class="four-menu">3、专业工程师将会及时与你联系，1对1的为你提供服务；</p>
+
+        </div>
+    </div>
+</div>
+<div class="container bgmenu-title button-demo" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2  ">
+            <p class="two-menu">办理所需材料</p>
+            <p class="four-menu">1、咨询右侧客服；</p>
+            <p class="four-menu">2、付款成功后，为您分配专业工程师；</p>
+            <p class="four-menu">3、专业工程师将会及时与你联系，1对1的为你提供服务；</p>
+
+        </div>
+    </div>
+</div>
+<div class="container bgmenu-title button-demo" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2  ">
+            <p class="two-menu">售后服务</p>
+            <p class="three-menu">客服7x24小时为你服务，如有疑问请联系客服，或致电：0755-25886161</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div th:replace="index/index/side :: side"></div>
+<div th:replace="index/index/footer :: footer"></div>
+<div th:include="index/index/js :: onload_js"></div>
+
+<script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
+<script type="text/javascript" src="/static/index/js/public.js"></script>
+</body>
+</html>

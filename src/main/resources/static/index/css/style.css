@@ -66,21 +66,7 @@ a:active{text-decoration:none;}
 .button-center{
   margin-top: 30px!important;
 }
-/*
 
-::-webkit-input-placeholder { !* WebKit, Blink, Edge *!
-  font-size: 15px;
-}
-:-moz-placeholder { !* Mozilla Firefox 4 to 18 *!
-  font-size: 15px;
-}
-::-moz-placeholder { !* Mozilla Firefox 19+ *!
-  font-size: 15px;
-}
-:-ms-input-placeholder { !* Internet Explorer 10-11 *!
-  font-size: 15px;
-}
-*/
 
 
 
@@ -1365,6 +1351,9 @@ font-size:23px;
    color:#f0114a;
    border-color:#f0114a;
    background-color:#fff;
+}
+#register:hover, #register:active, #register:focus{
+  color: #fff;
 }
 
 
