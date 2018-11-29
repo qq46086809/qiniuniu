@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title th:text=${title}></title>
+    <link rel="stylesheet" th:href="@{{path}static/index/css/newslist.css(path=${rootPath})}">
+    <style type="text/css">
+    </style>
+</head>
+<style>
+    ul,li{
+            list-style: none;
+        }
+
+        .total-police-alert{
+	width: 500px;
+	height: 90px;
+	padding: 10px;
+	margin: 100px auto 0;
+	font: 36px "华文楷体";
+	line-height: 90px;
+	color: #fff;
+	box-shadow: -2px 2px 10px #000;
+	background-color: rgba(81,167,229,1.00);
+	border-radius: 10px;
+        }
+        .fl{
+            float:left;
+        }
+        .fr{
+            float:right;
+        }
+
+
+</style>
+<body style="min-width:1500px">
+<div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
+</div>
+
+<div class="banner-engine">
+    <ul class="banner-ul clearfix" id="slider-back">
+        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/about1.jpg) center center  /100% 500px no-repeat;"></li>
+    </ul>
+    <!-- 对应banner文字 -->
+    <div class="slider-main banner-div">
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="40" data-start_left="0" data-to_left="0">
+                <p class="newslist-text1">大咖云集，知识分享的</p>
+                <p class="newslist-text1">开发者技术社区</p>
+                <p class=" newslist-text2" style="margin-top:30px;">实战干货、在线直播、专家问答、技术论坛、</p>
+                <p class=" newslist-text2">学习、分享、成长、共建</p>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="40" data-start_left="0" data-to_left="0">
+                <p class="newslist-text1">大咖云集，知识分享的</p>
+                <p class="newslist-text1">开发者技术社区</p>
+                <p class=" newslist-text2" style="margin-top:30px;">实战干货、在线直播、专家问答、技术论坛、</p>
+                <p class=" newslist-text2">学习、分享、成长、共建</p>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="40" data-start_left="0" data-to_left="0">
+                <p class="newslist-text1">大咖云集，知识分享的</p>
+                <p class="newslist-text1">开发者技术社区</p>
+                <p class=" newslist-text2" style="margin-top:30px;">实战干货、在线直播、专家问答、技术论坛、</p>
+                <p class=" newslist-text2">学习、分享、成长、共建</p>
+            </div>
+        </div>
+    </div>
+    <!-- banner索引 -->
+    <div class="banner-point">
+        <div class="auto">
+            <ul class="banner-area" id="slider-btn">
+                <li class="active" data-delay="12000"></li>
+                <li data-delay="8000"></li>
+                <li data-delay="8000"></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container button-demo menu-bottom">
+    <div class="row">
+        <div class="col-md-4 newslist-left text-center animate-box">
+            <div class="col-md-4">
+                <div class="newslist-services">
+                    <a class="on-about">公司动态</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="newslist-services">
+                    <a class="on-about">行业动态</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="newslist-services">
+                    <a class="on-about">最新案例动态</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container button-demo">
+    <div class="row">
+        <div class=" soilder-left animate-box">
+                <div class="div-white">
+                    <div class="col-md-5" >  <image src="/static/index/images/news-logo.jpg" class="solider-img"/></div>
+                    <div class="col-md-7">
+                        <p class="s-title"><a class="fx-title">数名亚马逊员工反对公司参与美政府面部识别技术</a></p>
+                        <p class="s-desc">科技巨头亚马逊450多名员工敦促首席执行官杰夫.贝佐思斯停止向美国警察出售面部识别技术，近日，贝佐斯在《连线》杂志的峰会上就面部识别技术与政府合同进行了辩护</p>
+                        <p class="s-time">2018-12-12</p>
+                        <a class="s-button">查看详情</a>  <p class="s-con"> > </p>
+                        <p class="s-fenxiang">分享到：<a class="fx-a"><i class="fa fa-weibo fa-2x"></i></a><a class="fx-a2"><i class="fa fa-wechat fa-2x"></i></a></p>
+                    </div>
+                </div>
+            <div class="div-white">
+                <div class="col-md-5" >  <image src="/static/index/images/news-logo.jpg" class="solider-img"/></div>
+                <div class="col-md-7">
+                    <p class="s-title"><a class="fx-title">数名亚马逊员工反对公司参与美政府面部识别技术</a></p>
+                    <p class="s-desc">科技巨头亚马逊450多名员工敦促首席执行官杰夫.贝佐思斯停止向美国警察出售面部识别技术，近日，贝佐斯在《连线》杂志的峰会上就面部识别技术与政府合同进行了辩护</p>
+                    <p class="s-time">2018-12-12</p>
+                    <a class="s-button">查看详情</a>  <p class="s-con"> > </p>
+                    <p class="s-fenxiang">分享到：<a class="fx-a"><i class="fa fa-weibo fa-2x"></i></a><a class="fx-a2"><i class="fa fa-wechat fa-2x"></i></a></p>
+                </div>
+            </div>
+            <div class="div-white">
+                <div class="col-md-5" >  <image src="/static/index/images/news-logo.jpg" class="solider-img"/></div>
+                <div class="col-md-7">
+                    <p class="s-title"><a class="fx-title">数名亚马逊员工反对公司参与美政府面部识别技术</a></p>
+                    <p class="s-desc">科技巨头亚马逊450多名员工敦促首席执行官杰夫.贝佐思斯停止向美国警察出售面部识别技术，近日，贝佐斯在《连线》杂志的峰会上就面部识别技术与政府合同进行了辩护</p>
+                    <p class="s-time">2018-12-12</p>
+                    <a class="s-button">查看详情</a>  <p class="s-con"> > </p>
+                    <p class="s-fenxiang">分享到：<a class="fx-a"><i class="fa fa-weibo fa-2x"></i></a><a class="fx-a2"><i class="fa fa-wechat fa-2x"></i></a></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-3" style="width:20%">
+            <div class="div-right">
+                <p class="li-title">相关话题</p>
+                <ul style="padding-left:30px;">
+                    <li class="li-i">在互联网行业里，想法和技术哪个更重要</li>
+                    <li class="li-i">秒级通行，无一人被拒，12万人如何刷脸</li>
+                    <li class="li-i">程序员最核心的竞争力是什么</li>
+                    <li class="li-i">【现场抽奖】大家来细数2018杭州云栖大会之最</li>
+                    <li class="li-i">剧透|企牛牛应用配置管理ACM即将正式商用，聊聊你的应用配置管理的故事</li>
+                </ul>
+            </div>
+            <div class="div-right-2">
+                <p class="jj-1">企牛牛为你提供最全的</p>
+                <p class="jj-2">解决方案</p>
+                <button class="btn btn-jj">立即咨询</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container button-demo">
+    <div class="row">
+        <div class="col-md-8" style="margin-left:17%">
+            <hr style="width:43%;float:left;margin-top:13px" />
+            <p style="display: inline; margin-left: 4%; font-size: 12px; color: #999999;">下拉更多咨询</p>
+            <hr style="width:43%;float:right;margin-top:13px" />
+        </div>
+</div>
+
+<div th:replace="index/index/side :: side"></div>
+<div th:replace="index/index/footer :: footer"></div>
+<div th:include="index/index/js :: onload_js">
+</div>
+<script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
+<script type="text/javascript" src="/static/index/js/public.js"></script>
+<script type="text/javascript" src="/static/index/js/newslist.js"></script>
+<script type="text/javascript" src="/static/index/js/layer.js"></script>
+<script type="text/javascript">
+$(function() {
+    var d = $("#slider-btn li");
+    var j = $("#slider-back li");
+    var a = $(".banner-text");
+    var h = $(".slider-text");
+    var e = $(".banner-txt a");
+    var i = 0;
+    d.each(function(l) {
+        $(this).mouseover(function() {
+            f(l)
+        });
+        $(this).data("index")
+    });
+    function f(l) {
+        i = l;
+        d.eq(l).addClass("active").siblings().removeClass();
+        var m = a.eq(l);
+        var n = m.children();
+        m.siblings(".banner-text").stop(true).fadeOut(100);
+        m.show();
+        n.each(function() {
+            var o = $(this);
+            o.css({
+                display: "block",
+                opacity: 0,
+                top: o.data("start_top") || 0,
+                left: o.data("start_left") || 0
+            });
+            o.stop(true).delay(400).animate({
+                display: "none",
+                opacity: 1,
+                top: o.data("to_top"),
+                left: o.data("to_left")
+            },
+            1200);
+            if (o.data("class") !== undefined) {
+                o.removeClass(o.data("class"));
+                setTimeout(function() {
+                    o.addClass(o.data("class"))
+                },
+                0)
+            }
+        });
+        j.eq(l).siblings().stop().animate({
+            opacity: 0
+        },
+        600);
+        j.eq(l).stop().animate({
+            opacity: 1
+        },
+        600)
+    }
+    function g() {
+        i++;
+        if (i == d.length) {
+            i = 0
+        }
+        f(i)
+    }
+    var c = null;
+    var b = $("#slider-btn");
+    var k = function() {
+        var l = b.find(".active");
+        c = setTimeout(function() {
+            g();
+            k()
+        },
+        l.data("delay") || 8000)
+    };
+    k();
+    d.hover(function() {
+        clearInterval(c)
+    },
+    function() {
+        k()
+    });
+    f(0)
+});
+
+</script>
+</body>
+</html>
