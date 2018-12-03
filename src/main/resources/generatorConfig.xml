@@ -68,14 +68,14 @@
             <!--<property name="my.isgen.usekeys" value="true"/>-->
             <!--<property name="useActualColumnNames" value="false"/>-->
             <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
-
+        <!--<table tableName="t_user" domainObjectName="Tuser"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"-->
+               <!--enableSelectByExample="false" selectByExampleQueryId="false">-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true"/>-->
+        <!--</table>-->
         <!--</table>-->
 
-        <table tableName="t_user" domainObjectName="Tuser"
-               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false" selectByExampleQueryId="false">
-            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
-        </table>
+
 
     </context>
 </generatorConfiguration>

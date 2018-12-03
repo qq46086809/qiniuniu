@@ -40,8 +40,8 @@
         <jdbcConnection
                 driverClass="com.mysql.jdbc.Driver"
                 connectionURL="jdbc:mysql://127.0.0.1:3306/test"
-                userId="root"
-                password="root">
+                userId="riqing"
+                password="asdf123">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -78,8 +78,10 @@
         </table>
         <table tableName="t_sys_permission_role" domainObjectName="TsysPermissionRole" enableCountByExample="true">
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>-->
-
+        </table>
+        <table tableName="t_news" domainObjectName="News" enableCountByExample="true">
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table> -->
 
     </context>
 </generatorConfiguration>
