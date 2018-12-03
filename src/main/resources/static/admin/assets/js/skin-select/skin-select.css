@@ -158,11 +158,11 @@
     font-size: 9px!important;
 }
 .widget-menu:before {
-    content:"Widget Menu" !important;
+    content:"用户管理" !important;
 }
 .design-kit:before {
-    content:"Design Kit Menu" !important;
+    content:"文案菜单管理" !important;
 }
 .component:before {
-    content:"系统设置" !important;
+    content:"管理员设置" !important;
 }

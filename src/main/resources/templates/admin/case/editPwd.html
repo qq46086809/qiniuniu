@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
-<head th:replace="admin/common/html/tableHead :: head(~{::title},~{::link},~{::style})">
+<head th:replace="admin/common/html/tableHead :: tableHead(~{::title},~{::link},~{::style})">
 
     <title th:text=${title}></title>
     <!-- 这儿引用单独的css link -->
@@ -12,9 +12,7 @@
           rel="stylesheet"/>
 
     <style type="text/css">
-.content-wrap {
-     padding: 0px;
-}
+
 body {
 	 color: #9ea7b3;
     font-family: "Open Sans", Arial, sans-serif!important;
@@ -24,7 +22,7 @@ body {
     min-height: 100%;
     z-index: -2;
     margin: 0px !important;
-    background: url() no-repeat top center fixed;
+    background-image: none;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -36,23 +34,6 @@ label.error {
     top: 5px;
     color: #ef392b;
     font-size: 12px;
-}
-.icheckbox-blue > label{
-	    display: inline-block;
-    box-sizing: border-box;
-    cursor: pointer;
-    position: relative;
-    /* padding-left: 25px; */
-    padding-right: 15px;
-    padding-top: 5px;
-}
-.sqcheckbox{
-    width: 16px;
-    height: 16px;
-    background-color: red;
-    display: inline-block;
-    position: relative;
-    top: 3px;
 }
 
     </style>
@@ -69,11 +50,13 @@ label.error {
                 </div>
                 <div class="body-nest" id="element">
                     <div class="panel-body">
-                        <form class="form-horizontal m" id="form-add">
+                        <form class="form-horizontal m" id="form-edit" th:object="${TsysUser}">
+                            <input id="id" name="id" type="hidden" th:field="*{id}"/>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label ">登录名称：</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="username" name="username"/>
+                                    <input class="form-control" disabled="disabled" type="text" id="username"
+                                           name="username" th:value="*{username}"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -83,14 +66,9 @@ label.error {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label ">权限授权：</label>
+                                <label class="col-sm-3 control-label ">确认密码：</label>
                                 <div class="col-sm-8">
-                                    <div class="icheckbox-blue">
-                                        <label th:each="m : ${tsysRoleList}">
-                                            <input class="sqcheckbox" name="roles" th:value="${m.id}" type="checkbox"><b
-                                                th:text="${m.name}"></b>
-                                        </label>
-                                    </div>
+                                    <input class="form-control" type="password" id="confirm" name="confirm"/>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -125,98 +103,47 @@ label.error {
 <!-- 遮罩层 -->
 <script th:src="@{{path}static/admin/assets/js/blockUI/jquery.blockUI.js(path=${rootPath})}"
         type="text/javascript"></script>
-<!-- jqueryForm序列化 -->
-<script th:src="@{{path}static/js/jqueryFormSerializeJson.js(path=${rootPath})}" type="text/javascript"></script>
+
 
 <script type="text/javascript">
-$("#form-add").validate({
+$("#form-edit").validate({
 	rules:{
-		username:{
-			required:true,
-			minlength: 2,
-			maxlength: 20,
-			remote: {
-                url: rootPath + "/UserController/checkLoginNameUnique",
-                type: "post",
-                dataType: "json",
-                dataFilter: function(data, type) {
-                    if (data == "0")
-                    	return true;
-                    else 
-                    	return false;
-                }
-            }
-		},
-		deptName:{
-			required:true,
-		},
 		password:{
 			required:true,
 			minlength: 5,
 			maxlength: 20
 		},
-		email:{
+		confirm:{
 			required:true,
-            email:true,
-            remote: {
-                url:rootPath + "/UserController/checkEmailUnique",
-                type: "post",
-                dataType: "json",
-                data: {
-                    name: function () {
-                        return $.trim($("#email").val());
-                    }
-                },
-                dataFilter: function (data, type) {
-                    if (data == "0") return true;
-                    else return false;
-                }
-            }
-		},
-		phonenumber:{
-			required:true,
-			isPhone:true,
-            remote: {
-                url: rootPath + "system/user/checkPhoneUnique",
-                type: "post",
-                dataType: "json",
-                data: {
-                    name: function () {
-                        return $.trim($("#phonenumber").val());
-                    }
-                },
-                dataFilter: function (data, type) {
-                    if (data == "0") return true;
-                    else return false;
-                }
-            }
-		},
+			minlength: 5,
+			maxlength: 20,
+			equalTo:"#password"
+		}
+		
 	},
 	messages: {
-        "username": {
-            remote: "用户已经存在"
-        },
-		"email": {
-            remote: "Email已经存在"
-        },
-		"phonenumber":{
-        	remote: "手机号码已经存在"
-		}
+		 password: {
+             required: "请输入新密码",
+             minlength: "密码不能小于6个字符",
+             maxlength: "密码不能大于20个字符"
+         },
+         confirm: {
+             required: "请再次输入新密码",
+             equalTo: "两次密码输入不一致"
+         }
     },
 	submitHandler:function(form){
-		add();
+		edit();
 	}
 });
 
-/**
- * 用户添加方法
- */
-function add() {
-	var dataFormJson=$("#form-add").serialize();
+
+function edit() {
+	var dataFormJson=$("#form-edit").serialize();
 	$.ajax({
 		cache : true,
 		type : "POST",
-		url : rootPath + "/UserController/add",
+		url : rootPath + "/UserController/editPwd",
 		data : dataFormJson,
 		async : false,
 		error : function(request) {
