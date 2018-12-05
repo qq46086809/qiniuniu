@@ -2,9 +2,7 @@ package com.fc.test.controller.admin;
 
 import com.fc.test.common.base.BaseController;
 import com.fc.test.common.domain.AjaxResult;
-import com.fc.test.model.auto.TsysRole;
-import com.fc.test.model.auto.TsysUser;
-import com.fc.test.model.custom.RoleVo;
+import com.fc.test.model.auto.News;
 import com.fc.test.model.custom.TableSplitResult;
 import com.fc.test.model.custom.Tablepar;
 import com.fc.test.model.custom.TitleVo;
@@ -15,8 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 @RequestMapping("newController")
@@ -39,38 +35,42 @@ public class newController extends BaseController{
 	@RequiresPermissions("system:new:list")
 	@ResponseBody
 	public Object list(Tablepar tablepar,String username){
-		PageInfo<TsysUser> page=sysUserService.list(tablepar,username) ; 
-		TableSplitResult<TsysUser> result=new TableSplitResult<TsysUser>(page.getPageNum(), page.getTotal(), page.getList()); 
+		PageInfo<News> page=sysNewService.list(tablepar,username) ;
+		TableSplitResult<News> result=new TableSplitResult<News>(page.getPageNum(), page.getTotal(), page.getList());
 		return  result;
 	}
-	
+
 	/**
-     * 新增用户
-     */
-    @GetMapping("/add")
-    public String add(ModelMap modelMap)
-    {
-    	//添加角色列表
-		List<TsysRole> tsysRoleList=sysRoleService.queryList();
-		modelMap.put("tsysRoleList",tsysRoleList);
-        return prefix + "/add";
-    }
-	
-	
+	 * 新增权限
+	 */
+	@GetMapping("add")
+	@RequiresPermissions("system:new:add")
+	public String add()
+	{
+		return prefix + "/add";
+	}
+
+
+	/**
+	 * 权限添加
+	 * @param news
+	 * @return
+	 */
 	@PostMapping("add")
 	@RequiresPermissions("system:new:add")
 	@ResponseBody
-	public AjaxResult add(TsysUser user,Model model,@RequestParam(value="roles", required = false)List<String> roles){
-		int b=sysUserService.insertUserRoles(user,roles);
+	public AjaxResult add(News news){
+		int b=sysNewService.insertSelective(news);
 		if(b>0){
 			return success();
 		}else{
 			return error();
 		}
 	}
-	
+
+
 	/**
-	 * 删除用户
+	 * 删除权限
 	 * @param ids
 	 * @return
 	 */
@@ -78,83 +78,39 @@ public class newController extends BaseController{
 	@RequiresPermissions("system:new:remove")
 	@ResponseBody
 	public AjaxResult remove(String ids){
-		int b=sysUserService.deleteByPrimaryKey(ids);
+		int b=sysNewService.deleteByPrimaryKey(ids);
 		if(b>0){
 			return success();
 		}else{
 			return error();
 		}
 	}
-	
+
+
+
 	/**
-	 * 检查用户
-	 * @param tsysUser
+	 * 修改权限
+	 * @param id
+	 * @param mmap
 	 * @return
 	 */
-	@PostMapping("checkLoginNameUnique")
-	@ResponseBody
-	public int checkLoginNameUnique(TsysUser tsysUser){
-		int b=sysUserService.checkLoginNameUnique(tsysUser);
-		if(b>0){
-			return 1;
-		}else{
-			return 0;
-		}
+	@GetMapping("/edit/{roleId}")
+	public String edit(@PathVariable("roleId") String id, ModelMap mmap)
+	{
+		mmap.put("news", sysNewService.selectByPrimaryKey(id));
+
+		return prefix + "/edit";
 	}
-	
-	
+
 	/**
-	 * 修改用户
-	 * @param id
-	 * @param mmap
-	 * @return
+	 * 修改保存权限
 	 */
-	@GetMapping("/edit/{id}")
-    public String edit(@PathVariable("id") String id, ModelMap mmap)
-    {
-		//查询所有角色
-		List<RoleVo> roleVos=sysUserService.getUserIsRole(id);
-		mmap.put("roleVos",roleVos);
-        mmap.put("TsysUser", sysUserService.selectByPrimaryKey(id));
-
-        return prefix + "/edit";
-    }
-	
-	/**
-     * 修改保存用户
-     */
-    @RequiresPermissions("system:new:edit")
-    @PostMapping("/edit")
-    @ResponseBody
-    public AjaxResult editSave(TsysUser tsysUser,@RequestParam(value="roles", required = false)List<String> roles)
-    {
-        return toAjax(sysUserService.updateUserRoles(tsysUser,roles));
-    }
-
-    
-    
-    /**
-	 * 修改用户密码
-	 * @param id
-	 * @param mmap
-	 * @return
-	 */
-	@GetMapping("/editPwd/{id}")
-    public String editPwd(@PathVariable("id") String id, ModelMap mmap)
-    {
-        mmap.put("TsysUser", sysUserService.selectByPrimaryKey(id));
-        return prefix + "/editPwd";
-    }
-	/**
-     * 修改保存用户
-     */
-    @RequiresPermissions("system:new:editPwd")
-    @PostMapping("/editPwd")
-    @ResponseBody
-    public AjaxResult editPwdSave(TsysUser tsysUser)
-    {
-        return toAjax(sysUserService.updateUserPassword(tsysUser));
-    }
-
+	@RequiresPermissions("system:new:edit")
+	@PostMapping("/edit")
+	@ResponseBody
+	public AjaxResult editSave(News news)
+	{
+		return toAjax(sysNewService.updateByPrimaryKey(news));
+	}
 	
 }

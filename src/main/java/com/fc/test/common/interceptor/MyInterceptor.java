@@ -1,10 +1,10 @@
 package com.fc.test.common.interceptor;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 /**
  * 自定义拦截器
  * @author fc
@@ -24,7 +24,7 @@ public class MyInterceptor  implements HandlerInterceptor {
 
 	@Override
 	public boolean preHandle(HttpServletRequest arg0, HttpServletResponse arg1, Object arg2) throws Exception {
-		arg0.setAttribute("rootPath", "http://localhost:8081/");
+		arg0.setAttribute("rootPath", "http://"+arg0.getServerName()+":"+arg0.getServerPort()+"/");
 		//System.out.println("xxxxxxxxx==="+"http://localhost:8081/");
 		//System.out.println(">>>MyInterceptor1>>>>>>>在请求处理之前进行调用（Controller方法调用之前）");
 	

@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan(value = "com.fc.test.mapper")
 public class SpringbootSwagger2Application {
     public static void main(String[] args) {
-
         SpringApplication.run(SpringbootSwagger2Application.class, args);
                         System.out.println("////////////////////////////////////////////////////////////////////");
                         System.out.println("//                          _ooOoo_                               //");

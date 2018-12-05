@@ -67,7 +67,6 @@
                                 </a>
                             </div>
                         </div>
-
                         <div class="body-nest" id="search_div">
                             <div class="form_left">
                                 <form role="form" class="form-inline">
@@ -168,11 +167,11 @@
 <!-- jquery-export 表格导出插件 -->
 
 <!-- 导出 -->
-var dataUrl=window.rootPath+"/UserController/list";
-var removeUrl=window.rootPath+"/UserController/remove";
-var createUrl=window.rootPath+"/UserController/add";
-var updateUrl=window.rootPath+"/UserController/edit/{id}";
-var exportUrl=window.rootPath+"/UserController/export";
+var dataUrl=window.rootPath+"/newController/list";
+var removeUrl=window.rootPath+"/newController/remove";
+var createUrl=window.rootPath+"/newController/add";
+var updateUrl=window.rootPath+"/newController/edit/{id}";
+var exportUrl=window.rootPath+"/newController/export";
   var options = {
 		dataUrl: dataUrl,
         createUrl: createUrl,
@@ -180,7 +179,7 @@ var exportUrl=window.rootPath+"/UserController/export";
         removeUrl:removeUrl,
         exportUrl: exportUrl,
         sortName: "roleSort",
-        modalName: "用户",
+        modalName: "新闻",
         search: false,
 	   dataColumns: [
 			{
@@ -189,14 +188,27 @@ var exportUrl=window.rootPath+"/UserController/export";
 			{
 			    field: 'id',
 			    title: '序号'
-			}, 
-			
-			{
-			    field: 'username',
-			    title: '账号'
 			}, {
-			    field: 'password',
-			    title: '密码'
+			    field: 'title',
+			    title: '标题'
+			}, {
+			    field: 'reader',
+			    title: '阅读量'
+			}, {
+			    field: 'build',
+			    title: '作者'
+			}, {
+			    field: 'source',
+			    title: '来源'
+			}, {
+			    field: 'textTime',
+			    title: '原文时间'
+			}, {
+			    field: 'createtime',
+			    title: '发布时间'
+			}, {
+			    field: 'summary',
+			    title: '摘要'
 			}, {
 			    title: '操作',
 			    formatter: function (value, row, index) {

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fc.test.mapper.custom.NewsDao">
+  <resultMap id="BaseResultMap" type="com.fc.test.model.auto.News">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="reader" jdbcType="VARCHAR" property="reader" />
+    <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="textTime" jdbcType="VARCHAR" property="textTime" />
+    <result column="build" jdbcType="VARCHAR" property="build" />
+    <result column="source" jdbcType="VARCHAR" property="source" />
+    <result column="createtime" jdbcType="VARCHAR" property="createtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, title, reader, summary, description, textTime, build, `source`, createtime
+  </sql>
+  <select id="selectNewsList" resultType="com.fc.test.model.auto.News" parameterType="String">
+    select * from t_news
+    <where>
+    <if test="_parameter != null and _parameter!=''">
+    title like concat(concat('%', #{_parameter}), '%')
+    </if>
+    </where>
+  </select>
+
+
+  <insert id="insertSelective" parameterType="com.fc.test.model.auto.News">
+  insert into t_news (title,reader,summary,description,textTime,build,source,createtime
+  )
+  values (#{title,jdbcType=VARCHAR}, 0, #{summary,jdbcType=VARCHAR},#{description,jdbcType=VARCHAR},
+  #{textTime,jdbcType=VARCHAR},#{build,jdbcType=VARCHAR},#{source,jdbcType=VARCHAR},#{createtime,jdbcType=VARCHAR})
+</insert>
+
+
+  <delete id="deleteSelective" parameterType="java.lang.String">
+    delete from t_news
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+
+  <select id="selectByPrimaryKey" parameterType="String" resultType="com.fc.test.model.auto.News">
+    select * from t_news where id = #{id}
+
+  </select>
+
+
+
+
+  <update id="updateByPrimaryKey" parameterType="com.fc.test.model.auto.News">
+    update t_news set title = #{title},summary = #{summary},description = #{description},
+    textTime = #{textTime},build = #{build},source = #{source} where id = #{id}
+  </update>
+</mapper>
