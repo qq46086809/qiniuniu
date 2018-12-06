@@ -49,7 +49,8 @@
             <property name="forceBigDecimals" value="false"/>
         </javaTypeResolver>
         <!--生成pojo类存放位置-->
-        <javaModelGenerator targetPackage="com.fc.test.model.auto" targetProject="src/main/java">
+
+        <javaModelGenerator targetPackage="com.fc.test.modal.auto" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>

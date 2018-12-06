@@ -10,10 +10,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringbootSwagger2Application {
     public static void main(String[] args) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         SpringApplication newRun= new SpringApplication(SpringbootSwagger2Application.class);
         newRun.setBannerMode(Banner.Mode.CONSOLE);
         newRun.run(args);
 =======
+=======
+>>>>>>> 9bb98eff013c2d25778ef196943a3f1033e406d9
         SpringApplication.run(SpringbootSwagger2Application.class, args);
                         System.out.println("////////////////////////////////////////////////////////////////////");
                         System.out.println("//                          _ooOoo_                               //");
