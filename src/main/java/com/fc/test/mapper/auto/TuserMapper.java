@@ -1,6 +1,6 @@
 package com.fc.test.mapper.auto;
 
-import com.fc.index.user.Tuser;
+import com.fc.test.model.auto.Tuser;
 
 public interface TuserMapper {
     int deleteByPrimaryKey(Integer id);

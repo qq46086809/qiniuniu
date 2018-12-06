@@ -59,4 +59,15 @@ public class LoginController extends BaseController {
         }
         return "index/login";
     }
+
+    /**
+     * 请求到注册界面
+     * @param request
+     * @return
+     */
+    @RequestMapping("/QnInsert")
+    public String QnInsert(HttpServletRequest request, Model model) {
+        setTitle(model, new TitleVo("注册", "注册", true,"欢迎进入", true, true));
+        return "index/insert";
+    }
 }

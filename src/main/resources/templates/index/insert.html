@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title>登录</title>
+    <link rel="stylesheet" th:href="@{{path}static/index/css/login.css(path=${rootPath})}">
+    <link rel="stylesheet" th:href="@{{path}static/index/css/iCheck/custom.css(path=${rootPath})}">
+    <style type="text/css">
+            ul,li{
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+<div th:fragment="side" class="containers" style="top:10%">
+    <div class="links2" style="height:192px;">
+        <div class="text">
+            <div class="link-div">
+                <i class="fa fa-wechat color-white"></i>
+                <a class="link-text">咨询</a></div>
+            <div class="link-div3">
+                <i class="fa fa-paper-plane-o color-white"></i>
+                <a class="link-text">发布需求</a></div>
+        </div>
+    </div>
+</div>
+<div class="nav-header" style="border-bottom:0.3px ridge #dddddd;height:56px;">
+    <h1 id="fh5co-logo" style="margin-left: 68px;margin-top: 15px;">
+        <a href="/login" style="color:#323232">企牛牛</a><a
+            style="font-size:15px;font-weight:500;color:#323232;margin-left:10px;">直营一站式服务平台</a></h1>
+    <nav id="fh5co-menu-wrap" role="navigation">
+        <ul class="sf-menu" id="fh5co-primary-menu" style="padding-right:10px;">
+            <li>
+                <a style="color:#323232;cursor:pointer;margin-top:5px;">首页</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<div class="insert clearfix" id="insertbox" >
+    <div class="login-image-box float-left">
+        <div class="insert-box">
+            <p style="display: inline;float: right;margin-top: 72px; margin-right: 20px;">已有企牛牛账号？<a style="color:#00c2de" onclick="Tologin()">快捷登录></a></p>
+            <h4 class="zhuce">欢迎注册企牛牛</h4>
+            <form th:action="@{/admininsert}" method="post" id="insertForm" onsubmit="return Insert()">
+                <!-- 用户名 -->
+                <div class=" clearfix login-text">
+                    <input class="float-left insert-input" autocomplete="off"  type="text" name="user" id="user" placeholder="设置会员名称"
+                           required>
+                </div>
+                <!-- 密码 -->
+                <div class=" clearfix login-text">
+                    <input class="float-left insert-input" autocomplete="off"  type="password" name="pwd" id="pwd"
+                           placeholder="设置你的登录密码" required>
+                </div>
+                <div class=" clearfix login-text">
+                    <input class="float-left insert-input" autocomplete="off"  type="password" name="check-pwd" id="check-pwd"
+                           placeholder="请再次输入你的密码" required>
+                </div>
+                <div class=" clearfix login-text">
+                    <input class="float-left insert-input" autocomplete="off"  type="text" name="phone" id="phone"
+                           placeholder="请输入手机号" required>
+                </div>
+                <button  class="insert-insert" type="submit">
+                    <span class="">同意条款并注册</span>
+                </button>
+                <div class="col-sm-12" style="text-align:center">
+                    <label class="checkbox-inline i-checks" style="padding-top: 10px;padding-left: 0px;font-size: 14px; color: #00c2de;">
+                        <input type="checkbox" value="option1">《企牛牛网站服务条款》|《法律声明和隐私政策》</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="login-footer">
+    <div style="margin-top:45px;">
+        <div class="fh5co-copyright text-center">
+            <p style="font-size:15px">上海市普陀区真南路620号同济科技园二楼</p>
+            <p style="font-size:15px">Copyright&copy; 2014-2018同年(上海)网络科技有限公司 All Rights Reserved 沪ICP备15041206-3</p>
+            <p style="font-size:15px">沪公网安备31010702003728号</p>
+        </div>
+    </div>
+</footer>
+<script src="/static/index/js/jquery.min.js"></script>
+<script src="/static/index/js/base64.js"></script>
+<script src="/static/index/js/iCheck/icheck.min.js"></script>
+<script>
+ $(document).ready(function () {
+            $('.i-checks').iCheck({
+                checkboxClass: 'icheckbox_square-green',
+            });
+        });
+
+		function Tologin(){
+            self.location.href="http://localhost:8081/QnLogin";
+		}
+
+         function Insert(){
+             var flag = true
+             var user = $( "#user" ).val();
+             if(user.length <= 4 ){
+                alert("用户名过短")
+                return flag = false;
+             }
+             if (user.length >=30 ){
+                 alert("用户名过长")
+                 return flag = false;
+             }
+             if($( "#pwd" ).val() !== $( "#check-pwd" ).val()){
+                 alert("两次密码不相同请检查")
+                 return flag = false;
+             }
+             if(!isPoneAvailable($( "#phone" ).val())){
+                 alert("请输入正确的手机号")
+                 return flag = false;
+             }
+             if(!$("input[type='checkbox']").is(':checked')){
+                 alert("请在接受条款后继续操作")
+                 return flag = false;
+             }
+             return flag;
+         }
+
+         function isPoneAvailable(phone) {
+             var myreg=/^[1][3,4,5,7,8,9][0-9]{9}$/;
+             if (!myreg.test(phone)) {
+                 return false;
+             } else {
+                 return true;
+             }
+         }
+
+</script>
+</body>
+</html>
