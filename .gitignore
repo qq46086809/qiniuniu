@@ -8,3 +8,4 @@ target/
 ### NetBeans ###
 .classpath
 .settings
+.idea
