@@ -1,4 +1,4 @@
-package com.fc.index.user;
+package com.fc.test.model.auto;
 
 public class Tuser {
     private Integer id;
@@ -40,5 +40,4 @@ public class Tuser {
     public void setPhone(String phone) {
         this.phone = phone == null ? null : phone.trim();
     }
-
 }
