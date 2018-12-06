@@ -59,6 +59,4 @@ public class LoginController extends BaseController {
         }
         return "index/login";
     }
-
-
 }
