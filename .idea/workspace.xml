@@ -2,83 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73de4cfb-98e1-4b50-86f8-e91a7b637975" name="Default" comment="测试2">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/json_lib_2_4_jdk15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fc/test/mapper/custom/NewsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/fc/test/service/SysNewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/custom/NewsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/font/summernote.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/font/summernote.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/font/summernote.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-ar-AR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-bg-BG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-ca-ES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-cs-CZ.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-da-DK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-de-DE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-el-GR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-es-ES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-es-EU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-fa-IR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-fi-FI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-fr-FR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-gl-ES.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-he-IL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-hr-HR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-hu-HU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-id-ID.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-it-IT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-ja-JP.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-ko-KR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-lt-LT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-lt-LV.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-mn-MN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-nb-NO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-nl-NL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-pl-PL.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-pt-BR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-pt-PT.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-ro-RO.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-ru-RU.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-sk-SK.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-sl-SI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-sr-RS-Latin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-sr-RS.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-sv-SE.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-ta-IN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-th-TH.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-tr-TR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-uk-UA.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-vi-VN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-zh-CN.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/lang/summernote-zh-TW.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/plugin/databasic/summernote-ext-databasic.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/plugin/databasic/summernote-ext-databasic.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/plugin/hello/summernote-ext-hello.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/plugin/specialchars/summernote-ext-specialchars.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/summernote.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/summernote.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/admin/dist/summernote.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/qiniu_java_sdk_7_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/qiniu-java-sdk-7.2.11.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/qiniuniu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/qiniuniu.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/SpringbootSwagger2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fc/SpringbootSwagger2Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/test/common/base/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fc/test/common/base/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/test/common/interceptor/MyInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fc/test/common/interceptor/MyInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/test/mapper/auto/NewsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fc/test/mapper/auto/NewsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/test/model/auto/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fc/test/model/auto/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/test/model/auto/NewsExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fc/test/model/auto/NewsExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/auto/NewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/auto/NewsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/new/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/new/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/new/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/new/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/new/editPwd.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/new/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/new/list.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -127,7 +55,7 @@
     <session id="-1094115849">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="1" />
+          <entry key="class" value="2" />
           <entry key="html" value="9" />
           <entry key="java" value="49" />
           <entry key="js" value="6" />
@@ -137,7 +65,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="1" />
+          <entry key="CLASS" value="2" />
           <entry key="HTML" value="9" />
           <entry key="JAVA" value="49" />
           <entry key="JavaScript" value="6" />
@@ -148,7 +76,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="303" />
-          <entry key="java" value="217" />
+          <entry key="java" value="228" />
           <entry key="js" value="10" />
           <entry key="xml" value="346" />
         </counts>
@@ -156,17 +84,17 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="303" />
-          <entry key="JAVA" value="217" />
+          <entry key="JAVA" value="228" />
           <entry key="JavaScript" value="10" />
           <entry key="XML" value="346" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
-          <entry key="project.open.time.2" value="3" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.2" value="4" />
           <entry key="project.open.time.21" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -197,8 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/new/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -206,22 +134,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/dist/summernote.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="1855" lean-forward="true" selection-start-line="1855" selection-end-line="1855" />
+            <state relative-caret-position="27900">
+              <caret line="1860" column="21" selection-start-line="1860" selection-start-column="21" selection-end-line="1860" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="881">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="165">
+              <caret line="56" column="11" lean-forward="true" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1250#1256#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -328,7 +257,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fc/index/login/LoginController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/test/common/base/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/test/service/SysNewService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/test/mapper/custom/NewsDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/custom/NewsMapper.xml" />
@@ -336,6 +264,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/new/list.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/new/edit.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/new/add.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java" />
       </list>
     </option>
   </component>
@@ -384,8 +313,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -397,6 +326,11 @@
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
               <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -419,87 +353,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="fc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="plugin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="auto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="fc" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
@@ -507,59 +360,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="auto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="custom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
@@ -576,27 +376,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="new" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -612,11 +392,11 @@
     <property name="SearchEverywhereHistoryKey" value="QnLogin&#9;null&#9;null&#10;QnRoot&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543924281407" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544065218790" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/qiniu-java-sdk-7.2.11.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5091954" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -629,6 +409,8 @@
       <recent name="com.fc.plugin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\周晓筱\Desktop\SpringBoot_v2\qiniuniu\lib" />
+      <recent name="C:\Users\周晓筱\Desktop\SpringBoot_v2\qiniuniu\src\main\resources\lib" />
       <recent name="C:\Users\周晓筱\Desktop\SpringBoot_v2\qiniuniu\src\main\resources\static\admin" />
       <recent name="C:\Users\周晓筱\Desktop\SpringBoot_v2\qiniuniu\src\main\resources\mybatis\custom" />
       <recent name="D:\Git\qiniuniu\src\main\resources" />
@@ -725,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543827773675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="测试2">
+      <created>1543975038547</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543975038548</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -748,7 +537,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19294377" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1923925" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Spring" order="0" />
@@ -757,10 +546,10 @@
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="5" weight="0.329582" />
-      <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.4983462" weight="0.22060354" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="6" sideWeight="0.4983462" visible="true" weight="0.16441207" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3298647" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.3080125" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.27159208" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005513" side_tool="true" weight="0.3298647" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.30385852" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
@@ -829,13 +618,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试2" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/assets/js/textEditor/src/bootstrap3-wysihtml5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="34" column="77" lean-forward="true" selection-start-line="34" selection-start-column="77" selection-end-line="34" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/assets/js/bootstrap/js/bootstrap-table/bootstrap-table.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1143,6 +925,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/dist/summernote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27900">
+          <caret line="1860" column="21" selection-start-line="1860" selection-start-column="21" selection-end-line="1860" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/test/service/SysNewService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
@@ -1174,28 +963,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/new/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.4.RELEASE/spring-context-5.0.4.RELEASE.jar!/org/springframework/context/annotation/Configuration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="881">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/dist/summernote.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="1855" lean-forward="true" selection-start-line="1855" selection-end-line="1855" />
+        <state relative-caret-position="165">
+          <caret line="56" column="11" lean-forward="true" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1250#1256#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1263,7 +1053,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>json-lib-2.4-jdk15</last-edited>
+          <last-edited>qiniu-java-sdk-7.2.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
