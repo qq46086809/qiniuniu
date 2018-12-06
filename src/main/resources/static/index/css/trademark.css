@@ -1,5 +1,5 @@
 #fh5co-header-section{
-    background:#292f36 !important;
+    background:rgb(42,31,34) !important;
 }
 .bgmenu{
     padding-top: 115px;
@@ -10,13 +10,14 @@
     padding-top: 50px;
 }
 .menu-pic{
-    border-right: 2px solid rgb(219,221,221);
+    border-right: 1px solid rgb(219,221,221);
     /*margin-right: -26px;*/
 }
 
 .menu-service{
     /*border-left: 2px solid rgb(219,221,221);*/
     padding-left: 55px;
+    width: 59%;
 }
 .menu-title{
     font-size: 17px;
@@ -45,12 +46,17 @@
 }
 .bgmenu-text{
     margin-top: 30px;
-    /*margin: 5px 0;*/
+
 }
-.bgmenu-text p{
+.bgmenu-text1 p ,.bgmenu-text p{
     display: inline-block;
     margin-top: 15px;
 }
+.bgmenu-text1{
+    margin-top: 13px;
+}
+
+
 .bgmenu-button{
     margin-top: 49px;
 }
@@ -79,8 +85,23 @@
     width: 85%;
 }
 .box2List3 li{
-    margin-right: 75px;
+    margin-right: 34px;
+    width: 20%;
 }
+.box2List4 li{
+    margin-left: 145px;
+}
+.box2List4 p{
+    color: #000;
+    margin-top: 10px;
+}
+.box2List5{
+    width: 100%;
+}
+.box2List5 li{
+    margin: 7px 0;
+}
+
 
 .button-demo p{
     margin-bottom: 0.5em;
@@ -99,4 +120,7 @@
 }
 .bgmenu-title{
     margin-top: 60px;
+}
+.img-responsive1{
+    width: 90%;
 }

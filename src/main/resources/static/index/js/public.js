@@ -30,7 +30,7 @@ jQuery(function(){
                                             $(".div-shadow").mouseleave(function(index, element) {
                                               $(this).attr("style","transition:0.5s;-moz-box-shadow:0px 0px 0px #333333; -webkit-box-shadow:0px 0px 0px #333333; box-shadow:0px 0px 0px #333333;");
                                                                                                                       });*/
-
+    //阴影动画
     $(".div-shadow").mouseenter(function(index, element) {
         $(this).attr("style","transition:0.5s; -moz-box-shadow:2px 3px 3px #757575; -webkit-box-shadow:2px 3px 3px #757575; box-shadow:-0.5px 0 3px #757575,2px 3px 3px #757575;   ");
     }).mouseleave(function(index, element) {
@@ -38,9 +38,6 @@ jQuery(function(){
     });
 
 
-   /* $(".div-shadow").mouseleave(function(index, element) {
-        $(this).attr("style","transition:0.2s;-moz-box-shadow:0px 0px 0px #333333; -webkit-box-shadow:0px 0px 0px #333333; box-shadow: 0px 0px 0px #333333;");
-    });*/
 
 
 

@@ -1,0 +1,94 @@
+body{
+    overflow-x: hidden;
+}
+.business-left {
+    margin-left: 13%;
+}
+.col-md-2{
+    width: 11.66667%;
+}
+.text-left .business-menu{
+    color: #333;
+    font-size: 28px;
+    font-weight: 500;
+    margin-top: 0px;
+}
+.text-left p,.text-left span{
+    color: #555;
+    font-size: 18px;
+}
+.solution-btn{
+    margin: 182px 0 0 -178px;
+}
+.park-enginer{
+    position: relative;
+}
+.park-enginer li{
+    position: absolute;
+}
+#myCarousel{
+    position: relative;
+}
+.carousel-indicators{
+
+    position: absolute;
+    margin: -60px;
+}
+.carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: gray;
+    float: left;
+    margin: 0 20px;
+
+    transition:width 1s;
+    -moz-transition:width 1s; /* Firefox 4 */
+    -webkit-transition:width 1s; /* Safari and Chrome */
+    -o-transition:width 1s; /* Opera */
+
+}
+.carousel-indicators li.active{
+    width: 40px;
+    height: 10px;
+    background: skyblue;
+
+}
+.business-one-menu{
+    margin: 40px 0;
+}
+.sop-title{
+    color: #333;
+}
+.tab-panel-item li{
+    float: left;
+    margin: 10px;
+}
+.tab-nav li.tab-active{
+    color: deepskyblue;
+
+}
+#parkapp1{
+    margin-top: -60px;
+}
+.parkService li{
+    float: left;
+    margin: 10px  100px;
+}
+
+#parkapp3 img{
+    margin-top: 40px;
+}
+.park-two-menu{
+    color: #222;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.moreservice .col-md-4{
+    width: 27.33333%;
+}
+.tab-panel-item .col-md-2{
+    width: 16.66667%;
+    margin-right: 30px;
+    margin-top: 20px;
+}

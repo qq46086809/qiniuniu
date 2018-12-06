@@ -1,0 +1,45 @@
+#fh5co-header-section{
+    background:rgb(42,31,34) !important;
+}
+.bgmenu{
+    padding-top: 115px;
+    width: 70%;
+    margin-left: 17%;
+}
+.div-white{
+    height: 100%;
+    padding: 40px;
+}
+.title p{
+    display: inline-block;
+}
+.Summary{
+    padding: 35px;
+}
+.button-demo p{
+    color: black;
+
+}
+.button-demo img{
+    margin: 20px 0;
+}
+.footer{
+    margin-top: 110px;
+}
+.news-time,.news-author{
+    display: inline-block;
+}
+.s-fenxiang{
+    padding: 18px 10px 10px 625px;
+    color: #555555;
+    font-size: 13px;
+}
+.aboutTittle p:nth-child(2){
+    margin-top: 40px;
+}
+.aboutTittle a{
+    color: #000;
+}
+.aboutTittle a:hover{
+    color: lightskyblue;
+}

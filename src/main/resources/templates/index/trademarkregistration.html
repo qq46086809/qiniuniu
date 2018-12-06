@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title th:text=${title}></title>
+    <link rel="stylesheet" th:href="@{{path}static/admin/assets/js/button/ladda/ladda.min.css(path=${rootPath})}">
+    <link rel="stylesheet" href="/static/index/css/trademark.css">
+    <style type="text/css">
+    </style>
+
+</head>
+<style>
+    ul,li{
+        list-style: none;
+    }
+
+    .total-police-alert{
+        width: 500px;
+        height: 90px;
+        padding: 10px;
+        margin: 100px auto 0;
+        font: 36px "华文楷体";
+        line-height: 90px;
+        color: #fff;
+        box-shadow: -2px 2px 10px #000;
+        background-color: rgba(81,167,229,1.00);
+        border-radius: 10px;
+    }
+    .fl{
+        float:left;
+    }
+    .fr{
+        float:right;
+    }
+
+</style>
+<body style="min-width:1500px">
+<div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
+</div>
+
+
+<div class="container">
+    <div class="bgmenu">
+        <div class=" row">
+            <div class="menu-title">
+                <a href="#" style="color: #000;">支持与服务</a> <strong>></strong> <a href="#" style="color: red;">商标注册</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 menu-pic">
+                <div class="container">
+                    <div class="col-md-11 col-sm-10">
+                        <a href="#"><img src="/static/index/images/trademark3.png" style="width: 100%;"></a>
+                    </div>
+                    <div class="col-md-1 col-sm-1" style="  margin-top: 50%;    margin-left: -10px;">
+                        <a class="menu-pic-link"><i class="fa fa-link fa-2x" style="color:#555555"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-8 col-sm-8 menu-service" >
+                <div>
+                    <div class=" bgmenu-text1">
+                        <h3 style="    margin: -20px 0 18px;">商标注册</h3>
+                        <p style="font-weight: 300; color: #000">为客户提供商标的注册服务，如被驳回，则完全免费为客户再次提供【普通商标注册】服务，或抵扣【商标驳回复审】服务费600元。</p>
+                    </div>
+                    <div class="bgmenu-text1">
+                        <a href="#" class="newprice">¥3600</a>
+                        <a href="#" class="oldprice"><s>¥5400</s></a>
+                        <img src="/static/index/images/trademarkflowers.png" style="float:right;" alt="">
+                    </div>
+                    <div class="bgmenu-text1">
+                        <p>类型选择：</p>
+                        <a href="#" class="btn btn-default">商标加急注册</a>
+                        <a href="#" class="btn btn-default">普通商标注册</a>
+                        <a href="#" class="btn btn-default">海外商标注册</a>
+
+                    </div>
+                    <div class="bgmenu-text1">
+                        <p>服务地区：</p>
+                        <a href="#"><p>全国</p></a>
+                        <br>
+                        <p>服务期限：</p>
+                        <a href="#"><p>一次性</p></a>
+                    </div>
+                    <div class=" bgmenu-button" >
+                        <a href="#" class="btn btn-default" >购买使用</a>
+                    </div>
+                    <div class=" bgmenu-text1 bgmenu-serviceamount">
+                        <p style="    font-size: 17px;">销售量：</p>
+                        <p style="    font-size: 19px;">5879</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="container">
+    <div class="bgmenu bgmenu1">
+        <div class="row">
+            <div class="menu-title menu-title1">
+                <h3 style="font-weight: 400;color: #000">详情介绍</h3>
+            </div>
+        </div>
+        <div class="row" style="position:relative;">
+            <div class="col-md-12 col-sm-12 ">
+                <a href="#"><img src="/static/index/images/trademarkregist-menu.png" alt="" class="img-responsive img-responsive1" style="    width: 93%;"></a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section ">
+            <p class="one-menu">商标构成</p>
+            <p>我国注册的商标主要包括以下6种元素，可以由一种或多种元素组成</p>
+        </div>
+    </div>
+</div>
+
+<ul class="box2List list-unstyled box2List2 box2List4 row ">
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkregisticon1.png" class="img-responsive"><p>用各种字组合的商标</p></div>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkregisticon2.png" class="img-responsive"><p>用符号、几何图形等构成的商标</p></div>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkregisticon3.png" class="img-responsive"><p>用各种字母等构成的商标</p></div>
+        </div>
+    </li>
+
+
+</ul>
+<ul class="box2List list-unstyled box2List2 box2List4 row ">
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkregisticon4.png" class="img-responsive"><p>用数字或中文字大写数字构成的商标</p></div>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkregisticon5.png" class="img-responsive"><p>三维立体物标志构成的商标</p></div>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-2 col-md-2">
+        <div class="box2Con">
+            <div class="box2Img"><img src="/static/index/images/trademarkregisticon6.png" class="img-responsive"><p>由两种或两种以上的颜色构成的商标</p></div>
+        </div>
+    </li>
+</ul>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section ">
+            <p class="one-menu">商标注册服务流程</p>
+
+        </div>
+    </div>
+</div>
+<div class="box2List" row col-md-offset-2>
+
+    <img src="/static/index/images/TrademarkProcess.png" alt="">
+</div>
+
+
+
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section ">
+            <p class="one-menu">你需要准备的资料</p>
+        </div>
+    </div>
+</div>
+
+<ul class="box2List list-unstyled box2List2 box2List5 row ">
+    <li class="col-xs-12 col-sm-1 col-md-1" style="    margin-top: -20px;">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkqy.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkqu.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkyy.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkadd.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarksb.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+
+
+
+
+
+</ul>
+<ul class="box2List list-unstyled box2List2 box2List5 row ">
+    <li class="col-xs-12 col-sm-1 col-md-1" style="    margin-top: -20px;">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkgr.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkqu.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkyy.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkadd.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarksb.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkadd.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-1 col-md-1">
+        <div class="box2Con">
+            <a href="#"> <div class="box2Img"><img src="/static/index/images/trademarkregistId.png" class="img-responsive"></div></a>
+        </div>
+    </li>
+</ul>
+
+<div class="container" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section ">
+            <p class="one-menu">你能得到的材料</p>
+
+        </div>
+    </div>
+</div>
+<ul class="box2List list-unstyled box2List1 row ">
+
+    <li class="col-xs-12 col-sm-3 col-md-3" style="    margin-left: 230px;">
+        <div class="box2Con">
+            <a href="#"><div class="box2Img"><img src="/static/index/images/trademarkregister1.png" class="img-responsive"></div></a>
+
+        </div>
+    </li>
+    <li class="col-xs-12 col-sm-3 col-md-3" style="margin-left: 15px;">
+        <div class="box2Con">
+            <a href="#"><div class="box2Img"><img src="/static/index/images/trademarkregister2.png" class="img-responsive"></div></a>
+
+        </div>
+    </li>
+
+
+
+</ul>
+
+
+<div class="container bgmenu-title  button-demo" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2  ">
+            <p class="two-menu">办理步骤及所需时间</p>
+            <p class="three-menu">办理步骤及所需时间</p>
+            <p class="four-menu">1、专业的查询商标，评估注册概率；</p>
+            <p class="four-menu">2、代理人全程专业、细致的服务；</p>
+            <p class="four-menu">3、提交至商标局，获得申请号；</p>
+            <p class="four-menu">4、自申请之日起3-6个月完成形式审查，下发受理通知书（可额外加急，两周的时间即可完成）；</p>
+            <p class="four-menu">5、自申请之日起9个月内完成实质审查，进入初审公告期；</p>
+            <p class="four-menu">6、初审公告3个月后，未被异议，即进入注册公告期；</p>
+            <p class="four-menu">7、自申请之日起12-18个月下发商标注册证书。</p>
+        </div>
+    </div>
+</div>
+<div class="container bgmenu-title button-demo" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2  ">
+            <p class="two-menu">办理所需材料</p>
+            <p class="three-menu">办理所需材料</p>
+            <p class="four-menu">企业：委托书、清晰商标图样、营业执照复印件</p>
+            <p class="four-menu">个人：委托书、清晰商标图样、个体工商户执照复印件、身份证复印件签名</p>
+
+        </div>
+    </div>
+</div>
+<div class="container bgmenu-title button-demo" >
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2  ">
+            <p class="two-menu">售后服务</p>
+            <p class="three-menu">客服7x24小时为你服务，如有疑问请联系客服，或致电：0755-25886161</p>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div th:replace="index/index/side :: side"></div>
+<div th:replace="index/index/footer :: footer"></div>
+<div th:include="index/index/js :: onload_js"></div>
+
+<script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
+<script type="text/javascript" src="/static/index/js/public.js"></script>
+</body>
+</html>

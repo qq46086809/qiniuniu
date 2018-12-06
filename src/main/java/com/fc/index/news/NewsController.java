@@ -15,7 +15,7 @@ public class NewsController extends BaseController {
 
 
     /**
-     * 请求到下载页面
+     * 请求到新闻列表页面
      * @param request
      * @return
      */

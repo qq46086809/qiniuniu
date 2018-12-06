@@ -35,10 +35,11 @@
 
 </style>
 <body style="min-width:1500px">
+<!--头部信息-->
 <div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
 </div>
 
-
+<!--商标交易-->
 <div class="container">
     <div class="bgmenu">
         <div class=" row">
@@ -59,7 +60,7 @@
 
             </div>
 
-            <div class="col-md-8 col-sm-8 menu-service" style="width: 57.66667%;">
+            <div class="col-md-8 col-sm-8 menu-service" >
                 <div>
                     <div class=" bgmenu-text">
                         <h3 style="    margin: -20px 0 18px;">商标设计</h3>
@@ -89,9 +90,8 @@
             </div>
         </div>
     </div>
-
-
 </div>
+<!--服务内容详情介绍-->
 <div class="container">
     <div class="bgmenu bgmenu1">
         <div class="row">
@@ -101,13 +101,14 @@
         </div>
         <div class="row" style="position:relative;">
             <div class="col-md-12 col-sm-12 ">
-                <a href="#"><img src="/static/index/images/trademarkdesign-menu.png" alt="" class="img-responsive"></a>
+                <a href="#"><img src="/static/index/images/trademarkdesign-menu.png" alt="" class="img-responsive img-responsive1"></a>
             </div>
         </div>
     </div>
 
 </div>
 
+<!--服务流程-->
 <div class="container" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section ">
@@ -149,6 +150,7 @@
 
 </ul>
 
+<!--交付材料-->
 <div class="container" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section ">
@@ -159,25 +161,25 @@
 </div>
 <ul class="box2List list-unstyled box2List1 box2List3 row col-md-offset-2">
 
-    <li class="col-xs-12 col-sm-3 col-md-2">
+    <li class="col-xs-12 col-sm-3 col-md-3">
         <div class="box2Con">
             <div class="box2Img"><img src="/static/index/images/trademarkdesignlist1.png" class="img-responsive"></div>
             <p>.ai源文件</p>
         </div>
     </li>
-    <li class="col-xs-12 col-sm-3 col-md-2">
+    <li class="col-xs-12 col-sm-3 col-md-3">
         <div class="box2Con">
             <div class="box2Img"><img src="/static/index/images/trademarkdesignlist2.png" class="img-responsive"></div>
             <p>.jpg格式图片文件</p>
         </div>
     </li>
-    <li class="col-xs-12 col-sm-3 col-md-2">
+    <li class="col-xs-12 col-sm-3 col-md-3">
         <div class="box2Con">
             <div class="box2Img"><img src="/static/index/images/trademarkdesignlist3.png" class="img-responsive"></div>
             <p>.png格式透明图片文件</p>
         </div>
     </li>
-    <li class="col-xs-12 col-sm-3 col-md-2">
+    <li class="col-xs-12 col-sm-3 col-md-3">
         <div class="box2Con">
             <div class="box2Img"><img src="/static/index/images/trademarkdesignlist4.png" class="img-responsive"></div>
             <p>.psd源文件</p>
@@ -187,10 +189,11 @@
 
 </ul>
 
+<!--办理步骤及所需时间-->
 <div class="container bgmenu-title  button-demo" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2  ">
-            <p class="two-menu">办理步骤及所需时间11</p>
+            <p class="two-menu">办理步骤及所需时间</p>
 
             <p class="four-menu">1、咨询右侧客服；</p>
             <p class="four-menu">2、付款成功后，为您分配专业工程师；</p>
@@ -199,6 +202,7 @@
         </div>
     </div>
 </div>
+<!--办理所需材料-->
 <div class="container bgmenu-title button-demo" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2  ">
@@ -210,6 +214,7 @@
         </div>
     </div>
 </div>
+<!--售后服务-->
 <div class="container bgmenu-title button-demo" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2  ">
@@ -221,7 +226,7 @@
 </div>
 
 
-
+<!--脚本，侧边栏等-->
 <div th:replace="index/index/side :: side"></div>
 <div th:replace="index/index/footer :: footer"></div>
 <div th:include="index/index/js :: onload_js"></div>

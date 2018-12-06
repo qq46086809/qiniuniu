@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title th:text=${title}></title>
+    <link rel="stylesheet" th:href="@{{path}static/index/css/business.css(path=${rootPath})}">
+    <link rel="stylesheet" href="/static/index/css/trademark.css">
+    <link rel="stylesheet" href="/static/index/css/parksolution.css">
+    <link rel="stylesheet" href="/static/index/css/conferencesolution.css">
+    <style type="text/css">
+    </style>
+</head>
+<style>
+    ul,li{
+        list-style: none;
+    }
+
+    .total-police-alert{
+        width: 500px;
+        height: 90px;
+        padding: 10px;
+        margin: 100px auto 0;
+        font: 36px "华文楷体";
+        line-height: 90px;
+        color: #fff;
+        box-shadow: -2px 2px 10px #000;
+        background-color: rgba(81,167,229,1.00);
+        border-radius: 10px;
+    }
+    .fl{
+        float:left;
+    }
+    .fr{
+        float:right;
+    }
+
+
+</style>
+<body style="min-width:1500px">
+<!--头部信息-->
+<div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
+</div>
+
+<!--轮播图-->
+<div class="banner-engine">
+    <ul class="banner-ul clearfix" id="slider-back">
+        <li style="background:url(/static/index/images/conference-banner.png) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/conference-banner.png) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/conference-banner.png) center center /100% 500px no-repeat;"></li>
+    </ul>
+    <!-- 对应banner文字 -->
+    <div class="slider-main banner-div">
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="business-text1">智慧有我会务解决方案</p>
+                <p class=" business-text2">有我会务，是一款在线会务管理后台制造工具，同时也是强大的智慧会务解决方案分享平台，提供方案和工具。它可以帮助你轻松完成会务全流程管理和现场互动，让你轻松获取会务的数据，用户现场简单快捷完成指定操作。</p>
+                <a class="banner-link-button" href="#">在线咨询</a>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="business-text1">智慧有我会务解决方案</p>
+                <p class=" business-text2">有我会务，是一款在线会务管理后台制造工具，同时也是强大的智慧会务解决方案分享平台，提供方案和工具。它可以帮助你轻松完成会务全流程管理和现场互动，让你轻松获取会务的数据，用户现场简单快捷完成指定操作。</p>
+                <a class="banner-link-button" href="#">在线咨询</a>
+            </div>
+        </div>
+        <div class="banner-text">
+            <div class="slider-text" data-start_top="30" data-to_top="0" data-start_left="0" data-to_left="0">
+                <p class="business-text1">智慧有我会务解决方案</p>
+                <p class=" business-text2">有我会务，是一款在线会务管理后台制造工具，同时也是强大的智慧会务解决方案分享平台，提供方案和工具。它可以帮助你轻松完成会务全流程管理和现场互动，让你轻松获取会务的数据，用户现场简单快捷完成指定操作。</p>
+                <a class="banner-link-button" href="#">在线咨询</a>
+            </div>
+        </div>
+    </div>
+    <!-- banner索引 -->
+    <div class="banner-point">
+        <div class="auto">
+            <ul class="banner-area" id="slider-btn">
+                <li class="active" data-delay="12000"></li>
+                <li data-delay="8000"></li>
+                <li data-delay="8000"></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!--菜单栏-->
+<div class="container button-demo">
+    <div class="row">
+        <div class="col-md-12 business-left text-center">
+            <div class="col-md-2  ">
+                <div class="business-services">
+                    <a class="on-about" id="conferenceScenesLink">适用场景</a>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="business-services">
+                    <a class="on-about" id="conferenceToolsLink">基础工具</a>
+                </div>
+            </div>
+            <div class="col-md-2 ">
+                <div class="business-services">
+                    <a class="on-about" id="parkapp1Link">会务四属性</a>
+                </div>
+            </div>
+            <div class="col-md-2  ">
+                <div class="business-services">
+                    <a class="on-about" id="conferenceIdeaLink">运营理念</a>
+                </div>
+            </div>
+            <div class="col-md-2   ">
+                <div class="business-services">
+                    <a class="on-about" id="parkapp3Link">用户痛点</a>
+                </div>
+            </div>
+            <div class="col-md-2  ">
+                <div class="business-services" >
+                    <a class="on-about" id="parkapp2Link">产品定位和设计特点</a>
+                </div>
+            </div>
+            <div class="col-md-2  ">
+                <div class="business-services">
+                    <a class="on-about"  id="parkapp4Link">客户案例</a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--智慧有我会务场景-->
+<div class="container" id="conferenceScenes">
+    <div class="bgmenu bgmenu1">
+        <div class="row">
+            <div class="menu-title menu-title1">
+                <h3 style="font-weight: 400;color: #000">智慧有我会务场景</h3>
+                <a href="#"><span style="float:right; color: deepskyblue">查看更多+</span></a>
+            </div>
+        </div>
+        <div class="row Scenes" >
+            <div class="col-md-12 ">
+
+                <div class="col-md-3">
+                    <a href="#"><img src="/static/index/images/conference-icon1.png" width="100%" alt="企业年会"></a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#"><img src="/static/index/images/conference-icon2.png" width="100%" alt="沙龙派对"></a>
+                    <a href="#"><img src="/static/index/images/conference-icon3.png" width="100%" alt="路演"></a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#"><img src="/static/index/images/conference-icon4.png" width="100%" alt="教育培训"></a>
+                </div>
+                <div class="col-md-3">
+                    <a href="#"><img src="/static/index/images/conference-icon5.png" width="100%" alt="政府会议"></a>
+                    <a href="#"><img src="/static/index/images/conference-icon6.png" width="100%" alt="学术报告"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--有我会务的基础工具-->
+<div class="container" id="conferenceTools">
+    <div class="bgmenu bgmenu1 ">
+        <div class="row">
+            <div class="menu-title menu-title1">
+                <h3 style="font-weight: 400;color: #000">有我会务的基础工具</h3>
+            </div>
+        </div>
+        <div class="row tools">
+
+
+
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon1.png" data-src="/static/index/images/conferenceSolution/tool-icon1-hover.png" alt="签到">
+                    <p>签到</p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon2.png" data-src="/static/index/images/conferenceSolution/tool-icon2-hover.png" alt="打招呼">
+                    <p>打招呼</p>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon3.png" data-src="/static/index/images/conferenceSolution/tool-icon3-hover.png" alt="抽奖">
+                    <p>抽奖</p>
+
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon4.png" data-src="/static/index/images/conferenceSolution/tool-icon4-hover.png" alt="提问">
+                    <p>提问</p>
+
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon5.png" data-src="/static/index/images/conferenceSolution/tool-icon5-hover.png" alt="发红包">
+                    <p>发红包</p>
+                </a>
+
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon6.png" data-src="/static/index/images/conferenceSolution/tool-icon6-hover.png" alt="投票">
+                    <p>投票</p>
+
+                </a>
+            </div>
+
+        </div>
+        <div class="row tools" >
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon7.png" data-src="/static/index/images/conferenceSolution/tool-icon7-hover.png" alt="打赏">
+                    <p>打赏</p>
+
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon8.png" data-src="/static/index/images/conferenceSolution/tool-icon8-hover.png" alt="名片台">
+                    <p>名片台</p>
+
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon9.png" data-src="/static/index/images/conferenceSolution/tool-icon9-hover.png" alt="统计">
+                    <p>统计</p>
+
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon10.png" data-src="/static/index/images/conferenceSolution/tool-icon10-hover.png" alt="直播">
+                    <p>直播</p>
+
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon11.png" data-src="/static/index/images/conferenceSolution/tool-icon11-hover.png" alt="流程管理">
+                    <p>流程管理</p>
+
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="#">
+                    <img class="tools-icon tools-icon1" src="/static/index/images/conferenceSolution/tool-icon12.png" data-src="/static/index/images/conferenceSolution/tool-icon12-hover.png" alt="物料管理">
+                    <p>物料管理</p>
+
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+<!--智慧会务的"四个属性"-->
+<div class="animate-box" id="parkapp1">
+    <div class="bgmenu bgmenu1 ">
+        <div class="row ">
+            <div class="menu-title menu-title1">
+                <h3 style="font-weight: 400;color: #000">智慧会务的"四个属性"</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 business-row">
+                <div class="col-md-3 ">
+                    <div class="div-shadow">
+                        <div class="text-center div-gray">
+                            <img src="/static/index/images/conferenceSolution/attribute-icon1.png" alt="">
+                            <p class="gray-menu">{{parkCharacter.parkTittle[0]}}</p>
+                        </div>
+                        <div class="div-white">
+                            <div class="div-white-desc">
+                                <p class="div-white-desc-p">{{parkCharacter.parkText[0]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="div-shadow">
+                        <div class="text-center div-gray">
+                            <img src="/static/index/images/conferenceSolution/attribute-icon2.png" alt="">
+                            <p class="gray-menu">{{parkCharacter.parkTittle[1]}}</p>
+                        </div>
+                        <div class="div-white">
+                            <div class="div-white-desc">
+                                <p class="div-white-desc-p">{{parkCharacter.parkText[1]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="div-shadow">
+                        <div class="text-center div-gray">
+                            <img src="/static/index/images/conferenceSolution/attribute-icon3.png" alt="">
+                            <p class="gray-menu">{{parkCharacter.parkTittle[2]}}</p>
+                        </div>
+                        <div class="div-white">
+                            <div class="div-white-desc">
+                                <p class="div-white-desc-p">{{parkCharacter.parkText[2]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="div-shadow">
+                        <div class="text-center div-gray">
+                            <img src="/static/index/images/conferenceSolution/attribute-icon4.png" alt="">
+                            <p class="gray-menu">{{parkCharacter.parkTittle[3]}}</p>
+                        </div>
+                        <div class="div-white">
+                            <div class="div-white-desc">
+                                <p class="div-white-desc-p">{{parkCharacter.parkText[3]}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--有我会务的运营理念-->
+<div class="container" id="conferenceIdea">
+    <div class="bgmenu bgmenu1">
+        <div class="row">
+            <div class="menu-title menu-title1">
+                <h3 style="font-weight: 400;color: #000">有我会务的运营理念</h3>
+            </div>
+        </div>
+        <div class="row conference-idea">
+            <div class="col-md-4">
+                <img class="tools-icon" src="/static/index/images/conferenceSolution/idea-icon1.png" data-src="/static/index/images/conferenceSolution/idea-icon1-hover.png" alt="">
+                <p class="gray-menu">提供会务解决方案和在线制作工具</p>
+            </div>
+            <div class="col-md-4">
+                <img class="tools-icon" src="/static/index/images/conferenceSolution/idea-icon2.png" data-src="/static/index/images/conferenceSolution/idea-icon2-hover.png" alt="">
+                <p class="gray-menu">向80%的用户提供在线工具和接口</p>
+            </div>
+            <div class="col-md-4">
+                <img class="tools-icon" src="/static/index/images/conferenceSolution/idea-icon3.png" data-src="/static/index/images/conferenceSolution/idea-icon3-hover.png" alt="">
+                <p class="gray-menu">向20%的高端客户提供定制化服务</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--根据大量定制服务总结的市场和用户痛点-->
+<div class="container" id="parkapp3">
+    <div class="bgmenu bgmenu1">
+        <div class="row">
+            <div class="menu-title menu-title1">
+                <h3 style="font-weight: 400;color: #000">根据大量定制服务总结的市场和用户痛点</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 market-box">
+                <div class="col-md-4">
+                    <img class="tools-icon" src="/static/index/images/conferenceSolution/market-icon1.png" data-src="/static/index/images/conferenceSolution/market-icon1-hover.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p class="park-two-menu">{{parkValue.parkTittle[0]}}</p>
+                    <p >{{parkValue.parkText[0]}}</p>
+                </div>
+            </div>
+            <div class="col-md-3 market-box">
+                <div class="col-md-4">
+                    <img class="tools-icon" src="/static/index/images/conferenceSolution/market-icon2.png" data-src="/static/index/images/conferenceSolution/market-icon2-hover.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p class="park-two-menu">{{parkValue.parkTittle[1]}}</p>
+                    <p >{{parkValue.parkText[1]}}</p>
+                </div>
+            </div>
+            <div class="col-md-3 market-box">
+                <div class="col-md-4">
+                    <img class="tools-icon" src="/static/index/images/conferenceSolution/market-icon3.png" data-src="/static/index/images/conferenceSolution/market-icon3-hover.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p class="park-two-menu">{{parkValue.parkTittle[2]}}</p>
+                    <p >{{parkValue.parkText[2]}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 market-box">
+                <div class="col-md-4">
+                    <img class="tools-icon" src="/static/index/images/conferenceSolution/market-icon4.png" data-src="/static/index/images/conferenceSolution/market-icon4-hover.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p class="park-two-menu">{{parkValue.parkTittle[3]}}</p>
+                    <p >{{parkValue.parkText[3]}}</p>
+                </div>
+            </div>
+            <div class="col-md-3 market-box">
+                <div class="col-md-4">
+                    <img class="tools-icon" src="/static/index/images/conferenceSolution/market-icon5.png" data-src="/static/index/images/conferenceSolution/market-icon5-hover.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p class="park-two-menu">{{parkValue.parkTittle[4]}}</p>
+                    <p >{{parkValue.parkText[4]}}</p>
+                </div>
+            </div>
+            <div class="col-md-3 market-box">
+                <div class="col-md-4">
+                    <img class="tools-icon" src="/static/index/images/conferenceSolution/market-icon6.png" data-src="/static/index/images/conferenceSolution/market-icon6-hover.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <p class="park-two-menu">{{parkValue.parkTittle[5]}}</p>
+                    <p >{{parkValue.parkText[5]}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--有我会务产品定位和设计特点-->
+<div class="animate-box" id="parkapp2">
+    <div class="bgmenu bgmenu1 ">
+        <div class="row ">
+            <div class="menu-title menu-title1">
+                <h3 style="font-weight: 400;color: #000">有我会务产品定位和设计特点</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 business-row">
+                <div class="col-md-1 ">
+                    <div class="div-shadow">
+                        <div class="text-center div-white">
+                            <img class="tools-icon" src="/static/index/images/conferenceSolution/character-icon1.png" data-src="/static/index/images/conferenceSolution/character-icon1-hover.png" alt="">
+                            <p class="gray-menu">{{parkCases.parkTittle[0]}}</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-1 ">
+                    <div class="div-shadow">
+                        <div class="text-center div-white">
+                            <img class="tools-icon" src="/static/index/images/conferenceSolution/character-icon2.png" data-src="/static/index/images/conferenceSolution/character-icon2-hover.png" alt="">
+                            <p class="gray-menu">{{parkCases.parkTittle[1]}}</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-1 ">
+                    <div class="div-shadow">
+                        <div class="text-center div-white">
+                            <img class="tools-icon" src="/static/index/images/conferenceSolution/character-icon3.png" data-src="/static/index/images/conferenceSolution/character-icon3-hover.png" alt="">
+                            <p class="gray-menu">{{parkCases.parkTittle[2]}}</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-1 ">
+                    <div class="div-shadow">
+                        <div class="text-center div-white">
+                            <img class="tools-icon" src="/static/index/images/conferenceSolution/character-icon4.png" data-src="/static/index/images/conferenceSolution/character-icon4-hover.png" alt="">
+                            <p class="gray-menu">{{parkCases.parkTittle[3]}}</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-1 ">
+                    <div class="div-shadow">
+                        <div class="text-center div-white">
+                            <img class="tools-icon" src="/static/index/images/conferenceSolution/character-icon5.png" data-src="/static/index/images/conferenceSolution/character-icon5-hover.png" alt="">
+                            <p class="gray-menu">{{parkCases.parkTittle[4]}}</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-1 ">
+                    <div class="div-shadow">
+                        <div class="text-center div-white">
+                            <img class="tools-icon" src="/static/index/images/conferenceSolution/character-icon6.png" data-src="/static/index/images/conferenceSolution/character-icon6-hover.png" alt="">
+                            <p class="gray-menu">{{parkCases.parkTittle[5]}}</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--客户案例-->
+<div class="animate-box" id="parkapp4">
+    <div class="bgmenu bgmenu1 ">
+        <div class="row ">
+            <div class="menu-title menu-title1">
+                <h3 style="font-weight: 400;color: #000">客户案例</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 business-row caselogo">
+                <div class="col-md-2 ">
+                    <div class="box2Con">
+                        <div class="box2Img">
+                            <div class="text-center div-caselogo">
+                                <img class="tools-icon img-responsive" src="/static/index/images/conferenceSolution/case-icon1.png"  alt="">
+                                <p class="gray-menu">{{parkCaseLogo.parkTittle[0]}}</p>
+                                <p class="gray-menu">{{parkCaseLogo.parkText1[0]}}</p>
+                            </div>
+                        </div>
+                        <div class="box2HovBg">
+                            <div class="box2Hov">
+                                <p class="box2HovTittle">{{parkCaseLogo.parkTittle[0]}}</p>
+                                <p class="">{{parkCaseLogo.parkText2[0]}}</p>
+                                <div class="box2Item">
+                                    <p class="box2HovTittle2">主要产品</p>
+
+                                        <div class=" col-md-12 box2-huodong">
+                                            <div class="col-md-1">
+                                                <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/qiandao.png"  alt="签到"></a>
+                                                <p>签到</p>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/fahongbao.png"  alt="发红包"></a>
+                                                <p class="con-hi">打招呼</p>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/tongji.png"  alt="统计"></a>
+                                                <p>抽奖</p>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/toupiao.png"  alt="投票"></a>
+                                                <p>签到</p>
+                                            </div>
+                                            <div class="col-md-1">
+                                                <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/tiwen.png"  alt="提问"></a>
+                                                <p>提问</p>
+                                            </div>
+                                        </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-2 ">
+
+                    <div class="box2Con">
+                        <div class="box2Img">
+                            <div class="text-center div-caselogo">
+                                <img class="tools-icon img-responsive" src="/static/index/images/conferenceSolution/case-icon2.png"  alt="">
+                                <p class="gray-menu">{{parkCaseLogo.parkTittle[1]}}</p>
+                                <p class="gray-menu">{{parkCaseLogo.parkText1[0]}}</p>
+                            </div>
+                        </div>
+                        <div class="box2HovBg">
+                            <div class="box2Hov">
+                                <p class="box2HovTittle">{{parkCaseLogo.parkTittle[1]}}</p>
+                                <p class="">{{parkCaseLogo.parkText2[0]}}</p>
+                                <div class="box2Item">
+                                    <p class="box2HovTittle2">主要产品</p>
+
+                                    <div class=" col-md-12 box2-huodong">
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/qiandao.png"  alt="签到"></a>
+                                            <p>签到</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/fahongbao.png"  alt="发红包"></a>
+                                            <p class="con-hi">打招呼</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/tongji.png"  alt="统计"></a>
+                                            <p>抽奖</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/toupiao.png"  alt="投票"></a>
+                                            <p>签到</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/tiwen.png"  alt="提问"></a>
+                                            <p>提问</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="col-md-2 ">
+
+                    <div class="box2Con">
+                        <div class="box2Img">
+                            <div class="text-center div-caselogo">
+                                <img class="tools-icon img-responsive" src="/static/index/images/conferenceSolution/case-icon3.png"  alt="">
+                                <p class="gray-menu">{{parkCaseLogo.parkTittle[2]}}</p>
+                                <p class="gray-menu">{{parkCaseLogo.parkText1[0]}}</p>
+                            </div>
+                        </div>
+                        <div class="box2HovBg">
+                            <div class="box2Hov">
+                                <p class="box2HovTittle">{{parkCaseLogo.parkTittle[2]}}</p>
+                                <p class="">{{parkCaseLogo.parkText2[0]}}</p>
+                                <div class="box2Item">
+                                    <p class="box2HovTittle2">主要产品</p>
+
+                                    <div class=" col-md-12 box2-huodong">
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/qiandao.png"  alt="签到"></a>
+                                            <p>签到</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/fahongbao.png"  alt="发红包"></a>
+                                            <p class="con-hi">打招呼</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/tongji.png"  alt="统计"></a>
+                                            <p>抽奖</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/toupiao.png"  alt="投票"></a>
+                                            <p>签到</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/tiwen.png"  alt="提问"></a>
+                                            <p>提问</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="col-md-2 ">
+
+                    <div class="box2Con">
+                        <div class="box2Img">
+                            <div class="text-center div-caselogo">
+                                <img class="tools-icon img-responsive" src="/static/index/images/conferenceSolution/case-icon4.png"  alt="">
+                                <p class="gray-menu">{{parkCaseLogo.parkTittle[3]}}</p>
+                                <p class="gray-menu">{{parkCaseLogo.parkText1[0]}}</p>
+                            </div>
+                        </div>
+                        <div class="box2HovBg">
+                            <div class="box2Hov">
+                                <p class="box2HovTittle">{{parkCaseLogo.parkTittle[3]}}</p>
+                                <p class="">{{parkCaseLogo.parkText2[0]}}</p>
+                                <div class="box2Item">
+                                    <p class="box2HovTittle2">主要产品</p>
+
+                                    <div class=" col-md-12 box2-huodong">
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/qiandao.png"  alt="签到"></a>
+                                            <p>签到</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/fahongbao.png"  alt="发红包"></a>
+                                            <p class="con-hi">打招呼</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/tongji.png"  alt="统计"></a>
+                                            <p>抽奖</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/toupiao.png"  alt="投票"></a>
+                                            <p>签到</p>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <a href="#"><img class="tools-icon " src="/static/index/images/conferenceSolution/tiwen.png"  alt="提问"></a>
+                                            <p>提问</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--脚本以及侧边栏-->
+<div th:replace="index/index/side :: side"></div>
+<div th:replace="index/index/footer :: footer"></div>
+<div th:include="index/index/js :: onload_js">
+</div>
+<script src="/static/index/js/vue.js"></script>
+<script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
+<script type="text/javascript" src="/static/index/js/public.js"></script>
+<script type="text/javascript" src="/static/index/js/aui.js"></script>
+<script type="text/javascript" src="/static/index/js/business.js"></script>
+<script>
+    $("#conferenceScenesLink").click(function() {
+        $("html, body").animate({
+            scrollTop: $("#conferenceScenes").offset().top }, {duration: 500,easing: "swing"});
+        return false;
+    });
+
+    function SearchTittle(id1,id2) {
+        $(id1).click(function () {
+            $("html, body").animate({
+                scrollTop: $(id2).offset().top }, {duration: 2000,easing: "swing"});
+            return false;
+        });
+    }
+    SearchTittle("#conferenceToolsLink","#conferenceTools");
+    SearchTittle("#parkapp1Link","#parkapp1");
+    SearchTittle("#conferenceIdeaLink","#conferenceIdea");
+    SearchTittle("#parkapp3Link","#parkapp3");
+    SearchTittle("#parkapp2Link","#parkapp2");
+    SearchTittle("#parkapp4Link","#parkapp4");
+
+
+    var app1 = new Vue({
+        el:"#parkapp1",
+        data:{
+            parkCharacter:{
+                parkTittle:["低频刚需","科技普惠","解决方案","应用工具"],
+                parkText:["低频刚需的产品就像医院，人不会天天去医院，但一定会去，年会不是天天有，一有就是大事。","每年年会是工会或者行政部最头疼的，不要重复去年，要新鲜，要创意，要省钱，要与时俱进","对接的年会服务商沟通成本和提案数量并不是很丰富，需要平台提供足够多的，好的解决方案。","科技服务，服务的越多，收集数据就会越多，平台的可参考价值就会增加，服务就能越精准。"]
+            }
+        },
+    });
+    var app2 = new Vue({
+        el:"#parkapp2",
+        data:{
+            parkCases:{
+                parkTittle:["丰富模板","大屏幕灵活切换","数据可视化","子母账户","管理者多端控制","用户入口灵活多样"],
+
+            }
+        }
+    });
+    var app3 = new Vue({
+        el:"#parkapp3",
+        data:{
+            parkValue:{
+                parkTittle:["用户需求","用户标准","成本高","周期长","稳定性、安全性","落地难"],
+                parkText:["用户需求不确定，较多、较杂","用户无标准，需要进行培训","成本较高，中小企业无法接受","开发周期较长，至少20天","使用稳定性、安全性不够成熟","用户实际操作问题较多，落地难"]
+            }
+        }
+    });
+    var app4 = new Vue({
+        el:"#parkapp4",
+        data:{
+            parkCaseLogo:{
+                parkTittle:["静安区共青团","友邦保险","小小恐龙集团","复旦MBA"],
+                parkText1:["参与社区志愿服务，共促进和谐社会建设","寻找最合适您和您家人的保险产品","诚信做人，激情做事；共创价值，共享生活","博学而笃志，切问而近思"],
+                parkText2:["企牛牛提供资源快速升级方案，支持众多并且持续过度增长的用户"]
+            }
+        }
+    })
+</script>
+<script type="text/javascript">
+    $(function() {
+        var d = $("#slider-btn li");
+        var j = $("#slider-back li");
+        var a = $(".banner-text");
+        var h = $(".slider-text");
+        var e = $(".banner-txt a");
+        var i = 0;
+        d.each(function(l) {
+            $(this).mouseover(function() {
+                f(l)
+            });
+            $(this).data("index")
+        });
+        function f(l) {
+            i = l;
+            d.eq(l).addClass("active").siblings().removeClass();
+            var m = a.eq(l);
+            var n = m.children();
+            m.siblings(".banner-text").stop(true).fadeOut(100);
+            m.show();
+            n.each(function() {
+                var o = $(this);
+                o.css({
+                    display: "block",
+                    opacity: 0,
+                    top: o.data("start_top") || 0,
+                    left: o.data("start_left") || 0
+                });
+                o.stop(true).delay(400).animate({
+                        display: "none",
+                        opacity: 1,
+                        top: o.data("to_top"),
+                        left: o.data("to_left")
+                    },
+                    1200);
+                if (o.data("class") !== undefined) {
+                    o.removeClass(o.data("class"));
+                    setTimeout(function() {
+                            o.addClass(o.data("class"))
+                        },
+                        0)
+                }
+            });
+            j.eq(l).siblings().stop().animate({
+                    opacity: 0
+                },
+                600);
+            j.eq(l).stop().animate({
+                    opacity: 1
+                },
+                600)
+        }
+        function g() {
+            i++;
+            if (i == d.length) {
+                i = 0
+            }
+            f(i)
+        }
+        var c = null;
+        var b = $("#slider-btn");
+        var k = function() {
+            var l = b.find(".active");
+            c = setTimeout(function() {
+                    g();
+                    k()
+                },
+                l.data("delay") || 8000)
+        };
+        k();
+        d.hover(function() {
+                clearInterval(c)
+            },
+            function() {
+                k()
+            });
+        f(0)
+    });
+
+    var imgHoverReplaceSrc = {
+        init: function (sel) {
+            this.sel = sel || "img";
+            this.imgList = document.querySelectorAll(sel);
+            this.work();
+        },
+        work: function () {
+            var _this = this;
+            this.imgList.forEach(function (item) {
+                item.addEventListener("mouseenter", function () {
+                    _this.changeSrc(item);
+                    // item.className = "animate-box";
+                });
+                item.addEventListener("mouseleave", function () {
+                    _this.changeSrc(item);
+                    // item.className = "animate-box";
+                });
+            });
+        },
+        changeSrc: function (item) {
+            if (item.getAttribute('data-src')) {
+                var tmpSrc = item.src;
+                item.src = item.getAttribute('data-src');
+                item.setAttribute('data-src', tmpSrc);
+            }
+        }
+    }
+    imgHoverReplaceSrc.init(".tools-icon");
+
+</script>
+</body>
+</html>

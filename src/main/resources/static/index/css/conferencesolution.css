@@ -1,0 +1,124 @@
+.business-left .col-md-2{
+    width: 10.9%;
+}
+.slider-text{
+    margin-left: 300px;
+}
+.Scenes .col-md-3{
+    padding: 0;
+}
+.business-row{
+
+    margin-left: 0%;
+}
+#parkapp1{
+    margin-top: 0;
+}
+.tools{
+    margin-left: 50px;
+}
+.tools .col-md-2{
+    width: 16.66667%;
+    text-align: center;
+    margin: 15px 0;
+}
+.tools-icon1:hover+p{
+    color: red;
+}
+.conference-idea img{
+    margin-left: 100px;
+}
+.market-box{
+    margin: 20px 40px;
+    border: 1px solid #888888;
+}
+#parkapp2 .col-md-1{
+    width: 16.33333%;
+}
+.div-white{
+    border: 1px solid #E2E3E4;
+    height: 230px;
+}
+.div-white img{
+    margin: 20px 0;
+}
+.gray-menu{
+    margin: 15px 0;
+}
+div-caselogo{
+    border: 1px solid #E2E3E4;
+    height: 300px;
+}
+.caselogo .col-md-2{
+    width: 23.66667%;
+    margin: 0 7px;
+    border: 1px solid #E2E3E4;
+}
+.caselogo .col-md-2:hover{
+    border: 1px solid red;
+}
+.div-caselogo{
+    height: 300px;
+}
+.box2Con{
+    position: relative;
+    overflow: hidden;
+}
+.box2Img img {
+    width: 39%;
+    margin-left: 80px;
+}
+.box2HovBg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: transparent;
+    color: #FFFFFF;
+    opacity: 10;
+    transform: translateY(-100%);
+    transition: all 0.4s ease 0s;
+}
+.box2Con:hover .box2Img{
+    opacity: 0;
+}
+.box2Hov p{
+     margin-bottom: 10px;
+
+    padding: 2px 3px;
+    font-size: 14px;
+}
+.box2Item{
+    border-top: 1px dashed gray;
+    margin-top: 40px;
+}
+.box2Item .col-md-1{
+    margin: 0 6px;
+}
+.box2Item .col-md-12{
+    width: 106%;
+}
+.box2HovTittle{
+    text-align: center;
+    font-size: 22px!important;
+    font-weight: 500;
+    color: black;
+}
+.box2HovTittle2{
+    font-size: 20px!important;
+    font-weight: 500;
+    color: black;
+}
+.box2-huodong{
+    margin: 10px 0 0 -15px;
+}
+.box2-huodong p{
+    width: 48px;
+    margin-left: -8px;
+}
+.con-hi{
+    margin-left: -14px!important;
+}
+

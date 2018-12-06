@@ -32,10 +32,12 @@
         }
 
     </style>
-<body style="min-width:1500px">
+<body style="min-width:1500px;">
+<div style="position: relative;">
+    <!--头文件-->
 <div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
 </div>
-
+<!--轮播图-->
     <div class="banner-engine">
         <ul class="banner-ul clearfix" id="slider-back">
             <li class="banner-cloudapp" style="background:url(/static/index/images/banner1.jpg) center center / 100% 500px no-repeat;"></li>
@@ -81,7 +83,7 @@
         </div>
 
     </div>
-
+<!--轮播图固定栏-->
 <div id="fh5co-partner" style="width:78%;margin-left:12%">
     <div class="container">
         <div class="partner-wrap">
@@ -109,6 +111,7 @@
         </div>
     </div>
 </div>
+    <!--中心logo-->
 <div class="container title-demo" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section">
@@ -119,6 +122,7 @@
         </div>
     </div>
 </div>
+    <!--服务菜单栏-->
 <div class="container">
     <div class="menu-demo  ">
         <div class="row text-center ">
@@ -293,7 +297,7 @@
 
 </div>
 
-
+<!--行业解决方案-->
 <div class="container button-demo" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section ">
@@ -302,6 +306,7 @@
         </div>
     </div>
 </div>
+    <!--智慧解决方案-->
 <ul class="box2List list-unstyled row animate-box">
     <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
         <div class="box2Con">
@@ -394,6 +399,7 @@
         </div>
     </li>
 </ul>
+    <!--精致产品-->
 <div class="container button-demo" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section">
@@ -446,7 +452,7 @@
 </div>
 
 </div>
-
+<!--下载中心-->
 <div class="container button-demo " >
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section" style="margin-top: -60px;">
@@ -733,7 +739,7 @@
     </div>
 </div>
 
-
+<!--统计栏-->
 <div class="container  box-tongji" >
     <div class="row">
         <div class="col-md-12  bg-gray">
@@ -791,7 +797,7 @@
         </div>
     </div>
 </div>
-
+<!--新闻资讯-->
 <div class="container button-demo" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section">
@@ -877,9 +883,6 @@
 
 
 </div>
-
-
-
 
 <div class="cards  animate-box news2">
     <div class="row .row-bottom-padded-sd">
@@ -1002,7 +1005,7 @@
 
 </div>
 
-
+<!--合作伙伴-->
 <div class="container button-demo logo-bottom" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section">
@@ -1051,7 +1054,7 @@
 </div>
 
 
-
+<!--注册-->
 <div class="container button-demo animate-box" >
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
@@ -1064,6 +1067,8 @@
 <div th:replace="index/index/side :: side"></div>
 <div th:replace="index/index/footer :: footer"></div>
 <div th:include="index/index/js :: onload_js"></div>
+
+</div>
 
 <script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
 <script type="text/javascript" src="/static/index/js/public.js"></script>

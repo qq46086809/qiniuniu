@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
+<head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
+    <title th:text=${title}></title>
+    <link rel="stylesheet" th:href="@{{path}static/index/css/newslist.css(path=${rootPath})}">
+    <link rel="stylesheet" href="/static/index/css/newslist1.css">
+    <style type="text/css">
+    </style>
+</head>
+<style>
+    ul,li{
+        list-style: none;
+    }
+
+    .total-police-alert{
+        width: 500px;
+        height: 90px;
+        padding: 10px;
+        margin: 100px auto 0;
+        font: 36px "华文楷体";
+        line-height: 90px;
+        color: #fff;
+        box-shadow: -2px 2px 10px #000;
+        background-color: rgba(81,167,229,1.00);
+        border-radius: 10px;
+    }
+    .fl{
+        float:left;
+    }
+    .fr{
+        float:right;
+    }
+
+
+</style>
+<body style="min-width:1500px">
+<div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
+</div>
+
+<div class="container">
+    <div class="bgmenu animate-box">
+        <div class=" row">
+            <div class="menu-title">
+                <a href="#" style="color: #000;">首页</a> <strong>></strong> <a href="#" style="color: #000;">新闻列表</a> <strong>></strong><a
+                    href="#" style="color: skyblue;">重磅发布|蚂蚁金服与电子标准院达成战略合作，共同推进数据安全行业的标准化</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container button-demo">
+    <div class="row">
+        <div class=" soilder-left animate-box">
+            <div class="div-white">
+
+                    <div class="title">
+                        <h1>重磅发布|蚂蚁金服与电子标准院达成战略合作，共同推进数据安全行业的标准化</h1>
+                        <p  class="fx-a"><i class="fa fa-clock-o "></i><i >2018-10-18</i></p>
+                        <p  class="fx-a"><i class="fa fa-eye"></i>浏览<i>124</i></p>
+                    </div>
+                    <div class="nav Summary">
+                        <p><strong>摘要：</strong>在客户个人数据安全和隐私保障领域，一方面持续加大数据安全能力建设，另一方面将内部能力沉淀形成数安大脑等产品与解决方案并完成生态输出，目前已经覆盖政府、银行、基金、保险等诸多行业。</p>
+                    </div>
+                <div class="container">
+                    <p>为期四天的杭州云栖大会上个月落下帷幕。</p>
+                    <p>现场除了来自全球6大洲81个国家及地区，共12万人现场参会带来的震撼之外，更有超170场峰会和分论坛不间断分享最新、最热的前沿技术：从服务器计算到火热不减的IoT，从备受争议的区块链到被人频频称道的人工智能，更是无所不包。</p>
+                    <p>而最为一家走在最前沿的科技公司，蚂蚁金服又在这方面都做了哪些努力，取得了哪些成绩呢，一起来瞧瞧吧！</p>
+                    <img src="/static/index/images/newlistmenu1.png" alt="">
+                    <p>有科技的地方都充满故事。</p>
+                    <p>会上提出的“新杭州故事”向人们全面地展示了城市大脑2.0、“移动支付之城”、“移动办事之城”、“智慧医疗之城”等诸多新意。</p>
+                    <p>除此之外，有一项战略合作的发布也被大家“看在眼里、记在心上”。</p>
+                    <p>这项合作有关蚂蚁金服与电子标准院，关乎被热议的金融安全与标准制定。</p>
+                    <p>一直以来，科技创新，搭建开放、共享、安全的信用体系以及金融服务平台，都是蚂蚁金服坚持不变的追求。</p>
+                    <p>一路走来，从快捷支付、余额宝、芝麻信用再到蚂蚁财富、保险，蚂蚁金服借助金融科技陆续开创了一系列新型的金融业态。</p>
+                    <p>在推动技术创新的过程中，如今蚂蚁金服已明确了系统化的B.A.S.I.C金融基础技术战略五大方向，分别是区块链（Blockchain）、人工智能（Artificial Intelligence）、安全 （Security）、物联网（Internet of Things）与计算（Computing）。</p>
+                    <img src="/static/index/images/newlistmenu2.png" alt="">
+                    <p>如果B.A.S.I.C战略是实现“技术让世界更平等”愿景的基础，那么Security（安全）则是蚂蚁金服的核心战斗力和发展的生命线。</p>
+                    <p>经过多年发展，蚂蚁金服的风险引擎已进化到第5代，资金损失率降低到百万分之一。</p>
+                    <p>在客户个人数据安全和隐私保障领域，一方面持续加大数据安全能力建设，另一方面将内部能力沉淀形成数安大脑等产品与解决方案并完成生态输出，目前已经覆盖政府、银行、基金、保险等诸多行业。</p>
+                    <p>在数字身份方面，蚂蚁金服投入了大量资源研究金融级生物身份识别，并联合合作伙伴成立了互联网金融身份认证联盟-IFAA，所提供的金融级的基于指纹、人脸等生物特征识别的身份校验核验功能为用户带来了切实的安全与便利。</p>
+                    <p>发展至今，在让“安全可信”日益成为新金融核心驱动力的道路上，尽管面对层出不穷的新技术与千变万化的环境，依然还存在许多不确定性因素。此背景下，蚂蚁金服与电子标准院应势建立了战略合作伙伴关系。</p>
+                    <img src="/static/index/images/newlistmenu3.png" alt="">
+                    <p>谈及合作，蚂蚁金服方面表示，如今数字经济蓬勃发展，各行各业在推出新产品、新服务的同时均以数据的深度使用为目的，有便利也包含风险，但整个行业的数据安全能力还参差不齐。 </p>
+                    <p>作为平台企业，蚂蚁金服本身非常重视数据安全，但在推进各行各业提升数据安全方面，生态的力量远大于单个企业的力量，蚂蚁金服更希望联合电子标准院的力量向各行业输出相关数据安全法律法规、标准的解读以及数据安全体系建设方面的咨询服务应用。 </p>
+                    <p>据记者了解，此前蚂蚁金服与电子标准院有过一定的合作。不管是在数据安全还是区块链、人工智能、生物特征识别等，都形成了非常良好的合作基础与氛围。 </p>
+                    <p>在标准研制与应用实践的过程中，企业的作用非常重要。举例来说，如今信安标委的四百多家成员单位中大部分均为企业，优秀的标准内容很大程度上来源于企业实践的总结，标准的落地应用也离不开企业对标准的试点验证。更重要的一点，标准的需求有时候来源于企业的痛点。”电子标准院表示。 </p>
+                    <p>从应用层面出发，标准的实践应用来自企业，只有企业实地运用了，才能第一时间得知怎么用、怎么改。 </p>
+                    <p>记者了解到，本次战略合作双方至少将会从以下几个领域深入展开：</p>
+                    <p>首先，在国内、国际标准化领域展开密切合作，共同参与和推动网络安全、数据安全与隐私保护、生物特征识别、身份认证、物联网、区块链、人工智能等技术领域内的标准化合作研制项目。</p>
+
+                </div>
+                <div class="footer">
+                    <p class="news-time">原文发布时间：</p><span>2018年10月17日</span><br>
+                    <p class="news-author">本文作者：</p><span href="#"></span>
+                    <p>本文来自中国新闻合作伙伴"蚂蚁金服科技",了解相关信息可以关注"蚂蚁金服科技"。</p>
+                    <p>本文经授权转载，不代表企牛牛及中国新闻网立场。如若转载请联系原作者。</p>
+                    <p class="s-fenxiang">分享到：<a class="fx-a"><i class="fa fa-weibo fa-2x"></i></a><a class="fx-a2"><i class="fa fa-wechat fa-2x"></i></a></p>
+                </div>
+
+
+                <div class="aboutTittle">
+                    <h3>相关文章</h3>
+                    <p><a href="#">蚂蚁金服与天津银行达成战略合作，金融科技开放势头迅速延伸</a></p>
+                    <P><a href="#">ATEC|蚂蚁金服技术出海，如何让人人享有平等的金融...</a></P>
+                    <p><a href="#">8.7亿活跃用户！支付宝晒出全球成绩单</a></p>
+                    <p><a href="#">进击的蚂蚁金融云与场景焦虑的银行</a></p>
+                    <p><a href="#">北京金融局、通州区政府与蚂蚁金融战略合作 共防系统性金融...</a></p>
+                    <p><a href="#">《企牛牛周刊》第5期MaxCompute2.0重磅发...</a></p>
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-3" style="width:20%">
+            <div class="div-right">
+                <p class="li-title">相关话题</p>
+                <ul style="padding-left:30px;">
+                    <li class="li-i">在互联网行业里，想法和技术哪个更重要</li>
+                    <li class="li-i">秒级通行，无一人被拒，12万人如何刷脸</li>
+                    <li class="li-i">程序员最核心的竞争力是什么</li>
+                    <li class="li-i">【现场抽奖】大家来细数2018杭州云栖大会之最</li>
+                    <li class="li-i">剧透|企牛牛应用配置管理ACM即将正式商用，聊聊你的应用配置管理的故事</li>
+                </ul>
+            </div>
+            <div class="div-right-2">
+                <p class="jj-1">企牛牛为你提供最全的</p>
+                <p class="jj-2">解决方案</p>
+                <button class="btn btn-jj">立即咨询</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container button-demo">
+
+
+    <div th:replace="index/index/side :: side"></div>
+    <div th:replace="index/index/footer :: footer"></div>
+    <div th:include="index/index/js :: onload_js">
+    </div>
+    <script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
+    <script type="text/javascript" src="/static/index/js/public.js"></script>
+    <script type="text/javascript" src="/static/index/js/newslist.js"></script>
+    <script type="text/javascript" src="/static/index/js/layer.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var d = $("#slider-btn li");
+            var j = $("#slider-back li");
+            var a = $(".banner-text");
+            var h = $(".slider-text");
+            var e = $(".banner-txt a");
+            var i = 0;
+            d.each(function(l) {
+                $(this).mouseover(function() {
+                    f(l)
+                });
+                $(this).data("index")
+            });
+            function f(l) {
+                i = l;
+                d.eq(l).addClass("active").siblings().removeClass();
+                var m = a.eq(l);
+                var n = m.children();
+                m.siblings(".banner-text").stop(true).fadeOut(100);
+                m.show();
+                n.each(function() {
+                    var o = $(this);
+                    o.css({
+                        display: "block",
+                        opacity: 0,
+                        top: o.data("start_top") || 0,
+                        left: o.data("start_left") || 0
+                    });
+                    o.stop(true).delay(400).animate({
+                            display: "none",
+                            opacity: 1,
+                            top: o.data("to_top"),
+                            left: o.data("to_left")
+                        },
+                        1200);
+                    if (o.data("class") !== undefined) {
+                        o.removeClass(o.data("class"));
+                        setTimeout(function() {
+                                o.addClass(o.data("class"))
+                            },
+                            0)
+                    }
+                });
+                j.eq(l).siblings().stop().animate({
+                        opacity: 0
+                    },
+                    600);
+                j.eq(l).stop().animate({
+                        opacity: 1
+                    },
+                    600)
+            }
+            function g() {
+                i++;
+                if (i == d.length) {
+                    i = 0
+                }
+                f(i)
+            }
+            var c = null;
+            var b = $("#slider-btn");
+            var k = function() {
+                var l = b.find(".active");
+                c = setTimeout(function() {
+                        g();
+                        k()
+                    },
+                    l.data("delay") || 8000)
+            };
+            k();
+            d.hover(function() {
+                    clearInterval(c)
+                },
+                function() {
+                    k()
+                });
+            f(0)
+        });
+
+    </script>
+</body>
+</html>

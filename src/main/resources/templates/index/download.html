@@ -35,9 +35,11 @@
 
 </style>
 <body style="min-width:1500px">
+<!--头文件-->
 <div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
 </div>
 
+<!--轮播图-->
 <div class="banner-engine">
     <ul class="banner-ul clearfix" id="slider-back">
         <li class="banner-cloudapp" style="background:url(/static/index/images/banner1.jpg) center center / 100% 500px no-repeat;"></li>
@@ -84,7 +86,7 @@
 
 </div>
 
-
+<!--导航栏-->
 <div class="container nav-menu" >
     <div class="row row-bottom-padded-md">
         <div class="list-title col-md-9 col-md-offset-2" style="margin-left: 14.66667%;">
@@ -123,7 +125,7 @@
         </div>
     </div>
 </div>
-
+<!--精品推荐-->
 <div class="container downrecommend" >
     <div class="cards row">
         <div class="menu-title">
@@ -181,7 +183,7 @@
 
 </div>
 </div>
-
+<!--微信定制-->
 <div class="container downrecommend" >
     <div class="cards row row-bottom-padded-md">
         <div class="menu-title">
@@ -301,6 +303,7 @@
         </div>
     </div>
 </div>
+<!--APP制造-->
 <div class="container downrecommend" >
     <div class="cards row row-bottom-padded-md">
         <div class="menu-title">
@@ -365,6 +368,7 @@
         </div>
     </div>
 </div>
+<!--网站模板-->
 <div class="container downrecommend" >
     <div class="cards row row-bottom-padded-md">
         <div class="menu-title">
@@ -429,6 +433,7 @@
         </div>
     </div>
 </div>
+<!--H5开发-->
 <div class="container downrecommend" >
     <div class="cards row row-bottom-padded-md">
         <div class="menu-title">
@@ -493,6 +498,7 @@
         </div>
     </div>
 </div>
+<!--商城制造-->
 <div class="container downrecommend" >
     <div class="cards row row-bottom-padded-md">
         <div class="menu-title">
@@ -557,6 +563,7 @@
         </div>
     </div>
 </div>
+<!--智慧会务-->
 <div class="container downrecommend" >
     <div class="cards row row-bottom-padded-md">
         <div class="menu-title">
@@ -623,7 +630,7 @@
 </div>
 
 
-
+<!--底部和侧边栏-->
 <div th:replace="index/index/side :: side"></div>
 <div th:replace="index/index/footer :: footer"></div>
 <div th:include="index/index/js :: onload_js"></div>
