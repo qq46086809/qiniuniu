@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73de4cfb-98e1-4b50-86f8-e91a7b637975" name="Default" comment="测试2">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/qiniu_java_sdk_7_2_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/qiniu-java-sdk-7.2.11.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qiniuniu.iml" beforeDir="false" afterPath="$PROJECT_DIR$/qiniuniu.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,6 +57,57 @@
     </expand>
     <select />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1094115849">
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="2" />
+          <entry key="html" value="9" />
+          <entry key="java" value="49" />
+          <entry key="js" value="6" />
+          <entry key="xml" value="25" />
+          <entry key="yml" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="2" />
+          <entry key="HTML" value="9" />
+          <entry key="JAVA" value="49" />
+          <entry key="JavaScript" value="6" />
+          <entry key="XML" value="25" />
+          <entry key="YAML" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="303" />
+          <entry key="java" value="228" />
+          <entry key="js" value="10" />
+          <entry key="xml" value="346" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="303" />
+          <entry key="JAVA" value="228" />
+          <entry key="JavaScript" value="10" />
+          <entry key="XML" value="346" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.21" value="1" />
+          <entry key="project.opened" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+>>>>>>> origin/master
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
@@ -108,8 +167,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/conferencesolution.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="1543">
               <caret line="252" lean-forward="true" selection-start-line="252" selection-end-line="252" />
+=======
+            <state relative-caret-position="300">
+              <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
+>>>>>>> origin/master
               <folding>
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -135,6 +199,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/index/news/NewsController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="471">
@@ -148,10 +213,17 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
               <caret line="11" column="67" lean-forward="true" selection-start-line="11" selection-start-column="67" selection-end-line="11" selection-end-column="67" />
+=======
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/dist/summernote.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="27900">
+              <caret line="1860" column="21" selection-start-line="1860" selection-start-column="21" selection-end-line="1860" selection-end-column="21" />
+>>>>>>> origin/master
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -180,6 +252,16 @@
                 <element signature="n#div#1;n#div#14;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#15;n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#16;n#div#0;n#body#0;n#html#0;n#!!top" />
+=======
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="56" column="11" lean-forward="true" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1250#1256#0" expanded="true" />
+>>>>>>> origin/master
               </folding>
             </state>
           </provider>
@@ -355,7 +437,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fc/index/login/LoginController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/test/common/base/BaseController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/test/service/SysNewService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fc/test/mapper/custom/NewsDao.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis/custom/NewsMapper.xml" />
@@ -363,6 +444,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/new/list.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/new/edit.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/admin/new/add.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java" />
       </list>
     </option>
   </component>
@@ -402,6 +484,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+>>>>>>> origin/master
       <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
@@ -414,18 +501,35 @@
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
               <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name=".idea" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
               <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+>>>>>>> origin/master
+            </path>
+            <path>
+              <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+>>>>>>> origin/master
             </path>
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
               <item name="qiniuniu" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+=======
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+>>>>>>> origin/master
             </path>
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
@@ -433,6 +537,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
             </path>
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
@@ -484,6 +589,9 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="fc" type="462c0819:PsiDirectoryNode" />
+>>>>>>> origin/master
             </path>
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
@@ -491,6 +599,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -503,6 +612,8 @@
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="index" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> origin/master
             </path>
             <path>
               <item name="qiniuniu" type="b2602c69:ProjectViewProjectNode" />
@@ -536,11 +647,15 @@
     <property name="SearchEverywhereHistoryKey" value="QnLogin&#9;null&#9;null&#10;QnRoot&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544065506840" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544065218790" />
+>>>>>>> origin/master
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/qiniu-java-sdk-7.2.11.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.5091954" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -553,6 +668,8 @@
       <recent name="com.fc.plugin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\周晓筱\Desktop\SpringBoot_v2\qiniuniu\lib" />
+      <recent name="C:\Users\周晓筱\Desktop\SpringBoot_v2\qiniuniu\src\main\resources\lib" />
       <recent name="C:\Users\周晓筱\Desktop\SpringBoot_v2\qiniuniu\src\main\resources\static\admin" />
       <recent name="C:\Users\周晓筱\Desktop\SpringBoot_v2\qiniuniu\src\main\resources\mybatis\custom" />
       <recent name="D:\Git\qiniuniu\src\main\resources" />
@@ -657,7 +774,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543827773675</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="测试2">
+      <created>1543975038547</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543975038548</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -681,7 +805,11 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Web" order="4" side_tool="true" />
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.20064378" />
+=======
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.1923925" />
+>>>>>>> origin/master
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="7" />
       <window_info anchor="bottom" id="Spring" order="0" />
@@ -690,11 +818,19 @@
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="5" weight="0.329582" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49785408" visible="true" weight="0.3810056" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3298647" />
       <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49946353" weight="0.27709496" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005365" side_tool="true" weight="0.30726257" />
+=======
+      <window_info active="true" anchor="bottom" id="Version Control" order="6" sideWeight="0.4983462" visible="true" weight="0.16441207" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.3298647" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.27159208" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005513" side_tool="true" weight="0.3298647" />
+>>>>>>> origin/master
       <window_info anchor="bottom" id="Debug" order="11" weight="0.30385852" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -775,6 +911,30 @@
     <option name="LAST_COMMIT_MESSAGE" value="测试2" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/assets/js/bootstrap/js/bootstrap-table/bootstrap-table.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/bootstarp/ndesaintheme.com/themes/apricot/assets/js/textEditor/src/bootstrap3-wysihtml5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="82" column="101" lean-forward="true" selection-start-line="82" selection-start-column="101" selection-end-line="82" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/user/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="74" column="92" selection-start-line="74" selection-start-column="88" selection-end-line="74" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> origin/master
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/test/model/auto/NewsExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1054,6 +1214,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/dist/summernote.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27900">
+          <caret line="1860" column="21" selection-start-line="1860" selection-start-column="21" selection-end-line="1860" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/test/service/SysNewService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
@@ -1085,28 +1252,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/new/add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        <state relative-caret-position="300">
+          <caret line="81" column="34" selection-start-line="81" selection-start-column="34" selection-end-line="81" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.4.RELEASE/spring-context-5.0.4.RELEASE.jar!/org/springframework/context/annotation/Configuration.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="881">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/admin/dist/summernote.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fc/test/controller/admin/newController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="1855" lean-forward="true" selection-start-line="1855" selection-end-line="1855" />
+        <state relative-caret-position="165">
+          <caret line="56" column="11" lean-forward="true" selection-start-line="56" selection-start-column="11" selection-end-line="56" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1250#1256#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1253,7 +1421,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>json-lib-2.4-jdk15</last-edited>
+          <last-edited>qiniu-java-sdk-7.2.11</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

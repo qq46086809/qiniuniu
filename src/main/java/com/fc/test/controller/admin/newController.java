@@ -20,7 +20,9 @@ import org.springframework.web.bind.annotation.*;
 public class newController extends BaseController{
 	
 	private String prefix = "admin/new";
-	
+	static String accessKey = "wvg0XHiVI2-bubOYj0cga4RQ4l9ish_6eH22GPGB";
+	static String secretKey = "_7c0Ije_5u2vObZ02SzsAqS17wCJm74GCGHdwsoY";
+	static String bucket = "qiniuniu";
 	
 	@GetMapping("view")
 	@RequiresPermissions("system:new:view")
@@ -60,6 +62,27 @@ public class newController extends BaseController{
 	@RequiresPermissions("system:new:add")
 	@ResponseBody
 	public AjaxResult add(News news){
+//		FileInputStream fileInputStream = (FileInputStream) multipartFile.getInputStream();
+//		Configuration cfg = new Configuration(Zone.zone2());
+//		UploadManager uploadManager = new UploadManager(cfg);
+//		String key = "22";
+//		Auth auth = Auth.create(accessKey, secretKey);
+//		String upToken = auth.uploadToken(bucket);
+//		try {
+//			Response response = uploadManager.put(fileInputStream,key,upToken,null, null);
+//			//解析上传成功的结果
+//			DefaultPutRet putRet = new Gson().fromJson(response.bodyString(), DefaultPutRet.class);
+//			System.out.println(putRet.key);
+//			System.out.println(putRet.hash);
+//		} catch (QiniuException ex) {
+//			Response r = ex.response;
+//			System.err.println(r.toString());
+//			try {
+//				System.err.println(r.bodyString());
+//			} catch (QiniuException ex2) {
+//				//ignore
+//			}
+//		}
 		int b=sysNewService.insertSelective(news);
 		if(b>0){
 			return success();
