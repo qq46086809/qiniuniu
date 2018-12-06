@@ -6,12 +6,15 @@
     <title th:text=${title}></title>
     <!-- 这儿引用单独的css link -->
     <!-- Ladda for Bootstrap 3按钮加载进度插件 -->
+
     <link rel="stylesheet" th:href="@{{path}static/admin/assets/js/button/ladda/ladda.min.css(path=${rootPath})}">
     <!-- bootstrap-table表单样式 -->
     <link th:href="@{{path}static/admin/assets/js/bootstrap/css/bootstrap-table/bootstrap-table.min.css(path=${rootPath})}"
           rel="stylesheet"/>
+    <link th:href="@{{path}static/admin/dist/summernote.css(path=${rootPath})}" rel="stylesheet"/>
 
     <style type="text/css">
+    .m{ width: 719px; margin-left: auto; margin-right: auto; }
 .content-wrap {
      padding: 0px;
 }
@@ -69,34 +72,55 @@ label.error {
                 </div>
                 <div class="body-nest" id="element">
                     <div class="panel-body">
-                        <form class="form-horizontal m" id="form-add">
+                        <form class="form-horizontal m" id="form-add" onsubmit="return sub()">
+
                             <div class="form-group">
-                                <label class="col-sm-3 control-label ">登录名称：</label>
+                                <label class="col-sm-3 control-label ">标题:</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="username" name="username"/>
+                                    <input class="form-control" type="text" id="title" name="title"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">来源:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="source" name="source"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">作者:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="build" name="build"/>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">原文创作时间:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="textTime" name="textTime"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">摘要:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="summary" name="summary"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label ">登录密码：</label>
-                                <div class="col-sm-8">
-                                    <input class="form-control" type="password" id="password" name="password"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label ">权限授权：</label>
-                                <div class="col-sm-8">
-                                    <div class="icheckbox-blue">
-                                        <label th:each="m : ${tsysRoleList}">
-                                            <input class="sqcheckbox" name="roles" th:value="${m.id}" type="checkbox"><b
-                                                th:text="${m.name}"></b>
-                                        </label>
+                                <div class="col-sm-11">
+                                    <div class="m" style="border:1px solid #ccc">
+                                        <div class="summernote" ></div>
                                     </div>
                                 </div>
                             </div>
+                            <input type="hidden" id="description" name="description" value="" />
                             <div class="form-group">
                                 <div class="form-control-static col-sm-offset-9">
                                     <button type="submit" class="btn btn-primary">提交</button>
-                                    <button onclick="$.modal.close()" class="btn btn-danger" type="button">关闭</button>
+                                    <button onclick="$.modal.close()" class="btn btn-danger" type="button">关闭1</button>
                                 </div>
                             </div>
                         </form>
@@ -122,6 +146,10 @@ label.error {
 
 <!-- 弹窗 -->
 <script th:src="@{{path}static/admin/assets/js/layer/layer.js(path=${rootPath})}" type="text/javascript"></script>
+
+<script th:src="@{{path}static/admin/dist/summernote.js(path=${rootPath})}"></script>
+<script th:src="@{{path}static/admin/dist/lang/summernote-zh-CN.js(path=${rootPath})}"></script>
+
 <!-- 遮罩层 -->
 <script th:src="@{{path}static/admin/assets/js/blockUI/jquery.blockUI.js(path=${rootPath})}"
         type="text/javascript"></script>
@@ -129,85 +157,25 @@ label.error {
 <script th:src="@{{path}static/js/jqueryFormSerializeJson.js(path=${rootPath})}" type="text/javascript"></script>
 
 <script type="text/javascript">
+$(function(){
+ $('.summernote').summernote({
+        height: 200,
+        tabsize: 2,
+        lang: 'zh-CN'
+    });
+});
 $("#form-add").validate({
-	rules:{
-		username:{
-			required:true,
-			minlength: 2,
-			maxlength: 20,
-			remote: {
-                url: rootPath + "/UserController/checkLoginNameUnique",
-                type: "post",
-                dataType: "json",
-                dataFilter: function(data, type) {
-                    if (data == "0")
-                    	return true;
-                    else 
-                    	return false;
-                }
-            }
-		},
-		deptName:{
-			required:true,
-		},
-		password:{
-			required:true,
-			minlength: 5,
-			maxlength: 20
-		},
-		email:{
-			required:true,
-            email:true,
-            remote: {
-                url:rootPath + "/UserController/checkEmailUnique",
-                type: "post",
-                dataType: "json",
-                data: {
-                    name: function () {
-                        return $.trim($("#email").val());
-                    }
-                },
-                dataFilter: function (data, type) {
-                    if (data == "0") return true;
-                    else return false;
-                }
-            }
-		},
-		phonenumber:{
-			required:true,
-			isPhone:true,
-            remote: {
-                url: rootPath + "system/user/checkPhoneUnique",
-                type: "post",
-                dataType: "json",
-                data: {
-                    name: function () {
-                        return $.trim($("#phonenumber").val());
-                    }
-                },
-                dataFilter: function (data, type) {
-                    if (data == "0") return true;
-                    else return false;
-                }
-            }
-		},
-	},
-	messages: {
-        "username": {
-            remote: "用户已经存在"
-        },
-		"email": {
-            remote: "Email已经存在"
-        },
-		"phonenumber":{
-        	remote: "手机号码已经存在"
-		}
-    },
+
 	submitHandler:function(form){
 		add();
 	}
 });
 
+
+function sub(){
+document.getElementById("description").value=document.getElementById("desc").innerHTML;
+return true;
+}
 /**
  * 用户添加方法
  */
@@ -216,7 +184,7 @@ function add() {
 	$.ajax({
 		cache : true,
 		type : "POST",
-		url : rootPath + "/UserController/add",
+		url : rootPath + "/newController/add",
 		data : dataFormJson,
 		async : false,
 		error : function(request) {

@@ -64,11 +64,12 @@
 
         <!--生成对应表及类名-->
 
-        <!--<table tableName="auth_resource" domainObjectName="AuthResource" >-->
-            <!--<property name="my.isgen.usekeys" value="true"/>-->
-            <!--<property name="useActualColumnNames" value="false"/>-->
-            <!--<generatedKey column="id" sqlStatement="JDBC"/>-->
-
+        <!--</table>-->
+        <table tableName="t_news" domainObjectName="News"
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false" selectByExampleQueryId="false">
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
         <!--</table>-->
         <table tableName="t_user" domainObjectName="Tuser"
             enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"

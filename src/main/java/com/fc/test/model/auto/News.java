@@ -1,8 +1,6 @@
 package com.fc.test.model.auto;
 
-import java.io.Serializable;
-
-public class News implements Serializable {
+public class News {
     private Integer id;
 
     private String title;
@@ -19,7 +17,7 @@ public class News implements Serializable {
 
     private String source;
 
-    private static final long serialVersionUID = 1L;
+    private String createtime;
 
     public Integer getId() {
         return id;
@@ -83,5 +81,13 @@ public class News implements Serializable {
 
     public void setSource(String source) {
         this.source = source == null ? null : source.trim();
+    }
+
+    public String getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(String createtime) {
+        this.createtime = createtime == null ? null : createtime.trim();
     }
 }

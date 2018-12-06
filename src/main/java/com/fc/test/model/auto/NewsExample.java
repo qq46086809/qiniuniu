@@ -445,72 +445,72 @@ public class NewsExample {
         }
 
         public Criteria andTextTimeIsNull() {
-            addCriterion("text_time is null");
+            addCriterion("textTime is null");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeIsNotNull() {
-            addCriterion("text_time is not null");
+            addCriterion("textTime is not null");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeEqualTo(String value) {
-            addCriterion("text_time =", value, "textTime");
+            addCriterion("textTime =", value, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeNotEqualTo(String value) {
-            addCriterion("text_time <>", value, "textTime");
+            addCriterion("textTime <>", value, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeGreaterThan(String value) {
-            addCriterion("text_time >", value, "textTime");
+            addCriterion("textTime >", value, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeGreaterThanOrEqualTo(String value) {
-            addCriterion("text_time >=", value, "textTime");
+            addCriterion("textTime >=", value, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeLessThan(String value) {
-            addCriterion("text_time <", value, "textTime");
+            addCriterion("textTime <", value, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeLessThanOrEqualTo(String value) {
-            addCriterion("text_time <=", value, "textTime");
+            addCriterion("textTime <=", value, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeLike(String value) {
-            addCriterion("text_time like", value, "textTime");
+            addCriterion("textTime like", value, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeNotLike(String value) {
-            addCriterion("text_time not like", value, "textTime");
+            addCriterion("textTime not like", value, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeIn(List<String> values) {
-            addCriterion("text_time in", values, "textTime");
+            addCriterion("textTime in", values, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeNotIn(List<String> values) {
-            addCriterion("text_time not in", values, "textTime");
+            addCriterion("textTime not in", values, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeBetween(String value1, String value2) {
-            addCriterion("text_time between", value1, value2, "textTime");
+            addCriterion("textTime between", value1, value2, "textTime");
             return (Criteria) this;
         }
 
         public Criteria andTextTimeNotBetween(String value1, String value2) {
-            addCriterion("text_time not between", value1, value2, "textTime");
+            addCriterion("textTime not between", value1, value2, "textTime");
             return (Criteria) this;
         }
 
