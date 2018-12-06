@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="159" />
+    <option name="y" value="198" />
+    <option name="width" value="1585" />
+    <option name="height" value="1100" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544080572958" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SpringbootSwagger2Application">
     <configuration name="SpringbootSwagger2Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.fc.SpringbootSwagger2Application" />
       <module name="qiniuniu" />
@@ -13,6 +21,13 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringbootSwagger2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="qiniuniu" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.fc.SpringbootSwagger2Application" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
