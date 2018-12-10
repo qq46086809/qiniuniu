@@ -1,3 +1,13 @@
+
+
+.menu-icon{
+    margin-top: 30px;
+}
+.title-demo {
+    margin-top: 60px;
+}
+
+
 .business-text1{
 color:#dddddd;
 font-size:30px;
@@ -16,8 +26,8 @@ font-weight:600;
 cursor:pointer;
 }
 
-.business-left{
-margin-left:8%
+.business-left .col-md-1{
+margin:10px;
 }
 
 .business-services{
@@ -68,7 +78,8 @@ line-height:1.4;
 color: #444444;
     font-size: 23px;
     font-weight: 600;
-margin-bottom:30px;
+    margin-bottom: 40px;
+    margin-top: 50px;
 }
 
 .business-min{

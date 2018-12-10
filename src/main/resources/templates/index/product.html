@@ -39,7 +39,7 @@
 <div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
 </div>
 
-<div class="container">
+<div class="container" id="goods">
     <div class="bgmenu">
         <div class=" row">
             <div class="menu-title">
@@ -50,12 +50,24 @@
             <div class="col-md-4 col-sm-4 menu-pic">
                 <div class="container">
                     <div class="col-md-11 col-sm-10">
-                        <a href="#"><img src="/static/index/images/trademark1.png" style="width: 100%;"></a>
-                        <p style="text-align: center;margin: 10px 0 0 0">2/10</p>
+                        <div class="pic" >
+                            <div class="content">
+                                <img src="/static/index/images/trademark1.png" >
+                                <img src="/static/index/images/trademark1.png" >
+                                <img src="/static/index/images/trademark1.png" >
+                                <img src="/static/index/images/trademark1.png" >
+                                <img src="/static/index/images/trademark1.png" >
+                            </div>
+                        </div>
+
+                        <p style="text-align: center;margin: 10px 0 0 0">
+                            <span id="indexs"></span> /
+                            <span id="amounts"></span>
+                        </p>
                     </div>
                     <div class="col-md-1 col-sm-1 menu-pic-side" style="  margin-top: 45%;    margin-left: -10px;">
-                        <a class="menu-pic-link"><i class="fa fa-chevron-up " style="color:#555555"></i></a>
-                        <a class="menu-pic-link"><i class="fa fa-chevron-down " style="color:#555555"></i></a>
+                        <a class="menu-pic-link"><i class="left fa fa-chevron-up " style="color:#555555"></i></a>
+                        <a class="menu-pic-link"><i class="right fa fa-chevron-down " style="color:#555555"></i></a>
                         <a class="menu-pic-link"><i class="fa fa-link fa-2x" style="color:#555555"></i></a>
                         <a class="menu-pic-link"><i class="fa fa-qrcode fa-2x" style="color:#555555;"></i></i></a>
                     </div>
@@ -209,6 +221,48 @@
 <script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
 <script type="text/javascript" src="/static/index/js/public.js"></script>
 <script type="text/javascript" src="/static/index/js/aui.js"></script>
+<script src="/static/index/js/vue.js"></script>
+<script>
+
+    var app = new Vue({
+        el:"#goods",
+        data:{
+            nums:'',
+            indexs:''
+        },
+        methods:{
+
+        }
+    })
+
+    $(function(){
+
+        var index = 0;
+        var length = $(".content img").length;
+        // console.log(length)
+
+        $(".left").click(function(){
+            index--;
+            if (index==-1) {index=(length-1);}
+            $(".content").animate({"left":-318*index},500);
+            $("#indexs").text(index+1);
+
+        })
+        $(".right").click(function(){
+            index++;
+            if (index==length) {index=0}
+            $(".content").animate({"left":-318*index},500);
+            $("#indexs").text(index+1);
+        })
+        $("#indexs").text(index+1);
+        $("#amounts").text(length)
+
+
+
+    })
+
+
+</script>
 
 </body>
 </html>

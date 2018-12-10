@@ -13,6 +13,7 @@
     </style>
 </head>
 <body>
+<!--侧边栏-->
 <div th:fragment="side" class="containers" style="top:10%">
     <div class="links2" style="height:192px;">
         <div class="text">
@@ -40,33 +41,41 @@
 
 <div class="login clearfix" id="loginbox"  style="display:block">
     <div class="login-image-box float-left">
-        <img src="/static/index/images/login.jpg" alt="" style="float:left">
-        <div class="login-box">
-            <h4 style="padding:40px 40px 40px 90px;font-weight:600;">密码登录</h4>
-            <form th:action="@{/adminlogin}" method="post" id="loginForm">
-                <!-- 用户名 -->
-                <div class="login-username clearfix">
-                    <input type="hidden" name="loginway" id="loginway" value="0"/>
-                    <input class="float-left login-input" autocomplete="off"  type="text" name="username" id="username" placeholder="用户名"
-                           required>
+        <div class="col-md-8">
+            <div class="col-md-4">
+                <img src="/static/index/images/login.jpg" alt="" style="float:left">
+            </div>
+            <div class="col-md-4">
+                <div class="login-box">
+                    <h4 style="padding:40px 40px 40px 90px;font-weight:600;">密码登录</h4>
+                    <form th:action="@{/adminlogin}" method="post" id="loginForm">
+                        <!-- 用户名 -->
+                        <div class="login-username clearfix">
+                            <input type="hidden" name="loginway" id="loginway" value="0"/>
+                            <input class="float-left login-input" autocomplete="off"  type="text" name="username" id="username" placeholder="用户名"
+                                   required>
+                        </div>
+                        <!-- 密码 -->
+                        <div class="login-password clearfix">
+                            <input class="float-left login-input" autocomplete="off"  type="password" name="password" id="password"
+                                   placeholder="请输入密码" required>
+                        </div>
+                        <button onclick="severCheck()" class="login-login">
+                            <span class="">登录</span>
+                        </button>
+                    </form>
+                    <div><p style="margin-left:200px;margin-top:10px">
+                        <a style="margin-left:20px;color:#999;cursor:pointer;">忘记密码</a>
+                        <a style="margin-left:30px;color:#999;cursor:pointer;" onclick="Toinsert()">免费注册</a></p></div>
+                    <div style="margin-top:70px;margin-left:92px;"><p>其他登录方式 :
+                        <img src="/static/index/images/wx.png" style="margin-left:10px">
+                        <img src="/static/index/images/qq.png" style="margin-left:10px">
+                    </p></div>
                 </div>
-                <!-- 密码 -->
-                <div class="login-password clearfix">
-                    <input class="float-left login-input" autocomplete="off"  type="password" name="password" id="password"
-                           placeholder="请输入密码" required>
-                </div>
-                <button onclick="severCheck()" class="login-login">
-                    <span class="">登录</span>
-                </button>
-            </form>
-            <div><p style="margin-left:200px;margin-top:10px">
-                <a style="margin-left:20px;color:#999;cursor:pointer;">忘记密码</a>
-                <a style="margin-left:30px;color:#999;cursor:pointer;" onclick="Toinsert()">免费注册</a></p></div>
-            <div style="margin-top:70px;margin-left:92px;"><p>其他登录方式 :
-                <img src="/static/index/images/wx.png" style="margin-left:10px">
-                <img src="/static/index/images/qq.png" style="margin-left:10px">
-            </p></div>
+            </div>
         </div>
+
+
     </div>
 
 </div>

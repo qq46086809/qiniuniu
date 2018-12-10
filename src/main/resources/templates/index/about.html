@@ -34,14 +34,15 @@
 
 </style>
 <body style="min-width:1500px">
+<!--头文件-->
 <div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
 </div>
-
+<!--轮播图-->
 <div class="banner-engine">
     <ul class="banner-ul clearfix" id="slider-back">
-        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
-        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
-        <li style="background:url(/static/index/images/about1.jpg) center center  /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/about/banner.png) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/about/banner.png) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/about/banner.png) center center  /100% 500px no-repeat;"></li>
     </ul>
     <!-- 对应banner文字 -->
     <div class="slider-main banner-div">
@@ -49,21 +50,21 @@
             <div class="slider-text" data-start_top="30" data-to_top="0">
                 <p class="about-text1">"正直，笃行，责任，进取，创新"</p>
                 <p class="about-text1">我们不断成长的信念</p>
-                <p class="about-text2">"integrity,commitment,responsibility,progress,innovation"</p>
+                <p class="about-text2">" integrity, commitment, responsibility, progress, innovation"</p>
             </div>
         </div>
         <div class="banner-text about-text">
             <div class="slider-text" data-start_top="30" data-to_top="0">
                 <p class="about-text1">"正直，笃行，责任，进取，创新"</p>
                 <p class=" about-text1">我们不断成长的信念</p>
-                <p class=" about-text2">"integrity,commitment,responsibility,progress,innovation"</p>
+                <p class="about-text2">" integrity, commitment, responsibility, progress, innovation"</p>
             </div>
         </div>
         <div class="banner-text about-text">
             <div class="slider-text" data-start_top="30" data-to_top="0">
                 <p class="about-text1">"正直，笃行，责任，进取，创新"</p>
                 <p class=" about-text1">我们不断成长的信念</p>
-                <p class=" about-text2">"integrity,commitment,responsibility,progress,innovation"</p>
+                <p class="about-text2">" integrity, commitment, responsibility, progress, innovation"</p>
             </div>
         </div>
     </div>
@@ -80,48 +81,57 @@
 
 </div>
 
-
+<!--导航栏-->
 <div class=" animate-box">
     <div class="container button-demo ">
         <div class="row">
             <div class="col-md-8 about-left text-center animate-box">
                 <div class="col-md-2 title-list">
                     <div class="about-services">
-                        <a class="on-about">了解企牛牛</a>
+                        <a href="#" class="on-about">了解企牛牛</a>
                     </div>
                 </div>
                 <div class="col-md-2 title-list">
                     <div class="about-services">
-                        <a class="on-about">成功案例</a>
+                        <a id="SuccessCasesLink" class="on-about">成功案例</a>
                     </div>
                 </div>
                 <div class="col-md-2 title-list">
                     <div class="about-services">
-                        <a class="on-about">质量管理体系</a>
+                        <a id="GuanliLink"  class="on-about">质量管理体系</a>
                     </div>
                 </div>
                 <div class="col-md-2 title-list">
                     <div class="about-services">
-                        <a class="on-about">服务标准</a>
+                        <a id="ServiceLink" class="on-about">服务标准</a>
                     </div>
                 </div>
                 <div class="col-md-2  title-list">
                     <div class="about-services">
-                        <a class="on-about">大客户经理职责</a>
+                        <a id="ManagerLink" class="on-about">大客户经理职责</a>
                     </div>
                 </div>
                 <div class="col-md-2 title-list">
                     <div class="about-services">
-                        <a class="on-about">新闻动态</a>
+                        <a id="newsLink" class="on-about">新闻动态</a>
                     </div>
                 </div>
                 <div class="col-md-2 title-list">
                     <div class="about-services">
-                        <a class="on-about">合作伙伴</a>
+                        <a id="huobanLink" class="on-about">合作伙伴</a>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <image src="/static/index/images/about-pic.jpg"/>
+                    <div id="container1">
+                        <div id="itemlist">
+                            <img src="/static/index/images/about/about-pic1.png" alt="" id="busby" />
+                            <img src="/static/index/images/about/about-pic2.png" alt="" id="gridly" />
+                            <!--<img src="/static/index/images/about/about-pic3.png" alt="" id="reco" />-->
+                            <!--<img src="/static/index/images/about/about-pic4.png" alt="" id="theblog" />-->
+                        </div>
+                    </div>
+
+                    <!--<image src="/static/index/images/about/about-pic.png" style="    width: 100%;"/>-->
                 </div>
                 <div class="col-md-6 text-left">
                     <p class="one-menu">了解企牛牛</p>
@@ -129,18 +139,18 @@
                         百家企业和品牌。起初以H5开发为主要业务，在后续的发展中成功运营上海本地生活类订阅号【掌上魔都】，并且在2015年与【微信临客(wxlinked.com)】团队合并
                         研发智慧会务管理平台--【有我】。我们在定位发展上的三部曲:掌上魔都，企牛牛，"有我"智慧会务平台。互相衔接，内在联系形成了上海同年
                         独有的生态体系。</p>
-                    <image src="/static/index/images/pinpai-icon.jpg"/>
+                    <image src="/static/index/images/about/logo.png"/>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container button-demo  ">
+<!--服务栏目-->
+    <div class="container button-demo  " style="    margin-top: 150px;">
         <div class="row">
             <div class="col-md-8 about-left  animate-box">
                 <div class="col-md-4">
                     <div class="col-md-2">
-                        <image src="/static/index/images/pinpai-icon.jpg"/>
+                        <image src="/static/index/images/about/niu.png"/>
                     </div>
                     <div class="col-md-8">
                         <p class="pinpai-menu">企牛牛企业服务</p>
@@ -149,7 +159,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="col-md-2">
-                        <image src="/static/index/images/pinpai-icon.jpg"/>
+                        <image src="/static/index/images/about/guanli.png"/>
                     </div>
                     <div class="col-md-8">
                         <p class="pinpai-menu">有我智慧会务管理平台</p>
@@ -158,7 +168,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="col-md-2">
-                        <image src="/static/index/images/pinpai-icon.jpg"/>
+                        <image src="/static/index/images/about/modu.png"/>
                     </div>
                     <div class="col-md-8">
                         <p class="pinpai-menu">掌上魔都新媒体</p>
@@ -169,7 +179,8 @@
         </div>
     </div>
 </div>
-<div class="container title-demo">
+<!--客户成功案例-->
+<div id="SuccessCases" class="container title-demo" style="margin-top: 80px;">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center">
             <p class="about-one-menu">客户成功案例</p>
@@ -179,28 +190,29 @@
     </div>
 </div>
 
-
-<div class="container button-demo  animate-box">
+<!--客户成功案例-->
+<div class="container button-demo  animate-box" style=" margin-top: -90px;position: relative;">
     <div class="row">
-        <div class="col-md-8 about-left  animate-box">
+        <div class="col-md-8 about-left  animate-box" style="    position: absolute;">
             <div class="col-md-3 about-min">
-                <image src="/static/index/images/about-info.jpg" class="about-info"/>
+                <image src="/static/index/images/about/card1.png" data-src="/static/index/images/about/card4.png" class="about-icon about-info"/>
             </div>
             <div class="col-md-3 about-min">
-                <image src="/static/index/images/about-info.jpg" class="about-info"/>
+                <image src="/static/index/images/about/card2.png" data-src="/static/index/images/about/card4.png" class="about-icon about-info"/>
             </div>
             <div class="col-md-3 about-min">
-                <image src="/static/index/images/about-info.jpg" class="about-info"/>
+                <image src="/static/index/images/about/card1.png" data-src="/static/index/images/about/card4.png" class="about-icon about-info"/>
             </div>
             <div class="col-md-3 about-min">
-                <image src="/static/index/images/about-info2.jpg" width="100%"/>
+                <image src="/static/index/images/about/card2.png" data-src="/static/index/images/about/card4.png" class="about-icon about-info"/>
+                <!--<image src="/static/index/images/about/card4.png" width="100%"/>-->
             </div>
         </div>
     </div>
 </div>
 
-
-<div class="container animate-box about-sop">
+<!--质量管理体系-->
+<div id="Guanli" class="container  about-sop" style="    margin-top: 29%;">
     <div class="row">
         <div class="col-md-8 about-left  animate-box about-bottom">
             <p class="sop-title">质量管理体系 SOP MOC 5A管理模式</p>
@@ -210,36 +222,36 @@
             <div class="col-md-3  about-text-center">
                 <div class="sop-border">
                     <p class="sop-border-text-title">质量管理体系</p>
-                    <image src="/static/index/images/sop-border.jpg"/>
+                    <image src="/static/index/images/about/icon1.png"/>
                     <p class="sop-border-text-desc">我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服</p>
                 </div>
             </div>
             <div class="col-md-3  about-text-center">
                 <div class="sop-border">
                     <p class="sop-border-text-title">SOP</p>
-                    <image src="/static/index/images/sop-border.jpg"/>
+                    <image src="/static/index/images/about/icon2.png"/>
                     <p class="sop-border-text-desc">我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服</p>
                 </div>
             </div>
             <div class="col-md-3  about-text-center">
                 <div class="sop-border">
                     <p class="sop-border-text-title">MOC</p>
-                    <image src="/static/index/images/sop-border.jpg"/>
+                    <image src="/static/index/images/about/icon3.png"/>
                     <p class="sop-border-text-desc">我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服</p>
                 </div>
             </div>
             <div class="col-md-3  about-text-center">
                 <div class="sop-border">
                     <p class="sop-border-text-title">5A管理模式</p>
-                    <image src="/static/index/images/sop-border.jpg"/>
+                    <image src="/static/index/images/about/icon4.png"/>
                     <p class="sop-border-text-desc">我们提供客户创新易用的解决方案的同时给与客服最贴心的的服务，提升客服</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-<div class="container title-demo">
+<!--企牛牛服务-->
+<div id="Service" class="container title-demo">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center ">
             <p class="about-one-menu">企牛牛服务综合、基石、宗旨、客户服务标准(响应时间、反馈)</p>
@@ -274,8 +286,8 @@
     </div>
 </div>
 
-
-<div class="container title-demo">
+<!--大客户经理职责-->
+<div id="Manager" class="container title-demo">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center ">
             <p class="about-one-menu">大客户经理职责</p>
@@ -301,8 +313,8 @@
     </div>
 </div>
 
-
-<div class="container button-demo" style="margin-top:130px">
+<!--新闻动态-->
+<div id="news" class="container button-demo" style="margin-top:130px">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center ">
             <p class="about-one-menu">新闻动态</p>
@@ -310,12 +322,12 @@
         </div>
     </div>
 </div>
-
+<!--新闻-->
 <div class="col-md-8 col-md-offset-2  animate-box">
     <div class="row row-bottom-padded-sd">
         <div class="col-lg-4 col-md-4 news-row">
             <div class=" fh5co-blog">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news1.jpg" alt=""></a>
+                <a href="#"><img class="img-responsive" src="/static/index/images/about/news1.png" alt=""></a>
                 <div class="blog-text"
                      style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
                     <div class="prod-title">
@@ -326,7 +338,7 @@
         </div>
         <div class="col-lg-4 col-md-4 news-row">
             <div class="fh5co-blog ">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news1.jpg" alt=""></a>
+                <a href="#"><img class="img-responsive" src="/static/index/images/about/news2.png" alt=""></a>
                 <div class="blog-text"
                      style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
                     <div class="prod-title">
@@ -337,7 +349,7 @@
         </div>
         <div class="col-lg-4 col-md-4 news-row">
             <div class="fh5co-blog">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news1.jpg" alt=""></a>
+                <a href="#"><img class="img-responsive" src="/static/index/images/about/news3.png" alt=""></a>
                 <div class="blog-text"
                      style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
                     <div class="prod-title">
@@ -346,53 +358,55 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <button class="btn btn-default" style="margin-top: 60px;">查看更多+</button>
+        </div>
     </div>
 </div>
 
-
-<div class="container button-demo animate-box logo-bottom">
+<!--合作伙伴-->
+<div class="container button-demo animate-box logo-bottom" id="huoban">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-            <button class="btn btn-default">查看更多+</button>
+
             <p class="one-menu">合作伙伴</p>
             <p style="font-size:14px">致力成为值得信赖的服务商</p>
             <p style="font-size:14px">创意H5设计、咨询 | 网站建设、运维 | 微信公众号开发 | 小程序开发</p>
-            <div class="col-md-2 col-sm-2">
-                <image src="/static/index/images/logo-list.jpg"/>
+            <div class="row">
+                <div class="col-md-2 col-sm-2">
+                    <image src="/static/index/images/about/logo1.png"/>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <image src="/static/index/images/about/logo2.png"/>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <image src="/static/index/images/about/logo3.png"/>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <image src="/static/index/images/about/logo4.png"/>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <image src="/static/index/images/about/logo5.png"/>
+                </div>
             </div>
-            <div class="col-md-2 col-sm-2">
-                <image src="/static/index/images/logo-list.jpg"/>
+            <div class="row">
+                <div class="col-md-2 col-sm-2" style="    margin-top: 36px;">
+                    <image src="/static/index/images/about/logo6.png"/>
+                </div>
+                <div class="col-md-2 col-sm-2 logo-line">
+                    <image src="/static/index/images/about/logo7.png"/>
+                </div>
+                <div class="col-md-2 col-sm-2 logo-line">
+                    <image src="/static/index/images/about/logo8.png"/>
+                </div>
+                <div class="col-md-2 col-sm-2 logo-line">
+                    <image src="/static/index/images/about/logo9.png"/>
+                </div>
+                <div class="col-md-2 col-sm-2 logo-line">
+                    <image src="/static/index/images/about/logo10.png"/>
+                </div>
             </div>
-            <div class="col-md-2 col-sm-2">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
-            <div class="col-md-2 col-sm-2">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
-            <div class="col-md-2 col-sm-2">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
-            <div class="col-md-2 col-sm-2">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
-            <div class="col-md-2 col-sm-2 logo-line">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
-            <div class="col-md-2 col-sm-2 logo-line">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
-            <div class="col-md-2 col-sm-2 logo-line">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
-            <div class="col-md-2 col-sm-2 logo-line">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
-            <div class="col-md-2 col-sm-2 logo-line">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
-            <div class="col-md-2 col-sm-2 logo-line">
-                <image src="/static/index/images/logo-list.jpg"/>
-            </div>
+
 
         </div>
     </div>
@@ -404,7 +418,46 @@
 </div>
 <script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
 <script type="text/javascript" src="/static/index/js/public.js"></script>
+<script src="/static/index/js/about.js"></script>
 <script type="text/javascript">
+
+    SearchTittle("#SuccessCasesLink","#SuccessCases");
+    SearchTittle("#GuanliLink","#Guanli");
+    SearchTittle("#ServiceLink","#Service");
+    SearchTittle("#ManagerLink","#Manager");
+    SearchTittle("#newsLink","#news");
+    SearchTittle("#huobanLink","#huoban");
+
+
+    var imgHoverReplaceSrc = {
+        init: function (sel) {
+            this.sel = sel || "img";
+            this.imgList = document.querySelectorAll(sel);
+            this.work();
+        },
+        work: function () {
+            var _this = this;
+            this.imgList.forEach(function (item) {
+                item.addEventListener("mouseenter", function () {
+                    _this.changeSrc(item);
+                    // item.className = "animate-box";
+                });
+                item.addEventListener("mouseleave", function () {
+                    _this.changeSrc(item);
+                    // item.className = "animate-box";
+                });
+            });
+        },
+        changeSrc: function (item) {
+            if (item.getAttribute('data-src')) {
+                var tmpSrc = item.src;
+                item.src = item.getAttribute('data-src');
+                item.setAttribute('data-src', tmpSrc);
+            }
+        }
+    }
+    imgHoverReplaceSrc.init(".about-icon");
+
 $(function() {
     var d = $("#slider-btn li");
     var j = $("#slider-back li");

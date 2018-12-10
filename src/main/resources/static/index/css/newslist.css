@@ -1,3 +1,6 @@
+
+
+
 .newslist-text1{
 color: #eeeeee;
     font-size: 28px;
@@ -12,9 +15,9 @@ color: #eeeeee;
 width:13.6%;
 }
 
-    .menu-bottom{
-             border-bottom:1px solid #E2E3E4;
-             }
+.menu-bottom{
+    border-bottom:1px solid #E2E3E4;
+}
 
 .newslist-left{
 margin-left:33%;

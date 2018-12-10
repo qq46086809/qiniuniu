@@ -1,5 +1,5 @@
 .menu-service{
-    width: 38%;
+    width: 37%;
 }
 .menu-size{
     border-left: 1px solid rgb(219,221,221);
@@ -45,11 +45,26 @@
     margin-left: 32px;
 }
 .menu-size ul li:nth-child(5){
-    margin-top: 100px;
+    margin-top: 70px;
 }
 .menu-size ul li:nth-child(5) p{
     margin: 20px 0 20px 30px;
 }
 .product-top p{
     color: #000;
+}
+
+.pic{
+    width: 318px;
+    height: 537px;
+    position: relative;
+    overflow: hidden;
+}
+.content{
+    width: 9999px;
+    height: 537px;
+    position: absolute;
+}
+.content img{
+    float: left;
 }

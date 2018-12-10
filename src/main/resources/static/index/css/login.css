@@ -25,7 +25,8 @@ display:inline;
 }
 
 .login-box{
-margin-left: 450px;
+/*margin-left: 450px;*/
+    margin-left: 262px;
     border: 1px solid #dddddd;
     height: 473px;
     width: 500px;

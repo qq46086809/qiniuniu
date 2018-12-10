@@ -34,14 +34,15 @@
 
 </style>
 <body style="min-width:1500px">
+<!--头部文件-->
 <div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
 </div>
-
+<!--轮播图-->
 <div class="banner-engine">
     <ul class="banner-ul clearfix" id="slider-back">
-        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
-        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
-        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/business/banner.png) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/business/banner.png) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/business/banner.png) center center /100% 500px no-repeat;"></li>
     </ul>
     <!-- 对应banner文字 -->
     <div class="slider-main banner-div">
@@ -82,68 +83,66 @@
     </div>
 
 </div>
-
-
+<!--导航栏-->
 <div class="container button-demo menu-bottom">
     <div class="row">
         <div class="col-md-12 business-left text-center animate-box">
             <div class="col-md-1  ">
                 <div class="business-services">
-                    <a class="on-about">逻辑架构</a>
+                    <a id="luojiLink" class="on-about">逻辑架构</a>
                 </div>
             </div>
             <div class="col-md-1  ">
                 <div class="business-services">
-                    <a class="on-about">优势商圈</a>
+                    <a id="youshiLink" class="on-about">优势商圈</a>
                 </div>
             </div>
             <div class="col-md-1  ">
                 <div class="business-services">
-                    <a class="on-about">线上服务</a>
+                    <a id="onlineLink" class="on-about">线上服务</a>
                 </div>
             </div>
             <div class="col-md-1  ">
                 <div class="business-services">
-                    <a class="on-about">商圈与用户互动</a>
+                    <a id="hudongLink" class="on-about">商圈与用户互动</a>
                 </div>
             </div>
             <div class="col-md-1   ">
                 <div class="business-services">
-                    <a class="on-about">促销活动</a>
+                    <a id="cuxiaoLink" class="on-about">促销活动</a>
                 </div>
             </div>
             <div class="col-md-1  ">
                 <div class="business-services">
-                    <a class="on-about">会员积分</a>
+                    <a id="vipLink" class="on-about">会员积分</a>
                 </div>
             </div>
             <div class="col-md-1  ">
                 <div class="business-services">
-                    <a class="on-about">优惠活动</a>
+                    <a id="youhuiLink" class="on-about">优惠活动</a>
                 </div>
             </div>
             <div class="col-md-1  ">
                 <div class="business-services">
-                    <a class="on-about">商圈背景</a>
+                    <a id="shangquanLink" class="on-about">商圈背景</a>
                 </div>
             </div>
             <div class="col-md-1  ">
                 <div class="business-services">
-                    <a class="on-about">预约点餐</a>
+                    <a id="yuyueLink" class="on-about">预约点餐</a>
                 </div>
             </div>
             <div class="col-md-1  ">
                 <div class="business-services">
-                    <a class="on-about">小票寻宝</a>
+                    <a id="xiaopiaoLink" class="on-about">小票寻宝</a>
                 </div>
             </div>
 
         </div>
     </div>
 </div>
-
-
-<div class="animate-box">
+<!--智慧商圈逻辑架构-->
+<div id="luoji" class="animate-box">
     <div class="container button-demo ">
         <div class="row">
             <div class="text-center">
@@ -151,7 +150,7 @@
             </div>
             <div class="col-md-8 business-row">
                 <div class="col-md-8">
-                    <image src="/static/index/images/business.jpg" width="100%"/>
+                    <image src="/static/index/images/business/pic1.png" width="100%"/>
                 </div>
                 <div class="col-md-4 text-left">
                     <p class="business-menu">智慧商圈解决方案</p>
@@ -164,7 +163,8 @@
         </div>
     </div>
 </div>
-<div class="animate-box">
+<!--优势商圈-->
+<div id="youshi" class="animate-box">
     <div class="container button-demo ">
         <div class="row">
             <div class="text-center">
@@ -174,7 +174,7 @@
                 <div class="col-md-3 ">
                     <div class="div-shadow">
                         <div class="text-center div-gray">
-                            <p class="fa fa-user fa-2x gray-icon"></p>
+                            <img src="/static/index/images/business/icon1.png" alt="">
                             <p class="gray-menu">个性化营销</p>
                         </div>
                         <div class="div-white">
@@ -188,7 +188,7 @@
                 <div class="col-md-3">
                     <div class="div-shadow">
                         <div class="text-center div-gray">
-                            <p class="fa fa-user fa-2x gray-icon"></p>
+                            <img src="/static/index/images/business/icon2.png" alt="">
                             <p class="gray-menu">用户粘度高</p>
                         </div>
                         <div class="div-white">
@@ -203,7 +203,7 @@
                 <div class="col-md-3">
                     <div class="div-shadow">
                         <div class="text-center div-gray">
-                            <p class="fa fa-user fa-2x gray-icon"></p>
+                            <img src="/static/index/images/business/icon3.png" alt="">
                             <p class="gray-menu">精准直达</p>
                         </div>
                         <div class="div-white">
@@ -217,7 +217,7 @@
                 <div class="col-md-3">
                     <div class="div-shadow">
                         <div class="text-center div-gray">
-                            <p class="fa fa-user fa-2x gray-icon"></p>
+                            <img src="/static/index/images/business/icon4.png" alt="">
                             <p class="gray-menu">支付与社交融合</p>
                         </div>
                         <div class="div-white">
@@ -232,9 +232,8 @@
         </div>
     </div>
 </div>
-
-
-<div class="animate-box">
+<!--线上服务-->
+<div id="online" class="animate-box">
     <div class="container button-demo ">
         <div class="row">
             <div class="text-center">
@@ -244,7 +243,7 @@
                 <div class="col-md-3 ">
                         <div class="div-card div-red">
                             <div class="col-md-4">
-                                <p class="fa fa-user fa-4x card-icon"></p>
+                                <img class="menu-icon" src="/static/index/images/business/wechat1.png" data-src="/static/index/images/business/wechat1-hover.png" alt="">
                             </div>
                             <div class="col-md-8">
                                 <p class="business-card-title">商圈信息展示</p>
@@ -256,7 +255,7 @@
                 <div class="col-md-3 ">
                         <div class="div-card div-red">
                             <div class="col-md-4">
-                                <p class="fa fa-user fa-4x card-icon"></p>
+                                <img class="menu-icon" src="/static/index/images/business/wechat2.png" data-src="/static/index/images/business/wechat2-hover.png" alt="">
                             </div>
                             <div class="col-md-8">
                                 <p class="business-card-title">商圈信息展示</p>
@@ -267,7 +266,7 @@
                 <div class="col-md-3 ">
                         <div class="div-card div-red">
                             <div class="col-md-4">
-                                <p class="fa fa-user fa-4x card-icon"></p>
+                                <img class="menu-icon" src="/static/index/images/business/wechat3.png" data-src="/static/index/images/business/wechat3-hover.png" alt="">
                             </div>
                             <div class="col-md-8">
                                 <p class="business-card-title">促销服务</p>
@@ -278,7 +277,7 @@
                 <div class="col-md-3 ">
                         <div class="div-card div-red">
                             <div class="col-md-4">
-                                <p class="fa fa-user fa-4x card-icon"></p>
+                                <img class="menu-icon" src="/static/index/images/business/wechat4.png" data-src="/static/index/images/business/wechat4-hover.png" alt="">
                             </div>
                             <div class="col-md-8">
                                 <p class="business-card-title">活动服务</p>
@@ -287,11 +286,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-8 business-row">
+            <div class="col-md-8 business-row" style="    margin-top: 20px;margin-bottom: 20px;">
                 <div class="col-md-3 ">
                         <div class="div-card div-red">
                             <div class="col-md-4">
-                                <p class="fa fa-user fa-4x card-icon"></p>
+                                <img class="menu-icon" src="/static/index/images/business/wechat5.png" data-src="/static/index/images/business/wechat5-hover.png" alt="">
                             </div>
                             <div class="col-md-8">
                                 <p class="business-card-title">餐饮服务</p>
@@ -302,7 +301,7 @@
                 <div class="col-md-3 ">
                         <div class="div-card div-red">
                             <div class="col-md-4">
-                                <p class="fa fa-user fa-4x card-icon"></p>
+                                <img class="menu-icon" src="/static/index/images/business/wechat6.png" data-src="/static/index/images/business/wechat6-hover.png" alt="">
                             </div>
                             <div class="col-md-8">
                                 <p class="business-card-title">智慧停车</p>
@@ -313,7 +312,7 @@
                 <div class="col-md-3 ">
                         <div class="div-card div-red">
                             <div class="col-md-4">
-                                <p class="fa fa-user fa-4x card-icon"></p>
+                                <img class="menu-icon" src="/static/index/images/business/wechat7.png" data-src="/static/index/images/business/wechat7-hover.png" alt="">
                             </div>
                             <div class="col-md-8">
                                 <p class="business-card-title">会员服务</p>
@@ -326,8 +325,8 @@
         </div>
     </div>
 </div>
-
-<div class="container animate-box business-sop">
+<!--商圈与用户交互-->
+<div id="hudong" class="container animate-box business-sop" style="margin-top: 30px;">
     <div class="row">
         <div class="col-md-8 jindu-left  animate-box business-bottom">
             <p class="sop-title">结合硬件辅助，智慧商圈真正与用户互动起来</p>
@@ -413,13 +412,8 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-<div class="animate-box">
+<!--促销活动-->
+<div id="cuxiao" class="animate-box">
     <div class="container button-demo ">
         <div class="row">
             <div class="text-center">
@@ -517,8 +511,8 @@
         </div>
     </div>
 </div>
-
-<div class="container title-demo">
+<!--会员积分-->
+<div id="vip" class="container title-demo">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center ">
             <p class="business-one-menu">会员积分</p>
@@ -528,7 +522,7 @@
                 <div class="div-shadow div-border business-cx">
                     <div class="fade1">
                     <div class="text-center ">
-                        <p class="fa fa-user fa-4x side-icon"></p>
+                        <img src="/static/index/images/business/vip1.png" alt="">
                     </div>
                  <p class="div-side-desc-p ">微信支付</p>
                     </div>
@@ -544,7 +538,7 @@
                 <div class="div-shadow div-border business-cx">
                     <div class="fade1">
                         <div class="text-center ">
-                            <p class="fa fa-user fa-4x side-icon"></p>
+                            <img src="/static/index/images/business/vip2.png" alt="">
                         </div>
                         <p class="div-side-desc-p ">签到</p>
                     </div>
@@ -560,7 +554,7 @@
                 <div class="div-shadow div-border business-cx">
                     <div class="fade1">
                         <div class="text-center ">
-                            <p class="fa fa-user fa-4x side-icon"></p>
+                            <img src="/static/index/images/business/vip3.png" alt="">
                         </div>
                         <p class="div-side-desc-p ">营销活动</p>
                     </div>
@@ -576,7 +570,7 @@
                 <div class="div-shadow div-border business-cx">
                     <div class="fade1">
                         <div class="text-center ">
-                            <p class="fa fa-user fa-4x side-icon"></p>
+                            <img src="/static/index/images/business/vip4.png" alt="">
                         </div>
                         <p class="div-side-desc-p ">购物</p>
                     </div>
@@ -592,7 +586,7 @@
                 <div class="div-shadow div-border business-cx">
                     <div class="fade1">
                         <div class="text-center ">
-                            <p class="fa fa-user fa-4x side-icon"></p>
+                            <img src="/static/index/images/business/vip5.png" alt="">
                         </div>
                         <p class="div-side-desc-p ">跨界</p>
                     </div>
@@ -608,7 +602,7 @@
                 <div class="div-shadow div-border business-cx">
                     <div class="fade1">
                         <div class="text-center ">
-                            <p class="fa fa-user fa-4x side-icon"></p>
+                            <img src="/static/index/images/business/vip6.png" alt="">
                         </div>
                         <p class="div-side-desc-p ">评论</p>
                     </div>
@@ -623,16 +617,13 @@
         </div>
     </div>
 </div>
-
-
-
-
-<div class="animate-box business-disc">
+<!--优惠活动-->
+<div id="youhui" class="animate-box business-disc">
     <div class="container button-demo ">
         <div class="row">
             <div class="col-md-8 business-row">
                 <div class="col-md-8">
-                    <image src="/static/index/images/business-yhhd.jpg" width="100%"/>
+                    <image src="/static/index/images/business/pic1.png" width="100%"/>
                 </div>
                 <div class="col-md-4 text-left">
                     <p class="business-side-menu">优惠活动</p>
@@ -644,26 +635,23 @@
         </div>
     </div>
 </div>
-
-
-
-<div class="container title-demo business-disc">
+<!--商圈背景-->
+<div id="shangquan" class="container title-demo business-disc">
     <div class="row">
         <div class="col-md-8 col-md-offset-2 text-center ">
             <p class="business-one-menu">全景商圈逛街</p>
             <p class="business-two-menu">用户关注公众号后，可在任何地方，通过"逛街"菜单，进入360°街景查看商圈实地商家周边环境</p>
-            <image src="/static/index/images/business-gj.jpg" width="100%"/>
+            <image src="/static/index/images/business/pic2.png" width="100%"/>
         </div>
     </div>
 </div>
-
-
-<div class="animate-box business-disc">
+<!--预约点餐-->
+<div id="yuyue" class="animate-box business-disc">
     <div class="container button-demo ">
         <div class="row">
             <div class="col-md-8 business-row">
                 <div class="col-md-8">
-                    <image src="/static/index/images/business-dc.jpg" width="100%"/>
+                    <image src="/static/index/images/business/pic3.png" width="100%"/>
                 </div>
                 <div class="col-md-4 text-left">
                     <p class="business-side-menu">预约点餐</p>
@@ -674,15 +662,13 @@
         </div>
     </div>
 </div>
-
-
-
-<div class="animate-box business-disc">
+<!--小票寻宝-->
+<div id="xiaopiao" class="animate-box business-disc">
     <div class="container button-demo ">
         <div class="row">
             <div class="col-md-8 business-row">
                 <div class="col-md-8">
-                    <image src="/static/index/images/business-xb.jpg" width="100%"/>
+                    <image src="/static/index/images/business/pic4.png" width="100%"/>
                 </div>
                 <div class="col-md-4 text-left">
                     <p class="business-side-menu">小票寻宝</p>
@@ -695,7 +681,7 @@
         </div>
     </div>
 </div>
-
+<!--底部和侧边栏-->
 <div th:replace="index/index/side :: side"></div>
 <div th:replace="index/index/footer :: footer"></div>
 <div th:include="index/index/js :: onload_js">
@@ -705,6 +691,18 @@
 <script type="text/javascript" src="/static/index/js/aui.js"></script>
 <script type="text/javascript" src="/static/index/js/business.js"></script>
 <script type="text/javascript">
+
+    SearchTittle("#luojiLink","#luoji");
+    SearchTittle("#youshiLink","#youshi");
+    SearchTittle("#onlineLink","#online");
+    SearchTittle("#hudongLink","#hudong");
+    SearchTittle("#cuxiaoLink","#cuxiao");
+    SearchTittle("#vipLink","#vip");
+    SearchTittle("#youhuiLink","#youhui");
+    SearchTittle("#shangquanLink","#shangquan");
+    SearchTittle("#yuyueLink","#yuyue");
+    SearchTittle("#xiaopiaoLink","#xiaopiao");
+
 $(function() {
     var d = $("#slider-btn li");
     var j = $("#slider-back li");
@@ -784,7 +782,34 @@ $(function() {
     f(0)
 });
 
-
+var imgHoverReplaceSrc = {
+    init: function (sel) {
+        this.sel = sel || "img";
+        this.imgList = document.querySelectorAll(sel);
+        this.work();
+    },
+    work: function () {
+        var _this = this;
+        this.imgList.forEach(function (item) {
+            item.addEventListener("mouseenter", function () {
+                _this.changeSrc(item);
+                // item.className = "animate-box";
+            });
+            item.addEventListener("mouseleave", function () {
+                _this.changeSrc(item);
+                // item.className = "animate-box";
+            });
+        });
+    },
+    changeSrc: function (item) {
+        if (item.getAttribute('data-src')) {
+            var tmpSrc = item.src;
+            item.src = item.getAttribute('data-src');
+            item.setAttribute('data-src', tmpSrc);
+        }
+    }
+}
+imgHoverReplaceSrc.init(".menu-icon");
 
 </script>
 </body>

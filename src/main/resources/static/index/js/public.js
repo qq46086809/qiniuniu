@@ -1,8 +1,19 @@
+function SearchTittle(id1,id2) {
+    $(id1).click(function () {
+        $("html, body").animate({
+            scrollTop: $(id2).offset().top }, {duration: 2000,easing: "swing"});
+        return false;
+    });
+}
+
 
 jQuery(function(){
 	$(".box2List li").each(function(index, element) {
         $(this).attr("data-wow-delay",index*3/10+"s");
     });
+
+
+
 
     $(".high-sec").mouseenter(function(index, element) {
             $(this).stop(true, true).animate({top: "-=50px"}, 500);

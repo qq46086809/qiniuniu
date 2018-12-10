@@ -4,40 +4,41 @@
 <head th:replace="index/index/head :: head(~{::title},~{::link},~{::style})">
     <title th:text=${title}></title>
     <link rel="stylesheet" th:href="@{{path}static/admin/assets/js/button/ladda/ladda.min.css(path=${rootPath})}">
+    <link rel="stylesheet" href="/static/index/css/index.css">
     <style type="text/css">
-</style>
+    </style>
 </head>
 <style>
     ul,li{
-            list-style: none;
-        }
+        list-style: none;
+    }
 
-        .total-police-alert{
-	width: 500px;
-	height: 90px;
-	padding: 10px;
-	margin: 100px auto 0;
-	font: 36px "华文楷体";
-	line-height: 90px;
-	color: #fff;
-	box-shadow: -2px 2px 10px #000;
-	background-color: rgba(81,167,229,1.00);
-	border-radius: 10px;
-        }
-        .fl{
-            float:left;
-        }
-        .fr{
-            float:right;
-        }
+    .total-police-alert{
+        width: 500px;
+        height: 90px;
+        padding: 10px;
+        margin: 100px auto 0;
+        font: 36px "华文楷体";
+        line-height: 90px;
+        color: #fff;
+        box-shadow: -2px 2px 10px #000;
+        background-color: rgba(81,167,229,1.00);
+        border-radius: 10px;
+    }
+    .fl{
+        float:left;
+    }
+    .fr{
+        float:right;
+    }
 
-    </style>
+</style>
 <body style="min-width:1500px;">
 <div style="position: relative;">
     <!--头文件-->
-<div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
-</div>
-<!--轮播图-->
+    <div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
+    </div>
+    <!--轮播图-->
     <div class="banner-engine">
         <ul class="banner-ul clearfix" id="slider-back">
             <li class="banner-cloudapp" style="background:url(/static/index/images/banner1.jpg) center center / 100% 500px no-repeat;"></li>
@@ -83,934 +84,1673 @@
         </div>
 
     </div>
-<!--轮播图固定栏-->
-<div id="fh5co-partner" style="width:78%;margin-left:12%">
-    <div class="container">
-        <div class="partner-wrap">
-            <div class="wrap" >
-                <image src="/static/index/images/list1.png" /><p class="partner-text">科技普惠应用<p>
-                <p class="partner-desc">科技普惠应用，高性价比科技应用，助理中小企业互联网+</p>
-            </div>
-            <div class="wrap" style="margin-left:20%">
-                <image src="/static/index/images/list2.png" /><p class="partner-text">一站式,直营服务<p>
-                <p class="partner-desc">为企业提供多方位专业技术支持，直营模式提供高品质服务</p>
-            </div>
-            <div class="wrap" style="margin-left:40%">
-                <image src="/static/index/images/list3.png" /><p class="partner-text">标准化流程<p>
-                <p class="partner-desc">自研标准化操作流程，提高服务效率，提升产品品质</p>
-            </div>
-            <div class="wrap" style="margin-left:60%">
-                <image src="/static/index/images/list4.png" /><p class="partner-text">值得信赖的伙伴<p>
-                <p class="partner-desc">企业成功五大基石:正直，创新，笃行，责任，进取</p>
-            </div>
-            <div class="wrap" style="margin-left:80%">
-                <image src="/static/index/images/list5.png" /><p class="partner-text">服务有保障<p>
-                <p class="partner-desc">郑重承诺按时保量完成任务，无增值收费，不满意退款</p>
-            </div>
+    <!--轮播图固定栏-->
+    <div id="fh5co-partner" style="width:78%;margin-left:12%">
+        <div class="container">
+            <div class="partner-wrap">
+                <div class="wrap" >
+                    <image src="/static/index/images/list1.png" /><p class="partner-text">科技普惠应用<p>
+                    <p class="partner-desc">科技普惠应用，高性价比科技应用，助理中小企业互联网+</p>
+                </div>
+                <div class="wrap" style="margin-left:20%">
+                    <image src="/static/index/images/list2.png" /><p class="partner-text">一站式,直营服务<p>
+                    <p class="partner-desc">为企业提供多方位专业技术支持，直营模式提供高品质服务</p>
+                </div>
+                <div class="wrap" style="margin-left:40%">
+                    <image src="/static/index/images/list3.png" /><p class="partner-text">标准化流程<p>
+                    <p class="partner-desc">自研标准化操作流程，提高服务效率，提升产品品质</p>
+                </div>
+                <div class="wrap" style="margin-left:60%">
+                    <image src="/static/index/images/list4.png" /><p class="partner-text">值得信赖的伙伴<p>
+                    <p class="partner-desc">企业成功五大基石:正直，创新，笃行，责任，进取</p>
+                </div>
+                <div class="wrap" style="margin-left:80%">
+                    <image src="/static/index/images/list5.png" /><p class="partner-text">服务有保障<p>
+                    <p class="partner-desc">郑重承诺按时保量完成任务，无增值收费，不满意退款</p>
+                </div>
 
+            </div>
         </div>
     </div>
-</div>
     <!--中心logo-->
-<div class="container title-demo" >
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center heading-section">
-            <!--<h3>企牛牛</h3>-->
-            <a href="#"><img src="/static/index/images/logo.png" alt=""></a>
-            <p class="one-menu">致力成为值得信赖的服务商</p>
-            <p class="three-menu">创意H5设计、咨询 | 网站建设、运维 | 微信公众号开发 | 小程序开发</p>
+    <div class="container title-demo" >
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section">
+                <!--<h3>企牛牛</h3>-->
+                <a href="#"><img src="/static/index/images/logo.png" alt=""></a>
+                <p class="one-menu">致力成为值得信赖的服务商</p>
+                <p class="three-menu">创意H5设计、咨询 | 网站建设、运维 | 微信公众号开发 | 小程序开发</p>
+            </div>
         </div>
     </div>
-</div>
     <!--服务菜单栏-->
-<div class="container">
-    <div class="menu-demo  ">
-        <div class="row text-center ">
-            <div class="col-md-3 col-sm-3">
-                <div class="services">
-                    <!--<span><i class="icon-browser"></i></span>-->
-                    <a  href="#"><img class="menu-icon"  src="/static/index/images/menu1.png" data-src="/static/index/images/menu1-hover.png" style="margin-bottom: 18px" alt=""></a>
-                    <a class="menu_curson"><h3>设计视觉类</h3></a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="services ">
-                    <!--<span><i class="icon-mobile"></i></span>-->
-                    <a href="#"><img class="menu-icon"  src="/static/index/images/menu2.png" data-src="/static/index/images/menu2-hover.png"  style="margin-bottom: 18px" alt=""></a>
-                    <a class="menu_curson"><h3>技术开发</h3></a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="services ">
-                    <!--<span><i class="icon-tools"></i></span>-->
-                    <a href="#"><img class="menu-icon"  src="/static/index/images/menu3.png" data-src="/static/index/images/menu3-hover.png"  style="margin-bottom: 18px" alt=""></a>
-                    <a class="menu_curson"><h3>运维服务</h3></a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="services">
-                    <!--<span><i class="icon-video"></i></span>-->
-                    <a href="#"><img class="menu-icon"  src="/static/index/images/menu4.png" data-src="/static/index/images/menu4-hover.png"  style="margin-bottom: 18px" alt=""></a>
-                    <a class="menu_curson"><h3>推广类服务</h3></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="menu2-demo ">
-        <div class="row ">
-            <div class="col-md-4 col-sm-4">
-                <div class="services " style="margin-left:80px;">
+    <div class="container">
+        <div class="menu-demo nav nav-tabs ">
+            <div class="row text-center ">
+                <div class="col-md-3 col-sm-3">
+                    <div class="services">
 
-                    <div class="feature-left" >
-                        <a class="menu_curson">
-                            <h3>产品设计交互</h3>
-                            <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
-                        </a>
-
-                    </div>
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>UI界面设计</h3>
-                            <p>开启用户新体验，帮助用户解决痛点</p>
-                        </a>
-
-                    </div>
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>手绘插画</h3>
-                            <p>开启用户新体验，帮助用户解决痛点</p>
-                        </a>
-
-                    </div>
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>排版设计</h3>
-                            <p>开启用户新体验，帮助用户解决痛点</p>
-                        </a>
+                        <a  href="#sheji" data-toggle="tab"><img class="menu-icon"  src="/static/index/images/menu1.png" data-src="/static/index/images/menu1-hover.png" style="margin-bottom: 18px" alt="">
+                            <h3>设计视觉类</h3></a>
 
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="services ">
-
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>AI</h3>
-                            <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
-                        </a>
-
-                    </div>
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>UI界面设计网页设计</h3>
-                            <p>开启用户新体验，帮助用户解决痛点</p>
-                        </a>
-
-                    </div>
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>H5设计</h3>
-                            <p>开启用户新体验，帮助用户解决痛点</p>
-                        </a>
-
-                    </div>
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>POP</h3>
-                            <p>开启用户新体验，帮助用户解决痛点</p>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="services ">
-
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>VR</h3>
-                            <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
-                        </a>
-
-                    </div>
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>微电影制作</h3>
-                            <p>开启用户新体验，帮助用户解决痛点</p>
-                        </a>
-
-                    </div>
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>小游戏设计</h3>
-                            <p>开启用户新体验，帮助用户解决痛点</p>
-                        </a>
-
-                    </div>
-                    <div class="feature-left">
-                        <a class="menu_curson">
-                            <h3>卡通形象设计</h3>
-                            <p>开启用户新体验，帮助用户解决痛点</p>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="menu-demo ">
-        <div class="row text-center ">
-            <div class="col-md-3 col-sm-3">
-                <div class="services " style="padding-right: 20px;">
-                    <!--<span><i class="icon-search"></i></span>-->
-                    <a href="#"><img class="menu-icon"  src="/static/index/images/menu5.png" data-src="/static/index/images/menu5-hover.png"  style="margin-bottom: 18px" alt=""></a>
-                    <a class="menu_curson"><h3>全员服务</h3></a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="services ">
-                    <!--<span><i class="icon-cloud"></i></span>-->
-                    <a href="#"><img class="menu-icon"  src="/static/index/images/menu6.png" data-src="/static/index/images/menu6-hover.png"  style="margin-bottom: 18px" alt=""></a>
-                    <a class="menu_curson"><h3>法律服务</h3></a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="services ">
-                    <!--<span><i class="icon-cloud"></i></span>-->
-                    <a href="#"><img class="menu-icon"  src="/static/index/images/menu7.png" data-src="/static/index/images/menu7-hover.png"  style="margin-bottom: 18px" alt=""></a>
-                    <a class="menu_curson"><h3>知识产权</h3></a>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="services ">
-                    <!--<span><i class="icon-cloud"></i></span>-->
-                    <a href="#"><img class="menu-icon"  src="/static/index/images/menu8.png" data-src="/static/index/images/menu8-hover.png"  style="margin-bottom: 18px" alt=""></a>
-                    <a class="menu_curson"><h3>工商财税</h3></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-8 col-md-offset-2 text-center">
-        <button class="btn btn-default" style="margin-top: 20px;">查看更多+</button>
-    </div>
-
-</div>
-
-<!--行业解决方案-->
-<div class="container button-demo" >
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center heading-section ">
-            <p class="one-menu">行业解决方案</p>
-            <p class="three-menu">正直诚心，开放合作，致力成为值得信赖的企业</p>
-        </div>
-    </div>
-</div>
-    <!--智慧解决方案-->
-<ul class="box2List list-unstyled row animate-box">
-    <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
-        <div class="box2Con">
-            <div class="box2Img"><img src="/static/index/images/panel1.png" class="img-responsive"></div>
-            <!--<h3 class="box2Tit"><span class="ellipsis">智慧园区解决方案</span></h3>-->
-            <div class="box2HovBg">
-                <div class="box2Hov">
-                    <h4 class="ellipsis"><strong>智慧园区解决方案</strong></h4>
-                    <div class="box2Item">
-                        我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
-                        <button class="btn btn-default row-btn">查看详情</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
-        <div class="box2Con">
-            <div class="box2Img"><img src="/static/index/images/panel2.png" class="img-responsive"></div>
-            <!--<h3 class="box2Tit"><span class="ellipsis">智慧商圈解决方案</span></h3>-->
-            <div class="box2HovBg">
-                <div class="box2Hov">
-                    <h4 class="ellipsis"><strong>智慧商圈解决方案</strong></h4>
-                    <div class="box2Item">
-                        我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
-                        <button class="btn btn-default row-btn">查看详情</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
-        <div class="box2Con">
-            <div class="box2Img"><img src="/static/index/images/panel3.png"  class="img-responsive"></div>
-            <!--<h3 class="box2Tit"><span class="ellipsis">智慧会务直接方案</span></h3>-->
-            <div class="box2HovBg">
-                <div class="box2Hov">
-                    <h4 class="ellipsis"><strong>智慧会务解决方案</strong></h4>
-                    <div class="box2Item">
-                        我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
-                        <button class="btn btn-default row-btn">查看详情</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
-        <div class="box2Con">
-            <div class="box2Img"><img src="/static/index/images/panel4.png"  class="img-responsive"></div>
-            <!--<h3 class="box2Tit"><span class="ellipsis">智慧政务解决方案</span></h3>-->
-            <div class="box2HovBg">
-                <div class="box2Hov">
-                    <h4 class="ellipsis"><strong>智慧政务解决方案</strong></h4>
-                    <div class="box2Item">
-                        我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
-                        <button class="btn btn-default row-btn">查看详情</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
-        <div class="box2Con">
-            <div class="box2Img"><img src="/static/index/images/panel5.png" class="img-responsive"></div>
-            <!--<h3 class="box2Tit"><span class="ellipsis">企业培训解决方案</span></h3>-->
-            <div class="box2HovBg">
-                <div class="box2Hov">
-                    <h4 class="ellipsis"><strong>企业培训解决方案</strong></h4>
-                    <div class="box2Item">
-                        我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
-                        <button class="btn btn-default row-btn">查看详情</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
-        <div class="box2Con">
-            <div class="box2Img"><img src="/static/index/images/panel6.png" class="img-responsive"></div>
-            <!--<h3 class="box2Tit"><span class="ellipsis">教育解决方案</span></h3>-->
-            <div class="box2HovBg">
-                <div class="box2Hov">
-                    <h4 class="ellipsis"><strong>教育解决方案</strong></h4>
-                    <div class="box2Item">
-                        我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
-                        <button class="btn btn-default row-btn">查看详情</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-</ul>
-    <!--精致产品-->
-<div class="container button-demo" >
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center heading-section">
-            <p class="one-menu">精致产品</p>
-            <p class="three-menu">对细节的专注让我们赢得信赖，探索科技与艺术的完美结合，结合我们的互联网思维碰撞出奇迹</p>
-        </div>
-    </div>
-</div>
-<div class="cards  animate-box">
-<div class="row row-bottom-padded-md">
-    <div class="col-lg-4 col-md-4">
-        <div class="fh5co-blog div-shadow ">
-            <a href="#"><img class="img-responsive" src="/static/index/images/youwo.png"  style="    height: 350px;" alt=""></a>
-            <div class="blog-text ">
-                <div class="prod-title">
-                    <p><a class="two-menu" href="#">有我会务管理</a></p>
-                    <p>有我会务管理有我会务管理有我会务管理有我会务管理有我会务管理</p>
-                    <a href="#" class="btn btn-default button-center row-btn-black">点击查看</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-4">
-        <div class="fh5co-blog div-shadow ">
-            <a href="#"><img class="img-responsive" src="/static/index/images/qitui.png" style="    height: 350px;" alt=""></a>
-            <div class="blog-text">
-                <div class="prod-title">
-                    <p><a class="two-menu" href="#">企推猫</a></p>
-                    <p>有我会务管理有我会务管理有我会务管理有我会务管理有我会务管理</p>
-                    <a href="#" class="btn btn-default button-center row-btn-black">点击查看</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-4 col-md-4">
-        <div class="fh5co-blog div-shadow ">
-            <a href="#"><img class="img-responsive" src="/static/index/images/qitui2.png" style="    height: 350px;"  alt=""></a>
-            <div class="blog-text ">
-                <div class="prod-title">
-                    <p><a class="two-menu" href="#">企推猫</a></p>
-                    <p>有我会务管理有我会务管理有我会务管理有我会务管理有我会务管理</p>
-                    <a href="#" class="btn btn-default button-center row-btn-black">点击查看</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row col-md-8 col-md-offset-2 text-center ">
-        <button class="btn btn-default" style="margin-top: 15px;">查看更多+</button>
-    </div>
-</div>
-
-</div>
-<!--下载中心-->
-<div class="container button-demo " >
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center heading-section" style="margin-top: -60px;">
-            <p class="one-menu">下载中心</p>
-            <p class="three-menu">企牛牛高质量精品模板，价格低廉，一站式服务，应有尽有</p>
-            <div class="col-md-2 col-sm-2">
-                <div class="services">
-                    <button class="btn btn-default" onclick="cards1()">微信下载</button>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-2">
-                <div class="services">
-                    <button class="btn btn-default" onclick="cards2()">APP下载</button>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-2">
-                <div class="services">
-                    <button class="btn btn-default" onclick="cards3()">H5开发下载</button>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-2">
-                <div class="services">
-                    <button class="btn btn-default" onclick="cards4()">智慧会务下载</button>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-2">
-                <div class="services">
-                    <button class="btn btn-default" onclick="cards5()">网站下载</button>
-                </div>
-            </div>
-            <div class="col-md-2 col-sm-2">
-                <div class="services">
-                    <button class="btn btn-default" onclick="cards6()">商城下载</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container box-download ">
-    <div class="cards cards-1  animate-box box-download-div">
-        <div class="row row-bottom-padded-md">
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog div-shadow  ">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>凡高设计官网开发1<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4  high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img class="" src="/static/index/images/shuren.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog  div-shadow">
-                    <a href="#"><img class="" src="/static/index/images/wulianw.png" alt=""></a>
-                    <div class="blog-text ">
-                        <div class="prod-title">
-                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="cards cards-2   box-download-div">
-        <div class="row row-bottom-padded-md">
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text ">
-                        <div class="prod-title">
-                            <h3>凡高设计官网开发2<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4  high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog  div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text ">
-                        <div class="prod-title">
-                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="cards cards-3  box-download-div">
-        <div class="row row-bottom-padded-md">
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog  div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text ">
-                        <div class="prod-title">
-                            <h3>凡高设计官网开发3<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4  high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="cards cards-4  box-download-div">
-        <div class="row row-bottom-padded-md">
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>凡高设计官网开发4<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4  high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog div-shadow ">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text ">
-                        <div class="prod-title">
-                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="cards cards-5   box-download-div">
-        <div class="row row-bottom-padded-md">
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>凡高设计官网开发5<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4  high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="cards cards-6   box-download-div">
-        <div class="row row-bottom-padded-md">
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>凡高设计官网开发66666<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4  high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 high-sec">
-                <div class="fh5co-blog div-shadow">
-                    <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
-                    <div class="blog-text  ">
-                        <div class="prod-title">
-                            <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
-                            <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
-                            <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!--统计栏-->
-<div class="container  box-tongji" >
-    <div class="row">
-        <div class="col-md-12  bg-gray">
-            <div class="blog-gray">
-                <p class="tongji">企牛牛近期框架签订协议用户</p >
-                <ul class="dc-scroll fr">
-                    <li>
-                        <div class="s-on">8</div>
-                    </li>
-                    <li>
-                        <div class="s-on">5</div>
-                    </li>
-                    <li>
-                        <div class="s-on">4</div>
-                    </li>
-                    <li>
-                        <div class="s-on">9</div>
-                    </li>
-                    <li>
-                        <div class="s-on">8</div>
-                    </li>
-                    <li>
-                        <div class="s-on">7</div>
-                    </li>
-                </ul>
-
-            </div>
-            <div class="blog-gray2">
-                <p class="tongji"> 企牛牛总框架签订协议用户</p >
-                <ul class="dc-scroll fr">
-                    <li>
-                        <div class="s-on">8</div>
-                    </li>
-                    <li>
-                        <div class="s-on">5</div>
-                    </li>
-                    <li>
-                        <div class="s-on">4</div>
-                    </li>
-                    <li>
-                        <div class="s-on">9</div>
-                    </li>
-                    <li>
-                        <div class="s-on">8</div>
-                    </li>
-                    <li>
-                        <div class="s-on">7</div>
-                    </li>
-                    <li>
-                        <div class="s-on">6</div>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-</div>
-<!--新闻资讯-->
-<div class="container button-demo" >
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center heading-section">
-            <p class="one-menu">大咖云集，知识分享的开发者技术社区</p>
-            <p class="three-menu">实战干货、在线直播、专家问答、技术论坛、学习、分享、成长、共建</p>
-            <div class="news-list">
-            <div class="col-md-4 col-sm-4">
-                <div class="services ">
-                    <button class="btn btn-default" onclick="news1()">公司动态</button>
-                </div>
-            </div>
-                <div class="col-md-4 col-sm-4">
+                <div class="col-md-3 col-sm-3">
                     <div class="services ">
-                        <button class="btn btn-default" onclick="news2()">最新案例动态</button>
+
+                        <a href="#jishu" data-toggle="tab"><img class="menu-icon"  src="/static/index/images/menu2.png" data-src="/static/index/images/menu2-hover.png"  style="margin-bottom: 18px" alt="">
+                            <h3>技术开发</h3></a>
                     </div>
                 </div>
-            <div class="col-md-4 col-sm-4">
-                <div class="services ">
-                    <button class="btn btn-default" onclick="news3()">行业动态</button>
+                <div class="col-md-3 col-sm-3">
+                    <div class="services ">
+
+                        <a href="#yunwei" data-toggle="tab">
+                            <img class="menu-icon"  src="/static/index/images/menu3.png" data-src="/static/index/images/menu3-hover.png"  style="margin-bottom: 18px" alt="">
+                            <h3>运维服务</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="services">
+
+                        <a href="#tuiguang" data-toggle="tab">
+                            <img class="menu-icon"  src="/static/index/images/menu4.png" data-src="/static/index/images/menu4-hover.png"  style="margin-bottom: 18px" alt="">
+                            <h3>推广类服务</h3>
+                        </a>
+                    </div>
                 </div>
             </div>
+        </div>
+        <!--中心内容区-->
+        <div id="myTabContent" class="tab-content">
+            <div class="menu2-demo tab-pane fade in active" id="sheji">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services " style="margin-left:80px;">
+
+                            <div class="feature-left" >
+                                <a class="menu_curson">
+                                    <h3>产品设计交互1</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>手绘插画</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>排版设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>AI</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计网页设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>H5设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>POP</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>VR</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>微电影制作</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>小游戏设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>卡通形象设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu2-demo tab-pane fade" id="jishu">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services " style="margin-left:80px;">
+
+                            <div class="feature-left" >
+                                <a class="menu_curson">
+                                    <h3>产品设计交互2</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>手绘插画</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>排版设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>AI</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计网页设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>H5设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>POP</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>VR</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>微电影制作</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>小游戏设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>卡通形象设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu2-demo tab-pane fade" id="yunwei">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services " style="margin-left:80px;">
+
+                            <div class="feature-left" >
+                                <a class="menu_curson">
+                                    <h3>产品设计交互3</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>手绘插画</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>排版设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>AI</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计网页设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>H5设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>POP</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>VR</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>微电影制作</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>小游戏设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>卡通形象设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu2-demo tab-pane fade" id="tuiguang">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services " style="margin-left:80px;">
+
+                            <div class="feature-left" >
+                                <a class="menu_curson">
+                                    <h3>产品设计交互4</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>手绘插画</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>排版设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>AI</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计网页设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>H5设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>POP</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>VR</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>微电影制作</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>小游戏设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>卡通形象设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu2-demo tab-pane fade" id="vip">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services " style="margin-left:80px;">
+
+                            <div class="feature-left" >
+                                <a class="menu_curson">
+                                    <h3>产品设计交互5</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>手绘插画</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>排版设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>AI</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计网页设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>H5设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>POP</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>VR</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>微电影制作</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>小游戏设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>卡通形象设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu2-demo tab-pane fade" id="falv">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services " style="margin-left:80px;">
+
+                            <div class="feature-left" >
+                                <a class="menu_curson">
+                                    <h3>产品设计交互6</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>手绘插画</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>排版设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>AI</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计网页设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>H5设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>POP</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>VR</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>微电影制作</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>小游戏设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>卡通形象设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu2-demo tab-pane fade" id="chanquan">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services " style="margin-left:80px;">
+
+                            <div class="feature-left" >
+                                <a class="menu_curson">
+                                    <h3>产品设计交互7</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>手绘插画</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>排版设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>AI</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计网页设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>H5设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>POP</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>VR</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>微电影制作</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>小游戏设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>卡通形象设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu2-demo tab-pane fade" id="caishui">
+                <div class="row ">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services " style="margin-left:80px;">
+
+                            <div class="feature-left" >
+                                <a class="menu_curson">
+                                    <h3>产品设计交互8</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>手绘插画</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>排版设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>AI</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>UI界面设计网页设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>H5设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>POP</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>VR</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点，这是我们为之努力的</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>微电影制作</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>小游戏设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                            <div class="feature-left">
+                                <a class="menu_curson">
+                                    <h3>卡通形象设计</h3>
+                                    <p>开启用户新体验，帮助用户解决痛点</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="menu-demo ">
+            <div class="row text-center ">
+                <div class="col-md-3 col-sm-3">
+                    <div class="services " style="padding-right: 20px;">
+
+                        <a href="#vip" data-toggle="tab">
+                            <img class="menu-icon"  src="/static/index/images/menu5.png" data-src="/static/index/images/menu5-hover.png"  style="margin-bottom: 18px" alt="">
+                            <h3>全员服务</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="services ">
+
+                        <a href="#falv" data-toggle="tab">
+                            <img class="menu-icon"  src="/static/index/images/menu6.png" data-src="/static/index/images/menu6-hover.png"  style="margin-bottom: 18px" alt="">
+                            <h3>法律服务</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="services ">
+
+                        <a href="#chanquan" data-toggle="tab">
+                            <img class="menu-icon"  src="/static/index/images/menu7.png" data-src="/static/index/images/menu7-hover.png"  style="margin-bottom: 18px" alt="">
+                            <h3>知识产权</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="services ">
+
+                        <a href="#caishui" data-toggle="tab">
+                            <img class="menu-icon"  src="/static/index/images/menu8.png" data-src="/static/index/images/menu8-hover.png"  style="margin-bottom: 18px" alt="">
+                            <h3>工商财税</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <button class="btn btn-default" style="margin-top: 20px;">查看更多+</button>
+        </div>
+
+    </div>
+
+    <!--行业解决方案-->
+    <div class="container button-demo" >
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section ">
+                <p class="one-menu">行业解决方案</p>
+                <p class="three-menu">正直诚心，开放合作，致力成为值得信赖的企业</p>
             </div>
         </div>
     </div>
-</div>
+    <!--智慧解决方案-->
+    <ul class="box2List list-unstyled row animate-box">
+        <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
+            <div class="box2Con">
+                <div class="box2Img"><img src="/static/index/images/panel1.png" class="img-responsive"></div>
+                <!--<h3 class="box2Tit"><span class="ellipsis">智慧园区解决方案</span></h3>-->
+                <div class="box2HovBg">
+                    <div class="box2Hov">
+                        <h4 class="ellipsis"><strong>智慧园区解决方案</strong></h4>
+                        <div class="box2Item">
+                            我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
+                            <button class="btn btn-default row-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
+            <div class="box2Con">
+                <div class="box2Img"><img src="/static/index/images/panel2.png" class="img-responsive"></div>
+                <!--<h3 class="box2Tit"><span class="ellipsis">智慧商圈解决方案</span></h3>-->
+                <div class="box2HovBg">
+                    <div class="box2Hov">
+                        <h4 class="ellipsis"><strong>智慧商圈解决方案</strong></h4>
+                        <div class="box2Item">
+                            我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
+                            <button class="btn btn-default row-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
+            <div class="box2Con">
+                <div class="box2Img"><img src="/static/index/images/panel3.png"  class="img-responsive"></div>
+                <!--<h3 class="box2Tit"><span class="ellipsis">智慧会务直接方案</span></h3>-->
+                <div class="box2HovBg">
+                    <div class="box2Hov">
+                        <h4 class="ellipsis"><strong>智慧会务解决方案</strong></h4>
+                        <div class="box2Item">
+                            我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
+                            <button class="btn btn-default row-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
+            <div class="box2Con">
+                <div class="box2Img"><img src="/static/index/images/panel4.png"  class="img-responsive"></div>
+                <!--<h3 class="box2Tit"><span class="ellipsis">智慧政务解决方案</span></h3>-->
+                <div class="box2HovBg">
+                    <div class="box2Hov">
+                        <h4 class="ellipsis"><strong>智慧政务解决方案</strong></h4>
+                        <div class="box2Item">
+                            我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
+                            <button class="btn btn-default row-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
+            <div class="box2Con">
+                <div class="box2Img"><img src="/static/index/images/panel5.png" class="img-responsive"></div>
+                <!--<h3 class="box2Tit"><span class="ellipsis">企业培训解决方案</span></h3>-->
+                <div class="box2HovBg">
+                    <div class="box2Hov">
+                        <h4 class="ellipsis"><strong>企业培训解决方案</strong></h4>
+                        <div class="box2Item">
+                            我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
+                            <button class="btn btn-default row-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="col-xs-12 col-sm-2 col-md-2 wow   animate-box">
+            <div class="box2Con">
+                <div class="box2Img"><img src="/static/index/images/panel6.png" class="img-responsive"></div>
+                <!--<h3 class="box2Tit"><span class="ellipsis">教育解决方案</span></h3>-->
+                <div class="box2HovBg">
+                    <div class="box2Hov">
+                        <h4 class="ellipsis"><strong>教育解决方案</strong></h4>
+                        <div class="box2Item">
+                            我们坚持以用户为中心的理念，解决用户痛点，以挺高会务效率，满足不同会务场景下的用户需求为前提，推出一条龙的会务解决方案
+                            <button class="btn btn-default row-btn">查看详情</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!--精致产品-->
+    <div class="container button-demo" >
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section">
+                <p class="one-menu">精致产品</p>
+                <p class="three-menu">对细节的专注让我们赢得信赖，探索科技与艺术的完美结合，结合我们的互联网思维碰撞出奇迹</p>
+            </div>
+        </div>
+    </div>
+    <div class="cards  animate-box">
+        <div class="row row-bottom-padded-md">
+            <div class="col-lg-4 col-md-4">
+                <div class="fh5co-blog div-shadow ">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/youwo.png"  style="    height: 350px;" alt=""></a>
+                    <div class="blog-text ">
+                        <div class="prod-title">
+                            <p><a class="two-menu" href="#">有我会务管理</a></p>
+                            <p>有我会务管理有我会务管理有我会务管理有我会务管理有我会务管理</p>
+                            <a href="#" class="btn btn-default button-center row-btn-black">点击查看</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="fh5co-blog div-shadow ">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/qitui.png" style="    height: 350px;" alt=""></a>
+                    <div class="blog-text">
+                        <div class="prod-title">
+                            <p><a class="two-menu" href="#">企推猫</a></p>
+                            <p>有我会务管理有我会务管理有我会务管理有我会务管理有我会务管理</p>
+                            <a href="#" class="btn btn-default button-center row-btn-black">点击查看</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="fh5co-blog div-shadow ">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/qitui2.png" style="    height: 350px;"  alt=""></a>
+                    <div class="blog-text ">
+                        <div class="prod-title">
+                            <p><a class="two-menu" href="#">企推猫</a></p>
+                            <p>有我会务管理有我会务管理有我会务管理有我会务管理有我会务管理</p>
+                            <a href="#" class="btn btn-default button-center row-btn-black">点击查看</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-10 col-md-offset-2 text-center ">
+                <button class="btn btn-default" style="margin-top: 15px;margin-left: 190px;">查看更多+</button>
+            </div>
+        </div>
 
-<div class="cards  animate-box news1">
-    <div class="row .row-bottom-padded-sd">
-        <div class="col-lg-4 col-md-4 news-row">
-            <div class=" fh5co-blog1">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news1.png" alt=""></a>
-                <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
-                    <div class="news-title">
-                        <p class="news-desc"><a  class="news-desc-a" href="#">【BI头条】特朗普前竞选经理马纳福特认罪 将配合特别检察官穆勒的调查</a></p>
+    </div>
+    <!--下载中心-->
+    <div class="container button-demo " >
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section" style="margin-top: -60px;">
+                <p class="one-menu">下载中心</p>
+                <p class="three-menu">企牛牛高质量精品模板，价格低廉，一站式服务，应有尽有</p>
+                <div class="col-md-2 col-sm-2">
+                    <div class="services">
+                        <button class="btn btn-default" onclick="cards1()">微信下载</button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <div class="services">
+                        <button class="btn btn-default" onclick="cards2()">APP下载</button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <div class="services">
+                        <button class="btn btn-default" onclick="cards3()">H5开发下载</button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <div class="services">
+                        <button class="btn btn-default" onclick="cards4()">智慧会务下载</button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <div class="services">
+                        <button class="btn btn-default" onclick="cards5()">网站下载</button>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2">
+                    <div class="services">
+                        <button class="btn btn-default" onclick="cards6()">商城下载</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 news-row">
-            <div class="fh5co-blog1 ">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news2.png" alt=""></a>
-                <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
-                    <div class="news-title" >
-                        <p class="news-desc"><a  class="news-desc-a" href="#">【头条】总书记为长江生态画"红线" 长江生态保护总书记最牵挂</a></p>
+    </div>
+    <!--下载中心切换轮播图-->
+    <div class="container box-download ">
+        <div class="cards cards-1  animate-box box-download-div">
+            <div class="row row-bottom-padded-md">
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog div-shadow  ">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>凡高设计官网开发1<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img class="" src="/static/index/images/shuren.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog  div-shadow">
+                        <a href="#"><img class="" src="/static/index/images/wulianw.png" alt=""></a>
+                        <div class="blog-text ">
+                            <div class="prod-title">
+                                <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cards cards-2   box-download-div">
+            <div class="row row-bottom-padded-md">
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text ">
+                            <div class="prod-title">
+                                <h3>凡高设计官网开发2<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog  div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text ">
+                            <div class="prod-title">
+                                <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cards cards-3  box-download-div">
+            <div class="row row-bottom-padded-md">
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog  div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text ">
+                            <div class="prod-title">
+                                <h3>凡高设计官网开发3<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cards cards-4  box-download-div">
+            <div class="row row-bottom-padded-md">
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>凡高设计官网开发4<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog div-shadow ">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text ">
+                            <div class="prod-title">
+                                <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cards cards-5   box-download-div">
+            <div class="row row-bottom-padded-md">
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>凡高设计官网开发5<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 news-row">
-            <div class="fh5co-blog1">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news3.png" alt=""></a>
-                <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
-                    <div class="news-title">
-                        <p class="news-desc"><a  class="news-desc-a two-menu" href="#">【国外热门】荷兰皇家卫队骑兵在烟雾中训练</a></p>
+        <div class="cards cards-6   box-download-div">
+            <div class="row row-bottom-padded-md">
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>凡高设计官网开发66666<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>舒仁地产官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 high-sec">
+                    <div class="fh5co-blog div-shadow">
+                        <a href="#"><img src="/static/index/images/fangao.png" alt=""></a>
+                        <div class="blog-text  ">
+                            <div class="prod-title">
+                                <h3>物联网产业联盟官网<p style="float:right;margin-bottom:0.5em"><i class="fa fa-link fa-2x" style="color:#555555"></i></p></h3>
+                                <h5 style="margin-bottom:50px">响应式网站开发<p style="float:right;"><i class="fa fa-qrcode fa-2x" style="color:#555555;padding:0 4px 0 0"></i></p></h5>
+                                <a href="#" class="btn btn-default row-btn-black btn-none animate-box">¥5000下载资源</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!--统计栏-->
+    <div class="container  box-tongji" >
+        <div class="row">
+            <div class="col-md-12  bg-gray">
+                <div class="blog-gray">
+                    <p class="tongji">企牛牛近期框架签订协议用户</p >
+                    <ul class="dc-scroll fr">
+                        <li>
+                            <div class="s-on">8</div>
+                        </li>
+                        <li>
+                            <div class="s-on">5</div>
+                        </li>
+                        <li>
+                            <div class="s-on">4</div>
+                        </li>
+                        <li>
+                            <div class="s-on">9</div>
+                        </li>
+                        <li>
+                            <div class="s-on">8</div>
+                        </li>
+                        <li>
+                            <div class="s-on">7</div>
+                        </li>
+                    </ul>
 
+                </div>
+                <div class="blog-gray2">
+                    <p class="tongji"> 企牛牛总框架签订协议用户</p >
+                    <ul class="dc-scroll fr">
+                        <li>
+                            <div class="s-on">8</div>
+                        </li>
+                        <li>
+                            <div class="s-on">5</div>
+                        </li>
+                        <li>
+                            <div class="s-on">4</div>
+                        </li>
+                        <li>
+                            <div class="s-on">9</div>
+                        </li>
+                        <li>
+                            <div class="s-on">8</div>
+                        </li>
+                        <li>
+                            <div class="s-on">7</div>
+                        </li>
+                        <li>
+                            <div class="s-on">6</div>
+                        </li>
+                    </ul>
 
-    <div class="row row-bottom-padded-md">
-        <div class="col-lg-4 col-md-4 ">
-            <div class=" fh5co-blog1 news-tab">
-                <p class="two-menu news-tab-one" ><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
-                <p class="two-menu"><a href="#"  class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 ">
-            <div class=" fh5co-blog1 news-tab">
-                <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
-                <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 ">
-            <div class=" fh5co-blog1 news-tab">
-                <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
-                <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
             </div>
         </div>
     </div>
-
-
-</div>
-
-<div class="cards  animate-box news2">
-    <div class="row .row-bottom-padded-sd">
-        <div class="col-lg-4 col-md-4 news-row">
-            <div class=" fh5co-blog1">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news1.png" alt=""></a>
-                <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
-                    <div class="news-title">
-                        <p class="news-desc"><a  class="news-desc-a" href="#">【BI头条】特朗普前竞2222选经理马纳福特认罪 将配合特别检察官穆勒的调查</a></p>
+    <!--新闻资讯-->
+    <div class="container button-demo" >
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section">
+                <p class="one-menu">大咖云集，知识分享的开发者技术社区</p>
+                <p class="three-menu">实战干货、在线直播、专家问答、技术论坛、学习、分享、成长、共建</p>
+                <div class="news-list">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+                            <button class="btn btn-default" onclick="news1()">公司动态</button>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 news-row">
-            <div class="fh5co-blog1 ">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news2.png" alt=""></a>
-                <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
-                    <div class="news-title" >
-                        <p class="news-desc"><a  class="news-desc-a" href="#">【头条】总书记为长江生态画"红线" 长江生态保护总书记最牵挂</a></p>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+                            <button class="btn btn-default" onclick="news2()">最新案例动态</button>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 news-row">
-            <div class="fh5co-blog1">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news3.png" alt=""></a>
-                <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
-                    <div class="news-title">
-                        <p class="news-desc"><a  class="news-desc-a" href="#">【国外热门】荷兰皇家卫队骑兵在烟雾中训练</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="row row-bottom-padded-md">
-        <div class="col-lg-4 col-md-4 ">
-            <div class=" fh5co-blog1 news-tab">
-                <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
-                <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 ">
-            <div class=" fh5co-blog1 news-tab">
-                <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
-                <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 ">
-            <div class=" fh5co-blog1 news-tab">
-                <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
-                <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
-            </div>
-        </div>
-    </div>
-
-
-</div>
-
-
-<div class="cards  animate-box news3">
-    <div class="row .row-bottom-padded-sd">
-        <div class="col-lg-4 col-md-4 news-row">
-            <div class=" fh5co-blog1">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news1.png" alt=""></a>
-                <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
-                    <div class="news-title">
-                        <p class="news-desc"><a  class="news-desc-a" href="#">【BI头条】特朗普3333前竞选经理马纳福特认罪 将配合特别检察官穆勒的调查</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 news-row">
-            <div class="fh5co-blog1 ">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news2.png" alt=""></a>
-                <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
-                    <div class="news-title" >
-                        <p class="news-desc"><a  class="news-desc-a" href="#">【头条】总书记为长江生态画"红线" 长江生态保护总书记最牵挂</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4 news-row">
-            <div class="fh5co-blog1">
-                <a href="#"><img class="img-responsive" src="/static/index/images/news3.png" alt=""></a>
-                <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
-                    <div class="news-title">
-                        <p class="news-desc"><a  class="news-desc-a" href="#">【国外热门】荷兰皇家卫队骑兵在烟雾中训练</a></p>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="services ">
+                            <button class="btn btn-default" onclick="news3()">行业动态</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!--新闻1-->
+    <div class="cards  animate-box news1">
+        <div class="row .row-bottom-padded-sd">
+            <div class="col-lg-4 col-md-4 news-row">
+                <div class=" fh5co-blog1">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/news1.png" alt=""></a>
+                    <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                        <div class="news-title">
+                            <p class="news-desc"><a  class="news-desc-a" href="#">【BI头条】特朗普前竞选经理马纳福特认罪 将配合特别检察官穆勒的调查</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 news-row">
+                <div class="fh5co-blog1 ">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/news2.png" alt=""></a>
+                    <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                        <div class="news-title" >
+                            <p class="news-desc"><a  class="news-desc-a" href="#">【头条】总书记为长江生态画"红线" 长江生态保护总书记最牵挂</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 news-row">
+                <div class="fh5co-blog1">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/news3.png" alt=""></a>
+                    <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                        <div class="news-title">
+                            <p class="news-desc"><a  class="news-desc-a two-menu" href="#">【国外热门】荷兰皇家卫队骑兵在烟雾中训练</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-    <div class="row row-bottom-padded-md">
-        <div class="col-lg-4 col-md-4 ">
-            <div class=" fh5co-blog1 news-tab">
-                <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
-                <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+        <div class="row row-bottom-padded-md">
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" fh5co-blog1 news-tab">
+                    <p class="two-menu news-tab-one" ><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
+                    <p class="two-menu"><a href="#"  class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" fh5co-blog1 news-tab">
+                    <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
+                    <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" fh5co-blog1 news-tab">
+                    <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
+                    <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 ">
-            <div class=" fh5co-blog1 news-tab">
-                <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
-                <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+
+
+    </div>
+    <!--新闻2-->
+    <div class="cards  animate-box news2">
+        <div class="row .row-bottom-padded-sd">
+            <div class="col-lg-4 col-md-4 news-row">
+                <div class=" fh5co-blog1">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/news1.png" alt=""></a>
+                    <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                        <div class="news-title">
+                            <p class="news-desc"><a  class="news-desc-a" href="#">【BI头条】特朗普前竞2222选经理马纳福特认罪 将配合特别检察官穆勒的调查</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 news-row">
+                <div class="fh5co-blog1 ">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/news2.png" alt=""></a>
+                    <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                        <div class="news-title" >
+                            <p class="news-desc"><a  class="news-desc-a" href="#">【头条】总书记为长江生态画"红线" 长江生态保护总书记最牵挂</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 news-row">
+                <div class="fh5co-blog1">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/news3.png" alt=""></a>
+                    <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                        <div class="news-title">
+                            <p class="news-desc"><a  class="news-desc-a" href="#">【国外热门】荷兰皇家卫队骑兵在烟雾中训练</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 ">
-            <div class=" fh5co-blog1 news-tab">
-                <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
-                <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+
+
+
+        <div class="row row-bottom-padded-md">
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" fh5co-blog1 news-tab">
+                    <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
+                    <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" fh5co-blog1 news-tab">
+                    <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
+                    <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" fh5co-blog1 news-tab">
+                    <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
+                    <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
             </div>
         </div>
+
+
     </div>
 
+    <!--新闻3-->
+    <div class="cards  animate-box news3">
+        <div class="row .row-bottom-padded-sd">
+            <div class="col-lg-4 col-md-4 news-row">
+                <div class=" fh5co-blog1">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/news1.png" alt=""></a>
+                    <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                        <div class="news-title">
+                            <p class="news-desc"><a  class="news-desc-a" href="#">【BI头条】特朗普3333前竞选经理马纳福特认罪 将配合特别检察官穆勒的调查</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 news-row">
+                <div class="fh5co-blog1 ">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/news2.png" alt=""></a>
+                    <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                        <div class="news-title" >
+                            <p class="news-desc"><a  class="news-desc-a" href="#">【头条】总书记为长江生态画"红线" 长江生态保护总书记最牵挂</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 news-row">
+                <div class="fh5co-blog1">
+                    <a href="#"><img class="img-responsive" src="/static/index/images/news3.png" alt=""></a>
+                    <div class="blog-text" style="border:0;-webkit-box-shadow: none;-moz-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;">
+                        <div class="news-title">
+                            <p class="news-desc"><a  class="news-desc-a" href="#">【国外热门】荷兰皇家卫队骑兵在烟雾中训练</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-</div>
 
-<!--合作伙伴-->
-<div class="container button-demo logo-bottom" >
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center heading-section">
-            <p class="one-menu">他们用战略眼光结合我们的互联网思维碰撞出了奇迹</p>
-            <p class="three-menu logo-few">加入企牛牛合作伙伴计划，开创新业务，获取技术，资源，实现更快速成长</p>
+
+        <div class="row row-bottom-padded-md">
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" fh5co-blog1 news-tab">
+                    <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
+                    <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" fh5co-blog1 news-tab">
+                    <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
+                    <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 ">
+                <div class=" fh5co-blog1 news-tab">
+                    <p class="two-menu news-tab-one"><a href="#" class="news-list-a" >【CNNMoney】亚马逊第二总部选址引发公...</a></p>
+                    <p class="two-menu"><a href="#" class="news-list-a">【CNBC】耳其加息并非可行的解决方案</a></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!--合作伙伴-->
+    <div class="container button-demo logo-bottom" >
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section">
+                <p class="one-menu">他们用战略眼光结合我们的互联网思维碰撞出了奇迹</p>
+                <p class="three-menu logo-few">加入企牛牛合作伙伴计划，开创新业务，获取技术，资源，实现更快速成长</p>
 
                 <div class="col-md-2 col-sm-2">
                     <image src="/static/index/images/logo-list1.png" />
@@ -1049,142 +1789,142 @@
                     <image src="/static/index/images/logo-list12.png" />
                 </div>
 
+            </div>
         </div>
     </div>
-</div>
 
 
-<!--注册-->
-<div class="container button-demo animate-box" >
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
-            <p class="one-menu">企牛牛为您提供最优质的直营一站式服务</p>
-            <button class="btn btn-red btn-insert">立即注册</button>
+    <!--注册-->
+    <div class="container button-demo animate-box" >
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
+                <p class="one-menu">企牛牛为您提供最优质的直营一站式服务</p>
+                <button class="btn btn-red btn-insert">立即注册</button>
+            </div>
         </div>
     </div>
-</div>
 
-<div th:replace="index/index/side :: side"></div>
-<div th:replace="index/index/footer :: footer"></div>
-<div th:include="index/index/js :: onload_js"></div>
+    <div th:replace="index/index/side :: side"></div>
+    <div th:replace="index/index/footer :: footer"></div>
+    <div th:include="index/index/js :: onload_js"></div>
 
 </div>
 
 <script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
 <script type="text/javascript" src="/static/index/js/public.js"></script>
 <script type="text/javascript">
-$(function() {
-    var d = $("#slider-btn li");
-    var j = $("#slider-back li");
-    var a = $(".banner-text");
-    var h = $(".slider-text");
-    var e = $(".banner-txt a");
-    var i = 0;
-    d.each(function(l) {
-        $(this).mouseover(function() {
-            f(l)
-        });
-        $(this).data("index")
-    });
-    function f(l) {
-        i = l;
-        d.eq(l).addClass("active").siblings().removeClass();
-        var m = a.eq(l);
-        var n = m.children();
-        m.siblings(".banner-text").stop(true).fadeOut(100);
-        m.show();
-        n.each(function() {
-            var o = $(this);
-            o.css({
-                display: "block",
-                opacity: 0,
-                top: o.data("start_top") || 0,
-                left: o.data("start_left") || 0
+    $(function() {
+        var d = $("#slider-btn li");
+        var j = $("#slider-back li");
+        var a = $(".banner-text");
+        var h = $(".slider-text");
+        var e = $(".banner-txt a");
+        var i = 0;
+        d.each(function(l) {
+            $(this).mouseover(function() {
+                f(l)
             });
-            o.stop(true).delay(400).animate({
-                display: "none",
-                opacity: 1,
-                top: o.data("to_top"),
-                left: o.data("to_left")
-            },
-            1200);
-            if (o.data("class") !== undefined) {
-                o.removeClass(o.data("class"));
-                setTimeout(function() {
-                    o.addClass(o.data("class"))
+            $(this).data("index")
+        });
+        function f(l) {
+            i = l;
+            d.eq(l).addClass("active").siblings().removeClass();
+            var m = a.eq(l);
+            var n = m.children();
+            m.siblings(".banner-text").stop(true).fadeOut(100);
+            m.show();
+            n.each(function() {
+                var o = $(this);
+                o.css({
+                    display: "block",
+                    opacity: 0,
+                    top: o.data("start_top") || 0,
+                    left: o.data("start_left") || 0
+                });
+                o.stop(true).delay(400).animate({
+                        display: "none",
+                        opacity: 1,
+                        top: o.data("to_top"),
+                        left: o.data("to_left")
+                    },
+                    1200);
+                if (o.data("class") !== undefined) {
+                    o.removeClass(o.data("class"));
+                    setTimeout(function() {
+                            o.addClass(o.data("class"))
+                        },
+                        0)
+                }
+            });
+            j.eq(l).siblings().stop().animate({
+                    opacity: 0
                 },
-                0)
+                600);
+            j.eq(l).stop().animate({
+                    opacity: 1
+                },
+                600)
+        }
+        function g() {
+            i++;
+            if (i == d.length) {
+                i = 0
             }
-        });
-        j.eq(l).siblings().stop().animate({
-            opacity: 0
-        },
-        600);
-        j.eq(l).stop().animate({
-            opacity: 1
-        },
-        600)
-    }
-    function g() {
-        i++;
-        if (i == d.length) {
-            i = 0
+            f(i)
         }
-        f(i)
-    }
-    var c = null;
-    var b = $("#slider-btn");
-    var k = function() {
-        var l = b.find(".active");
-        c = setTimeout(function() {
-            g();
-            k()
-        },
-        l.data("delay") || 8000)
-    };
-    k();
-    d.hover(function() {
-        clearInterval(c)
-    },
-    function() {
-        k()
+        var c = null;
+        var b = $("#slider-btn");
+        var k = function() {
+            var l = b.find(".active");
+            c = setTimeout(function() {
+                    g();
+                    k()
+                },
+                l.data("delay") || 8000)
+        };
+        k();
+        d.hover(function() {
+                clearInterval(c)
+            },
+            function() {
+                k()
+            });
+        f(0)
     });
-    f(0)
-});
 
 
 
 
 
 
-var imgHoverReplaceSrc = {
-    init: function (sel) {
-        this.sel = sel || "img";
-        this.imgList = document.querySelectorAll(sel);
-        this.work();
-    },
-    work: function () {
-        var _this = this;
-        this.imgList.forEach(function (item) {
-            item.addEventListener("mouseenter", function () {
-                _this.changeSrc(item);
-                // item.className = "animate-box";
+    var imgHoverReplaceSrc = {
+        init: function (sel) {
+            this.sel = sel || "img";
+            this.imgList = document.querySelectorAll(sel);
+            this.work();
+        },
+        work: function () {
+            var _this = this;
+            this.imgList.forEach(function (item) {
+                item.addEventListener("mouseenter", function () {
+                    _this.changeSrc(item);
+                    // item.className = "animate-box";
+                });
+                item.addEventListener("mouseleave", function () {
+                    _this.changeSrc(item);
+                    // item.className = "animate-box";
+                });
             });
-            item.addEventListener("mouseleave", function () {
-                _this.changeSrc(item);
-                // item.className = "animate-box";
-            });
-        });
-    },
-    changeSrc: function (item) {
-        if (item.getAttribute('data-src')) {
-            var tmpSrc = item.src;
-            item.src = item.getAttribute('data-src');
-            item.setAttribute('data-src', tmpSrc);
+        },
+        changeSrc: function (item) {
+            if (item.getAttribute('data-src')) {
+                var tmpSrc = item.src;
+                item.src = item.getAttribute('data-src');
+                item.setAttribute('data-src', tmpSrc);
+            }
         }
     }
-}
-imgHoverReplaceSrc.init(".menu-icon");
+    imgHoverReplaceSrc.init(".menu-icon");
 </script>
 </body>
 </html>

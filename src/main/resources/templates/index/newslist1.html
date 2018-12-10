@@ -35,9 +35,10 @@
 
 </style>
 <body style="min-width:1500px">
+<!--头部信息-->
 <div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
 </div>
-
+<!--新闻头部-->
 <div class="container">
     <div class="bgmenu animate-box">
         <div class=" row">
@@ -51,10 +52,10 @@
 
 
 
-
+<!--新闻主体-->
 
 <div class="container button-demo">
-    <div class="row">
+    <div >
         <div class=" soilder-left animate-box">
             <div class="div-white">
 
@@ -94,6 +95,7 @@
                     <p>首先，在国内、国际标准化领域展开密切合作，共同参与和推动网络安全、数据安全与隐私保护、生物特征识别、身份认证、物联网、区块链、人工智能等技术领域内的标准化合作研制项目。</p>
 
                 </div>
+                <!--文章信息-->
                 <div class="footer">
                     <p class="news-time">原文发布时间：</p><span>2018年10月17日</span><br>
                     <p class="news-author">本文作者：</p><span href="#"></span>
@@ -102,7 +104,7 @@
                     <p class="s-fenxiang">分享到：<a class="fx-a"><i class="fa fa-weibo fa-2x"></i></a><a class="fx-a2"><i class="fa fa-wechat fa-2x"></i></a></p>
                 </div>
 
-
+<!--关于文章-->
                 <div class="aboutTittle">
                     <h3>相关文章</h3>
                     <p><a href="#">蚂蚁金服与天津银行达成战略合作，金融科技开放势头迅速延伸</a></p>
@@ -120,6 +122,7 @@
 
 
         </div>
+        <!--侧边栏-->
         <div class="col-md-3" style="width:20%">
             <div class="div-right">
                 <p class="li-title">相关话题</p>
@@ -141,16 +144,12 @@
 </div>
 
 
+<!--脚部信息及侧边栏-->
+<div th:replace="index/index/side :: side"></div>
+<div th:replace="index/index/footer :: footer"></div>
+<div th:include="index/index/js :: onload_js">
+</div>
 
-
-
-<div class="container button-demo">
-
-
-    <div th:replace="index/index/side :: side"></div>
-    <div th:replace="index/index/footer :: footer"></div>
-    <div th:include="index/index/js :: onload_js">
-    </div>
     <script type="text/javascript" src="/static/admin/assets/js/toggle_close.js"></script>
     <script type="text/javascript" src="/static/index/js/public.js"></script>
     <script type="text/javascript" src="/static/index/js/newslist.js"></script>

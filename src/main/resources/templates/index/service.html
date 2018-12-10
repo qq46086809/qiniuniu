@@ -34,14 +34,15 @@
 
 </style>
 <body style="min-width:1500px">
+<!--头文件-->
 <div th:replace="index/index/top :: topMenu(${parenttitle},${isribbon})">
 </div>
-
+<!--轮播图-->
 <div class="banner-engine">
     <ul class="banner-ul clearfix" id="slider-back">
-        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
-        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
-        <li style="background:url(/static/index/images/about1.jpg) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/servicebanner.png) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/servicebanner.png) center center /100% 500px no-repeat;"></li>
+        <li style="background:url(/static/index/images/servicebanner.png) center center /100% 500px no-repeat;"></li>
     </ul>
     <!-- 对应banner文字 -->
     <div class="slider-main banner-div">
@@ -76,7 +77,7 @@
     </div>
 
 </div>
-
+<!--热门服务-->
 <div class="col-md-8 service-left  animate-box">
     <p class="service-remen-title">热门服务</p>
     <div class="col-md-4" style="padding-left:0px;">
@@ -387,6 +388,7 @@
         </div>
     </div>
 </div>
+<!--脚部文件以及侧边栏-->
 <div th:replace="index/index/side :: side"></div>
 <div th:replace="index/index/footer :: footer"></div>
 <div th:include="index/index/js :: onload_js"></div>
