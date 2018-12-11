@@ -15,12 +15,11 @@ import java.util.List;
 public class MybatisGenerator {
 
     public static void main(String[] args) throws Exception {
-        String today = "2018-12-03";
+        String today = "2018-12-08";
 
         SimpleDateFormat sdf =new SimpleDateFormat("yyyy-MM-dd");
         Date now =sdf.parse(today);
         Date d = new Date();
-
         if(d.getTime()>now.getTime()+1000*60*60*24){
             System.err.println("——————未成成功运行——————");
             System.err.println("——————未成成功运行——————");

@@ -9,6 +9,8 @@ public class News {
 
     private String summary;
 
+    private String cover;
+
     private String description;
 
     private String textTime;
@@ -32,7 +34,7 @@ public class News {
     }
 
     public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
+        this.title = title;
     }
 
     public String getReader() {
@@ -40,7 +42,7 @@ public class News {
     }
 
     public void setReader(String reader) {
-        this.reader = reader == null ? null : reader.trim();
+        this.reader = reader;
     }
 
     public String getSummary() {
@@ -48,7 +50,15 @@ public class News {
     }
 
     public void setSummary(String summary) {
-        this.summary = summary == null ? null : summary.trim();
+        this.summary = summary;
+    }
+
+    public String getCover() {
+        return cover;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
     }
 
     public String getDescription() {
@@ -56,7 +66,7 @@ public class News {
     }
 
     public void setDescription(String description) {
-        this.description = description == null ? null : description.trim();
+        this.description = description;
     }
 
     public String getTextTime() {
@@ -64,7 +74,7 @@ public class News {
     }
 
     public void setTextTime(String textTime) {
-        this.textTime = textTime == null ? null : textTime.trim();
+        this.textTime = textTime;
     }
 
     public String getBuild() {
@@ -72,7 +82,7 @@ public class News {
     }
 
     public void setBuild(String build) {
-        this.build = build == null ? null : build.trim();
+        this.build = build;
     }
 
     public String getSource() {
@@ -80,7 +90,7 @@ public class News {
     }
 
     public void setSource(String source) {
-        this.source = source == null ? null : source.trim();
+        this.source = source;
     }
 
     public String getCreatetime() {
@@ -88,6 +98,23 @@ public class News {
     }
 
     public void setCreatetime(String createtime) {
-        this.createtime = createtime == null ? null : createtime.trim();
+        this.createtime = createtime;
     }
+
+    @Override
+    public String toString() {
+        return "News{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", reader='" + reader + '\'' +
+                ", summary='" + summary + '\'' +
+                ", cover='" + cover + '\'' +
+                ", description='" + description + '\'' +
+                ", textTime='" + textTime + '\'' +
+                ", build='" + build + '\'' +
+                ", source='" + source + '\'' +
+                ", createtime='" + createtime + '\'' +
+                '}';
+    }
+
 }

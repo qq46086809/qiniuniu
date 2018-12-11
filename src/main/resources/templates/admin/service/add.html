@@ -11,7 +11,10 @@
     <!-- bootstrap-table表单样式 -->
     <link th:href="@{{path}static/admin/assets/js/bootstrap/css/bootstrap-table/bootstrap-table.min.css(path=${rootPath})}"
           rel="stylesheet"/>
-    <link th:href="@{{path}static/admin/dist/summernote.css(path=${rootPath})}" rel="stylesheet"/>
+
+    <link rel="stylesheet" th:href="@{{path}static/admin/css/base.css(path=${rootPath})}">
+
+    <link rel="stylesheet" th:href="@{{path}static/admin/css/home.css(path=${rootPath})}">
 
     <style type="text/css">
     .m{ width: 719px; margin-left: auto; margin-right: auto; }
@@ -82,55 +85,92 @@ label.error {
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label ">来源:</label>
+                                <label class="col-sm-3 control-label ">描述:</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="source" name="source"/>
+                                    <input class="form-control" type="text" id="desc" name="desc"/>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label ">作者:</label>
+                                <label class="col-sm-3 control-label ">类型:</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="build" name="build"/>
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label ">原文创作时间:</label>
-                                <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="textTime" name="textTime"/>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label ">摘要:</label>
-                                <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="summary" name="summary"/>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label ">封面:</label>
-                                <div class="col-sm-8">
-                                    <input type="file" class="btn btn-primary"  id="imgTest"  onchange="imgChange(event)" accept=".gif,.jpg,.jpeg,.png">
-                                    <input type="hidden" id="showImage" name="cover" >
+                                    <input class="form-control" type="text" id="type" name="type"/>
                                 </div>
                             </div>
 
 
                             <div class="form-group">
-                                <div class="col-sm-11">
-                                    <div class="m" style="border:1px solid #ccc">
-                                        <div class="summernote" ></div>
+                                <label class="col-sm-3 control-label ">服务地区:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="area" name="area"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">服务期限:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="times" name="times"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">价格:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="price" name="price"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">折扣价:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="discount" name="discount"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">链接地址:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="link" name="link"/>
+                                </div>
+                            </div>
+                            <div class="aui-form-group clear">
+                                <label class="aui-label-control">
+                                    封面 <em>*</em>
+                                    <span>仅限一张</span>
+                                </label>
+                                <div class="aui-form-input">
+                                    <div class="aui-content-img-box aui-content-full">
+                                        <div class="aui-photo aui-up-img clear">
+                                            <section class="aui-file-up fl">
+                                                <img src="/static/admin/image/up.png" class="add-img">
+                                                <input type="file"  class="file" id="filecover" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple/>
+
+                                            </section>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <input type="hidden" name="cover" id="cover"  value="" />
+
+                            <div class="aui-form-group clear">
+                                <label class="aui-label-control">
+                                    内容 <em>*</em>
+                                    <span>小于5M</span>
+                                </label>
+                                <div class="aui-form-input">
+                                    <div class="aui-content-img-box aui-content-full">
+                                        <div class="aui-photo aui-up-img clear">
+                                            <section class="aui-file-up fl">
+                                                <img src="/static/admin/image/up.png" class="add-img">
+                                                <input type="file"  class="file2" id="filecontent" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple/>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="content" id="content"  value="" />
                             <input type="hidden" id="description" name="description" value="" />
                             <div class="form-group">
                                 <div class="form-control-static col-sm-offset-9">
                                     <button type="submit" class="btn btn-primary">提交</button>
-                                    <button onclick="$.modal.close()" class="btn btn-danger" type="button">关闭1</button>
+                                    <button onclick="$.modal.close()" class="btn btn-danger" type="button">关闭</button>
                                 </div>
                             </div>
                         </form>
@@ -140,7 +180,15 @@ label.error {
         </div>
     </div>
 </div>
-
+<div class="aui-mask aui-works-mask">
+    <div class="aui-mask-content">
+        <p class="aui-delete-text">确定要删除你上传的资料？</p>
+        <p class="aui-check-text">
+            <span class="aui-delete aui-accept-ok">确定</span>
+            <span class="aui-accept-no">取消</span>
+        </p>
+    </div>
+</div>
 <!-- 通用js -->
 <div th:include="admin/common/html/js :: onload_js">
 
@@ -153,12 +201,11 @@ label.error {
 <script th:src="@{{path}static/admin/assets/js/bootstrap/js/base_list.js(path=${rootPath})}"
         type="text/javascript"></script>
 
-
+<script th:src="@{{path}static/admin/js/up.js(path=${rootPath})}"
+        type="text/javascript"></script>
 <!-- 弹窗 -->
 <script th:src="@{{path}static/admin/assets/js/layer/layer.js(path=${rootPath})}" type="text/javascript"></script>
 
-<script th:src="@{{path}static/admin/dist/summernote.js(path=${rootPath})}"></script>
-<script th:src="@{{path}static/admin/dist/lang/summernote-zh-CN.js(path=${rootPath})}"></script>
 
 <!-- 遮罩层 -->
 <script th:src="@{{path}static/admin/assets/js/blockUI/jquery.blockUI.js(path=${rootPath})}"
@@ -167,28 +214,7 @@ label.error {
 <script th:src="@{{path}static/js/jqueryFormSerializeJson.js(path=${rootPath})}" type="text/javascript"></script>
 
 <script type="text/javascript">
-function imgChange(e) {
-    console.info(e.target.files[0]);//图片文件
-    var dom =$("input[id^='imgTest']")[0];
-    console.info(dom.value);//这个是文件的路径 C:\fakepath\icon (5).png
-    console.log(e.target.value);//这个也是文件的路径和上面的dom.value是一样的
-    var reader = new FileReader();
-    reader.onload = (function (file) {
-        return function (e) {
-           console.info(this.result); //这个就是base64的数据了
-            var sss=$("#showImage");
-            $("#showImage")[0].value=this.result;
-        };
-    })(e.target.files[0]);
-    reader.readAsDataURL(e.target.files[0]);
-}
-$(function(){
- $('.summernote').summernote({
-        height: 200,
-        tabsize: 2,
-        lang: 'zh-CN'
-    });
-});
+
 $("#form-add").validate({
 
 	submitHandler:function(form){
@@ -209,7 +235,7 @@ function add() {
 	$.ajax({
 		cache : true,
 		type : "POST",
-		url : rootPath + "/newController/add",
+		url : rootPath + "/ServiceRawController/add",
 		data : dataFormJson,
 		async : false,
 		error : function(request) {

@@ -1,0 +1,45 @@
+/*
+*  author: AUI
+*  base.css
+*  http://azenui.com/
+*  http://a-ui.cn/
+*/
+::-webkit-scrollbar {
+    display: none;
+}
+
+::-moz-placeholder {
+    color: #aaa;
+}
+
+::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+:-ms-input-placeholder {
+    color: #aaa;
+}
+
+::selection {
+    background: #111;
+    color: #fff;
+    font-weight: bold
+}
+
+
+
+table.aui-tab-data tr {
+    background: #fff;
+}
+
+table.aui-tab-data tr:nth-child(odd) {
+    background-color: #F5F5F5;
+}
+
+table.aui-tab-data tr th {
+    padding: 10px;
+}
+
+table.aui-tab-data tr td {
+    padding: 10px;
+}
