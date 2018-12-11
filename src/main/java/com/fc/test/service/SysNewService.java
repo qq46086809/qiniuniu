@@ -66,4 +66,8 @@ public class SysNewService {
 	public int updateByPrimaryKey(News news) {
 		return newsDao.updateByPrimaryKey(news);
 	}
+
+	public String NewsDescByPrimaryKey(String ids) {
+		return newsDao.NewsDescByPrimaryKey(ids);
+	}
 }

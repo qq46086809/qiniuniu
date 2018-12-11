@@ -6,6 +6,7 @@
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="reader" jdbcType="VARCHAR" property="reader" />
     <result column="summary" jdbcType="VARCHAR" property="summary" />
+    <result column="cover" jdbcType="VARCHAR" property="cover" />
     <result column="description" jdbcType="VARCHAR" property="description" />
     <result column="text_time" jdbcType="VARCHAR" property="textTime" />
     <result column="build" jdbcType="VARCHAR" property="build" />
@@ -13,7 +14,7 @@
     <result column="createtime" jdbcType="VARCHAR" property="createtime" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, title, reader, summary, description, text_time, build, `source`, createtime
+    id, title,cover,reader, summary, description, text_time, build, `source`, createtime
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -29,11 +30,11 @@
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into t_news (title, reader, summary, 
+    insert into t_news (title, reader, summary, cover,
       description, text_time, build, 
       `source`, createtime)
-    values (#{title,jdbcType=VARCHAR}, #{reader,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR}, 
-      #{description,jdbcType=VARCHAR}, #{textTime,jdbcType=VARCHAR}, #{build,jdbcType=VARCHAR}, 
+    values (#{title,jdbcType=VARCHAR}, #{reader,jdbcType=VARCHAR}, #{summary,jdbcType=VARCHAR},  #{cover,jdbcType=VARCHAR},
+    #{description,jdbcType=VARCHAR}, #{textTime,jdbcType=VARCHAR}, #{build,jdbcType=VARCHAR},
       #{source,jdbcType=VARCHAR}, #{createtime,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.fc.test.model.auto.News">
@@ -50,6 +51,9 @@
       </if>
       <if test="summary != null">
         summary,
+      </if>
+      <if test="cover != null">
+        cover,
       </if>
       <if test="description != null">
         description,
@@ -76,6 +80,9 @@
       </if>
       <if test="summary != null">
         #{summary,jdbcType=VARCHAR},
+      </if>
+      <if test="cover != null">
+        #{cover,jdbcType=VARCHAR},
       </if>
       <if test="description != null">
         #{description,jdbcType=VARCHAR},
@@ -106,6 +113,9 @@
       <if test="summary != null">
         summary = #{summary,jdbcType=VARCHAR},
       </if>
+      <if test="cover != null">
+        cover = #{cover,jdbcType=VARCHAR},
+      </if>
       <if test="description != null">
         description = #{description,jdbcType=VARCHAR},
       </if>
@@ -129,6 +139,7 @@
     set title = #{title,jdbcType=VARCHAR},
       reader = #{reader,jdbcType=VARCHAR},
       summary = #{summary,jdbcType=VARCHAR},
+    cover = #{cover,jdbcType=VARCHAR},
       description = #{description,jdbcType=VARCHAR},
       text_time = #{textTime,jdbcType=VARCHAR},
       build = #{build,jdbcType=VARCHAR},

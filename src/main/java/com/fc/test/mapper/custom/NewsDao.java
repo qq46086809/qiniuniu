@@ -21,4 +21,6 @@ public interface NewsDao {
 	News selectByPrimaryKey(String id);
 
 	int updateByPrimaryKey(News news);
+
+    String NewsDescByPrimaryKey(String ids);
 }
