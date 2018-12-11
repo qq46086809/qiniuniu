@@ -88,32 +88,32 @@
         <div class="col-md-12 business-left text-center">
             <div class="col-md-2  ">
                 <div class="business-services">
-                    <a class="on-about">智慧营销</a>
+                    <a id="zhihuiLink" class="on-about">智慧营销</a>
                 </div>
             </div>
             <div class="col-md-2 ">
                 <div class="business-services">
-                    <a class="on-about">ICON功能展示</a>
+                    <a id="gongnengLink" class="on-about">ICON功能展示</a>
                 </div>
             </div>
             <div class="col-md-2 ">
                 <div class="business-services">
-                    <a class="on-about">智慧园区特点</a>
+                    <a id="parkapp1Link" class="on-about">智慧园区特点</a>
                 </div>
             </div>
             <div class="col-md-2  ">
                 <div class="business-services">
-                    <a class="on-about">延伸拓展服务</a>
+                    <a id="yanshenLink" class="on-about">延伸拓展服务</a>
                 </div>
             </div>
             <div class="col-md-2   ">
                 <div class="business-services">
-                    <a class="on-about">客户案例</a>
+                    <a id="parkapp2Link" class="on-about">客户案例</a>
                 </div>
             </div>
             <div class="col-md-2  ">
                 <div class="business-services">
-                    <a class="on-about">核心价值</a>
+                    <a id="parkapp3Link" class="on-about">核心价值</a>
                 </div>
             </div>
 
@@ -123,7 +123,7 @@
 </div>
 
 <!--产品详情 子轮播图-->
-<div class="animate-box">
+<div class="animate-box" id="zhihui">
     <div class="container button-demo ">
         <div class="row">
 
@@ -170,7 +170,7 @@
 </div>
 
 <!--ICON功能展示-->
-<div class="container animate-box" style="margin-top: 70px;">
+<div id="gongneng" class="container animate-box" style="margin-top: 70px;">
     <div class="row">
         <div class="col-md-8 jindu-left  animate-box business-bottom">
             <p class="sop-title">ICON功能展示</p>
@@ -494,7 +494,7 @@
 </div>
 
 <!--延伸拓展服务-->
-<div class="animate-box moreservice">
+<div id="yanshen" class="animate-box moreservice">
     <div class="container button-demo ">
         <div class="row">
             <div class="text-center">
@@ -960,7 +960,17 @@
                 parkText:["提升园区在业界的知名度、影响力，由跟从到引领","成熟的运营经验，确保能够如期实现园区愿景","现在以及未来，均能满足园区内企业的需求","以内部流量为契机，通过积累，服务更广的层面"]
             }
         }
-    })
+    });
+
+    SearchTittle("#zhihuiLink","#zhihui");
+    SearchTittle("#gongnengLink","#gongneng");
+    SearchTittle("#parkapp1Link","#parkapp1");
+    SearchTittle("#yanshenLink","#yanshen");
+    SearchTittle("#parkapp2Link","#parkapp2");
+    SearchTittle("#parkapp3Link","#parkapp3");
+
+
+
 </script>
 <script type="text/javascript">
     $(function() {
