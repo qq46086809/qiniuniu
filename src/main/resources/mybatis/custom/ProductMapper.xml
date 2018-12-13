@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fc.test.mapper.custom.ProductDao">
+  <resultMap id="BaseResultMap" type="com.fc.test.model.auto.Product">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="desc" jdbcType="VARCHAR" property="desc" />
+    <result column="price" jdbcType="VARCHAR" property="price" />
+    <result column="discount" jdbcType="VARCHAR" property="discount" />
+    <result column="source" jdbcType="VARCHAR" property="source" />
+    <result column="front" jdbcType="VARCHAR" property="front" />
+    <result column="language" jdbcType="VARCHAR" property="language" />
+    <result column="background" jdbcType="VARCHAR" property="background" />
+    <result column="database" jdbcType="VARCHAR" property="database" />
+    <result column="size" jdbcType="VARCHAR" property="size" />
+    <result column="updatetime" jdbcType="VARCHAR" property="updatetime" />
+    <result column="cover" jdbcType="VARCHAR" property="cover" />
+    <result column="content" jdbcType="VARCHAR" property="content" />
+    <result column="link" jdbcType="VARCHAR" property="link" />
+    <result column="other1" jdbcType="VARCHAR" property="other1" />
+    <result column="other2" jdbcType="VARCHAR" property="other2" />
+    <result column="other3" jdbcType="VARCHAR" property="other3" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.fc.test.model.auto.Product">
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, title, `type`, `desc`, price, discount, `source`, front, `language`, background,
+    `database`, `size`, updatetime, cover, content, link, other1, other2, other3
+  </sql>
+  <sql id="Blob_Column_List">
+    content
+  </sql>
+
+  <select id="selectProductList" resultType="com.fc.test.model.auto.Product" parameterType="String">
+    select * from t_product
+    <where>
+      <if test="_parameter != null and _parameter!=''">
+        title like concat(concat('%', #{_parameter}), '%')
+      </if>
+    </where>
+  </select>
+
+
+    <select id="ProductcoverByPrimaryKey" resultType="String" parameterType="String">
+    select cover from t_product where id = #{#ids}
+  </select>
+
+  <select id="ProductContentByPrimaryKey" resultType="String" parameterType="String">
+    select content from t_product where id = #{#ids}
+  </select>
+
+
+  <delete id="deleteSelective" parameterType="java.lang.String">
+    delete from t_product
+    where id = #{ids,jdbcType=VARCHAR}
+  </delete>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultType="com.fc.test.model.auto.Product">
+    select * from t_product
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+
+  <insert id="insertSelective" parameterType="com.fc.test.model.auto.Product">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_product
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="title != null">
+        title,
+      </if>
+      <if test="type != null">
+        `type`,
+      </if>
+      <if test="desc != null">
+        `desc`,
+      </if>
+      <if test="price != null">
+        price,
+      </if>
+      <if test="discount != null">
+        discount,
+      </if>
+      <if test="source != null">
+        `source`,
+      </if>
+      <if test="front != null">
+        front,
+      </if>
+      <if test="language != null">
+        `language`,
+      </if>
+      <if test="background != null">
+        background,
+      </if>
+      <if test="database != null">
+        `database`,
+      </if>
+      <if test="size != null">
+        `size`,
+      </if>
+      <if test="updatetime != null">
+        updatetime,
+      </if>
+      <if test="cover != null">
+        cover,
+      </if>
+      <if test="content != null">
+        content,
+      </if>
+      <if test="link != null">
+        link,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="desc != null">
+        #{desc,jdbcType=VARCHAR},
+      </if>
+      <if test="price != null">
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="discount != null">
+        #{discount,jdbcType=VARCHAR},
+      </if>
+      <if test="source != null">
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="front != null">
+        #{front,jdbcType=VARCHAR},
+      </if>
+      <if test="language != null">
+        #{language,jdbcType=VARCHAR},
+      </if>
+      <if test="background != null">
+        #{background,jdbcType=VARCHAR},
+      </if>
+      <if test="database != null">
+        #{database,jdbcType=VARCHAR},
+      </if>
+      <if test="size != null">
+        #{size,jdbcType=VARCHAR},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="cover != null">
+        #{cover,jdbcType=VARCHAR},
+      </if>
+      <if test="content != null">
+        #{content,jdbcType=VARCHAR},
+      </if>
+      <if test="link != null">
+        #{link,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.fc.test.model.auto.Product">
+    update t_product
+    set title = #{title,jdbcType=VARCHAR},
+    `type` = #{type,jdbcType=VARCHAR},
+    `desc` = #{desc,jdbcType=VARCHAR},
+    price = #{price,jdbcType=VARCHAR},
+    discount = #{discount,jdbcType=VARCHAR},
+    `source` = #{source,jdbcType=VARCHAR},
+    front = #{front,jdbcType=VARCHAR},
+    `language` = #{language,jdbcType=VARCHAR},
+    background = #{background,jdbcType=VARCHAR},
+    `database` = #{database,jdbcType=VARCHAR},
+    `size` = #{size,jdbcType=VARCHAR},
+    updatetime = #{updatetime,jdbcType=VARCHAR},
+    cover = #{cover,jdbcType=VARCHAR},
+    content = #{content,jdbcType=VARCHAR},
+    link = #{link,jdbcType=VARCHAR},
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+
+  <update id="updateProductDown" parameterType="java.lang.String">
+    update t_product
+    set
+    other2 =1
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateProductUp" parameterType="java.lang.String">
+    update t_product
+    set
+    other2 =0
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+</mapper>

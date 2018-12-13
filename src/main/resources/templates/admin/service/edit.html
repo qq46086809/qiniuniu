@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.pollix.at/thymeleaf/shiro">
-<head th:replace="admin/common/html/tableHead :: tableHead(~{::title},~{::link},~{::style})">
+<head th:replace="admin/common/html/tableHead :: head(~{::title},~{::link},~{::style})">
 
     <title th:text=${title}></title>
     <!-- 这儿引用单独的css link -->
@@ -10,9 +10,15 @@
     <!-- bootstrap-table表单样式 -->
     <link th:href="@{{path}static/admin/assets/js/bootstrap/css/bootstrap-table/bootstrap-table.min.css(path=${rootPath})}"
           rel="stylesheet"/>
-    <link th:href="@{{path}static/admin/dist/summernote.css(path=${rootPath})}" rel="stylesheet"/>
+
+    <link rel="stylesheet" th:href="@{{path}static/admin/css/base.css(path=${rootPath})}">
+
+    <link rel="stylesheet" th:href="@{{path}static/admin/css/home.css(path=${rootPath})}">
     <style type="text/css">
-    .m{ width: 719px; margin-left: auto; margin-right: auto; }
+   .m{ width: 719px; margin-left: auto; margin-right: auto; }
+.content-wrap {
+     padding: 0px;
+}
 body {
 	 color: #9ea7b3;
     font-family: "Open Sans", Arial, sans-serif!important;
@@ -22,7 +28,7 @@ body {
     min-height: 100%;
     z-index: -2;
     margin: 0px !important;
-    background-image: none;
+    background: url() no-repeat top center fixed;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -34,6 +40,23 @@ label.error {
     top: 5px;
     color: #ef392b;
     font-size: 12px;
+}
+.icheckbox-blue > label{
+	    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    /* padding-left: 25px; */
+    padding-right: 15px;
+    padding-top: 5px;
+}
+.sqcheckbox{
+    width: 16px;
+    height: 16px;
+    background-color: red;
+    display: inline-block;
+    position: relative;
+    top: 3px;
 }
 
     </style>
@@ -50,53 +73,92 @@ label.error {
                 </div>
                 <div class="body-nest" id="element">
                     <div class="panel-body">
-                        <form class="form-horizontal m" id="form-edit" th:object="${news}"  onsubmit="return sub()">
+                        <form class="form-horizontal m" id="form-edit" th:object="${service}"  onsubmit="return sub()">
                             <input id="id" name="id" type="hidden" th:field="*{id}"/>
 
                             <div class="form-group">
                                 <label class="col-sm-3 control-label ">标题:</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="title" name="title" th:value="*{title}"/>
+                                    <input class="form-control" type="text" id="title" name="title"  th:value="*{title}"/>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label ">来源:</label>
+                                <label class="col-sm-3 control-label ">描述:</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="source" name="source" th:value="*{source}"/>
+                                    <input class="form-control" type="text" id="desc" name="desc"  th:value="*{desc}"/>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label ">作者:</label>
+                                <label class="col-sm-3 control-label ">类型:</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="build" name="build" th:value="*{build}"/>
+                                    <input class="form-control" type="text" id="type" name="type" th:value="*{type}"/>
                                 </div>
                             </div>
 
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label ">原文创作时间:</label>
+                                <label class="col-sm-3 control-label ">服务地区:</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="textTime" name="textTime" th:value="*{textTime}"/>
+                                    <input class="form-control" type="text" id="area" name="area" th:value="*{area}"/>
                                 </div>
                             </div>
 
                             <div class="form-group">
-                                <label class="col-sm-3 control-label ">摘要:</label>
+                                <label class="col-sm-3 control-label ">服务期限:</label>
                                 <div class="col-sm-8">
-                                    <input class="form-control" type="text" id="summary" name="summary" th:value="*{summary}"/>
+                                    <input class="form-control" type="text" id="times" name="times" th:value="*{times}"/>
                                 </div>
                             </div>
-
                             <div class="form-group">
-                                <div class="col-sm-11">
-                                    <div class="m" style="border:1px solid #ccc">
-                                        <div class="summernote" ></div>
+                                <label class="col-sm-3 control-label ">价格:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="price" name="price" th:value="*{price}"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">折扣价:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="discount" name="discount" th:value="*{discount}"/>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label ">链接地址:</label>
+                                <div class="col-sm-8">
+                                    <input class="form-control" type="text" id="link" name="link" th:value="*{link}"/>
+                                </div>
+                            </div>
+                            <div class="aui-form-group clear">
+                                <label class="aui-label-control">
+                                    封面 <em>*</em>
+                                    <span>仅限一张</span>
+                                </label>
+                                <div class="aui-form-input">
+                                    <div class="aui-content-img-box aui-content-full">
+                                        <div class="aui-photo aui-up-img clear ai1">
+
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <input type="hidden" id="description" name="description" th:value="*{description}"/>
+                            <input type="hidden" name="cover" id="cover"  value="" />
+
+                            <div class="aui-form-group clear">
+                                <label class="aui-label-control">
+                                    内容 <em>*</em>
+                                    <span>小于5M</span>
+                                </label>
+                                <div class="aui-form-input">
+                                    <div class="aui-content-img-box aui-content-full">
+                                        <div class="aui-photo aui-up-img clear ai2">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" name="content" id="content"  value="" />
                             <div class="form-group">
                                 <div class="form-control-static col-sm-offset-9">
                                     <button type="submit" class="btn btn-primary">提交</button>
@@ -110,7 +172,15 @@ label.error {
         </div>
     </div>
 </div>
-
+<div class="aui-mask aui-works-mask">
+    <div class="aui-mask-content">
+        <p class="aui-delete-text">确定要删除你上传的资料？</p>
+        <p class="aui-check-text">
+            <span class="aui-delete aui-accept-ok">确定</span>
+            <span class="aui-accept-no">取消</span>
+        </p>
+    </div>
+</div>
 <!-- 通用js -->
 <div th:include="admin/common/html/js :: onload_js">
 
@@ -123,34 +193,58 @@ label.error {
 <script th:src="@{{path}static/admin/assets/js/bootstrap/js/base_list.js(path=${rootPath})}"
         type="text/javascript"></script>
 
-<script th:src="@{{path}static/admin/dist/summernote.js(path=${rootPath})}"></script>
-<script th:src="@{{path}static/admin/dist/lang/summernote-zh-CN.js(path=${rootPath})}"></script>
+<script th:src="@{{path}static/admin/js/up.js(path=${rootPath})}"
+        type="text/javascript"></script>
 <!-- 弹窗 -->
 <script th:src="@{{path}static/admin/assets/js/layer/layer.js(path=${rootPath})}" type="text/javascript"></script>
+
+
 <!-- 遮罩层 -->
 <script th:src="@{{path}static/admin/assets/js/blockUI/jquery.blockUI.js(path=${rootPath})}"
         type="text/javascript"></script>
+<!-- jqueryForm序列化 -->
+<script th:src="@{{path}static/js/jqueryFormSerializeJson.js(path=${rootPath})}" type="text/javascript"></script>
 
 
 <script type="text/javascript">
-
-$(function(){
- $('.summernote').summernote({
-        height: 200,
-        tabsize: 2,
-        lang: 'zh-CN'
-    });
-    document.getElementById("desc").innerHTML= document.getElementById("description").value;
-});
-
+<!--alert('[[${service.cover}]]');-->
+<!--alert('[[${service.content}]]');-->
+<!--<section class="aui-up-section fl" id="xkpwe1x6bhp"><span class="aui-up-span"></span><img class="aui-close-up-img" src="/static/admin/image/close.png"><img class="aui-to-up-img" src="blob:http://localhost:8081/f786dd05-ef76-4e6f-978b-9ac3f2398f6b"><p class="img-aui-img-name-p">labelblue.png</p><input id="actionId" name="actionId" value="" type="hidden"><input id="tags" name="tags" value="" type="hidden"></section>-->
+var coverl = HTMLDecode('[[${service.cover}]]');
+coverl = coverl.substring(coverl.lastIndexOf("src='")+5,coverl.length-2)
+ var coverhtml = '<section class="aui-up-section fl" id="mm"><span class="aui-up-span"></span><img class="aui-close-up-img" src="/static/admin/image/close.png"><img class="aui-to-up-img" src="'+coverl+'"><p class="img-aui-img-name-p">'+coverl+'.png</p><input id="actionId" name="actionId" value="" type="hidden"><input id="tags" name="tags" value="" type="hidden"></section>';
+ coverhtml+='  <section class="aui-file-up fl">   <img src="/static/admin/image/up.png" class="add-img">        <input type="file"  class="file" id="filecover" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple/>  </section>';
+ var coverp ="[{'mm':'"+coverl+"'}]";
+ var contenthtml="";
+ var contentp="[{";
+var contentl = HTMLDecode('[[${service.content}]]');
+var m = contentl.split(",");
+for(var a = 0;a<m.length;a++){
+ var sjs = Math.random().toString(36).substr(2);
+ var contentsrc = m[a].substring(m[a].lastIndexOf("src='")+5,m[a].length-2)
+ contenthtml+='<section class="aui-up-section fl" id="'+sjs+'"><span class="aui-up-span"></span><img class="aui-close-up-img" src="/static/admin/image/close.png"><img class="aui-to-up-img" src="'+contentsrc+'"><p class="img-aui-img-name-p">'+contentsrc+'.png</p><input id="actionId" name="actionId" value="" type="hidden"><input id="tags" name="tags" value="" type="hidden"></section>';
+contentp+="'"+sjs+"':'"+contentsrc+"',";
+}
+contenthtml+='<section class="aui-file-up fl">    <img src="/static/admin/image/up.png" class="add-img">      <input type="file"  class="file2" id="filecontent" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple/>   </section>';
+contentp=contentp.substring(0,contentp.length-1);
+contentp+="}]";
+$("#cover").val(coverp)
+$("#content").val(contentp)
+$('.ai1').html(coverhtml)
+$('.ai2').html(contenthtml)
 $("#form-edit").validate({
 	submitHandler:function(form){
 		edit();
 	}
 });
-
+function HTMLDecode(text) {
+var temp = document.createElement("div");
+temp.innerHTML = text;
+var output = temp.innerText || temp.textContent;
+temp = null;
+return output;
+}
 function sub(){
-document.getElementById("description").value=document.getElementById("desc").innerHTML;
 return true;
 }
 
@@ -159,7 +253,7 @@ function edit() {
 	$.ajax({
 		cache : true,
 		type : "POST",
-		url : rootPath + "/newController/edit",
+		url : rootPath + "/ServiceRawController/edit",
 		data : dataFormJson,
 		async : false,
 		error : function(request) {

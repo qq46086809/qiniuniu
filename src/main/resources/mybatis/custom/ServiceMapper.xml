@@ -51,7 +51,10 @@
     delete from t_service
     where id = #{ids,jdbcType=VARCHAR}
   </delete>
-
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultType="com.fc.test.model.auto.Service">
+    select * from t_service
+    where id = #{id,jdbcType=INTEGER}
+  </select>
 
   <insert id="insertSelective" parameterType="com.fc.test.model.auto.Service">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
@@ -83,20 +86,8 @@
       <if test="discount != null">
         discount,
       </if>
-      <if test="sale != null">
-        sale,
-      </if>
       <if test="link != null">
         link,
-      </if>
-      <if test="other1 != null">
-        other1,
-      </if>
-      <if test="other2 != null">
-        other2,
-      </if>
-      <if test="other3 != null">
-        other3,
       </if>
       <if test="content != null">
         content,
@@ -127,25 +118,40 @@
       <if test="discount != null">
         #{discount,jdbcType=VARCHAR},
       </if>
-      <if test="sale != null">
-        #{sale,jdbcType=INTEGER},
-      </if>
       <if test="link != null">
         #{link,jdbcType=VARCHAR},
-      </if>
-      <if test="other1 != null">
-        #{other1,jdbcType=VARCHAR},
-      </if>
-      <if test="other2 != null">
-        #{other2,jdbcType=VARCHAR},
-      </if>
-      <if test="other3 != null">
-        #{other3,jdbcType=VARCHAR},
       </if>
       <if test="content != null">
         #{content,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
+  <update id="updateByPrimaryKey" parameterType="com.fc.test.model.auto.Service">
+    update t_service
+    set title = #{title,jdbcType=VARCHAR},
+    `desc` = #{desc,jdbcType=VARCHAR},
+    `type` = #{type,jdbcType=VARCHAR},
+    area = #{area,jdbcType=VARCHAR},
+    times = #{times,jdbcType=VARCHAR},
+    cover = #{cover,jdbcType=VARCHAR},
+    content = #{content,jdbcType=VARCHAR},
+    price = #{price,jdbcType=VARCHAR},
+    discount = #{discount,jdbcType=VARCHAR},
+    link = #{link,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 
+  <update id="updateServiceDown" parameterType="java.lang.String">
+    update t_service
+    set
+    other2 =1
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <update id="updateServiceUp" parameterType="java.lang.String">
+    update t_service
+    set
+    other2 =0
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 </mapper>

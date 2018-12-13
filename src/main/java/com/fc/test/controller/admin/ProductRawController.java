@@ -3,6 +3,7 @@ package com.fc.test.controller.admin;
 import com.fc.test.common.base.BaseController;
 import com.fc.test.common.domain.AjaxResult;
 import com.fc.test.common.interceptor.BASE64DecodedMultipartFile;
+import com.fc.test.model.auto.Product;
 import com.fc.test.model.auto.Service;
 import com.fc.test.model.custom.TableSplitResult;
 import com.fc.test.model.custom.Tablepar;
@@ -26,37 +27,36 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import sun.misc.BASE64Decoder;
+
 import java.io.*;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Controller
-@RequestMapping("ServiceRawController")
+@RequestMapping("ProductRawController")
 @Api(value = "服务管理")
-public class ServiceRawController extends BaseController {
+public class ProductRawController extends BaseController {
 
-	private String prefix = "admin/service";
+	private String prefix = "admin/product";
 	static String accessKey = "wvg0XHiVI2-bubOYj0cga4RQ4l9ish_6eH22GPGB";
 	static String secretKey = "_7c0Ije_5u2vObZ02SzsAqS17wCJm74GCGHdwsoY";
 	static String bucket = "qiniuniu";
 	static String qny = "http://pj8reikgn.bkt.clouddn.com";
 
 	@GetMapping("view")
-	@RequiresPermissions("system:service:view")
+	@RequiresPermissions("system:product:view")
 	public String view(Model model) {
-
-		setTitle(model, new TitleVo("服务管理", "服务管理", true, "欢迎进入服务管理", true, false));
+		setTitle(model, new TitleVo("产品管理", "产品管理", true, "欢迎进入产品管理", true, false));
 		return prefix + "/list";
 	}
 
 	@PostMapping("list")
-	@RequiresPermissions("system:service:list")
+	@RequiresPermissions("system:product:list")
 	@ResponseBody
 	public Object list(Tablepar tablepar, String title) {
-		System.out.println(title);
-		PageInfo<Service> page = sysServiceService.list(tablepar, title);
-		TableSplitResult<Service> result = new TableSplitResult<Service>(page.getPageNum(), page.getTotal(), page.getList());
+		PageInfo<Product> page = sysProductService.list(tablepar, title);
+		TableSplitResult<Product> result = new TableSplitResult<Product>(page.getPageNum(), page.getTotal(), page.getList());
 		return result;
 	}
 
@@ -64,7 +64,7 @@ public class ServiceRawController extends BaseController {
 	 * 新增服务
 	 */
 	@GetMapping("add")
-	@RequiresPermissions("system:service:add")
+	@RequiresPermissions("system:product:add")
 	public String add() {
 		return prefix + "/add";
 	}
@@ -73,26 +73,23 @@ public class ServiceRawController extends BaseController {
 	/**
 	 * 服务添加
 	 *
-	 * @param service
+	 * @param product
 	 * @return
 	 * AjaxResult
 	 */
 	@PostMapping("add")
-	@RequiresPermissions("system:service:add")
+	@RequiresPermissions("system:product:add")
 	@ResponseBody
-	public AjaxResult add(Service service) throws IOException {
-		if(service.getContent()!=""){
+	public AjaxResult add(Product product) throws IOException {
+		if(product.getContent()!=""){
 			String contentsrc="";
-			System.out.println(service.getContent());
-			JSONObject content = JSONObject.fromObject(service.getContent().substring(1,service.getContent().length()-1));
-			System.out.println(content);
+			JSONObject content = JSONObject.fromObject(product.getContent().substring(1,product.getContent().length()-1));
 			Iterator it = content.keys();
 			while(it.hasNext()){
 				String hashkey = it.next().toString();
 				String url = content.getString(hashkey);
 				String imageurl =url.replace("data:image/png;base64,", "");
 				imageurl=imageurl.replace("data:image/jpeg;base64,", "");
-				System.out.println(imageurl);
 				BASE64Decoder decoder = new BASE64Decoder();
 				byte[] b = new byte[0];
 				try {
@@ -109,7 +106,7 @@ public class ServiceRawController extends BaseController {
 				}
 				//生成jpeg图片
 				UUID uuid = UUID.randomUUID();
-				String imgFilePath = "E:\\fuwu\\"+uuid+".jpg";//新生成的图片
+				String imgFilePath = "E:\\chanpin\\"+uuid+".jpg";//新生成的图片
 				try {
 					OutputStream out = new FileOutputStream(imgFilePath);
 					out.write(b);
@@ -145,11 +142,11 @@ public class ServiceRawController extends BaseController {
 					}
 				}
 			}
-			service.setContent(contentsrc.substring(0,contentsrc.length()-1));
+			product.setContent(contentsrc.substring(0,contentsrc.length()-1));
 		}
-		if(service.getCover()!=""){
+		if(product.getCover()!=""){
 			String conversrc="";
-			JSONObject cover = JSONObject.fromObject(service.getCover().substring(1,service.getCover().length()-1));
+			JSONObject cover = JSONObject.fromObject(product.getCover().substring(1,product.getCover().length()-1));
 			System.out.println(cover);
 			String url = cover.getString("mm");
 			String imageurl =url.replace("data:image/png;base64,", "");
@@ -170,7 +167,7 @@ public class ServiceRawController extends BaseController {
 			}
 			//生成jpeg图片
 			UUID uuid = UUID.randomUUID();
-			String imgFilePath = "E:\\fwfm\\"+uuid+".jpg";//新生成的图片
+			String imgFilePath = "E:\\cpfm\\"+uuid+".jpg";//新生成的图片
 			try {
 				OutputStream out = new FileOutputStream(imgFilePath);
 				out.write(b);
@@ -195,7 +192,7 @@ public class ServiceRawController extends BaseController {
 				System.out.println(putRet.key);
 				System.out.println(url);
 				 conversrc="<img src='"+qny+"/"+putRet.key+"'>";
-				service.setCover(conversrc);
+				product.setCover(conversrc);
 				System.out.println(putRet.hash);
 			} catch (QiniuException ex) {
 				Response r = ex.response;
@@ -208,7 +205,7 @@ public class ServiceRawController extends BaseController {
 			}
 
 		}
-		int b =sysServiceService.insertSelective(service);
+		int b =sysProductService.insertSelective(product);
 		if (b > 0) {
 			return success();
 		} else {
@@ -226,11 +223,11 @@ public class ServiceRawController extends BaseController {
 	 * @return
 	 */
 	@PostMapping("remove")
-	@RequiresPermissions("system:service:remove")
+	@RequiresPermissions("system:product:remove")
 	@ResponseBody
 	public AjaxResult remove(String ids) {
-		String cover = sysServiceService.ServicecoverByPrimaryKey(ids);
-		String content = sysServiceService.ServiceContentByPrimaryKey(ids);
+		String cover = sysProductService.ProductcoverByPrimaryKey(ids);
+		String content = sysProductService.ProductContentByPrimaryKey(ids);
 		Set<String> pics = new HashSet<>();
 		String img = "";
 		Pattern p_image;
@@ -301,7 +298,7 @@ public class ServiceRawController extends BaseController {
 			}
 
 		}
-		int b = sysServiceService.deleteByPrimaryKey(ids);
+		int b = sysProductService.deleteByPrimaryKey(ids);
 		if (b > 0) {
 			return success();
 		} else {
@@ -324,7 +321,7 @@ public class ServiceRawController extends BaseController {
 	@GetMapping("/edit/{roleId}")
 	public String edit(@PathVariable("roleId") String id, ModelMap mmap)
 	{
-		mmap.put("service", sysServiceService.selectByPrimaryKey(id));
+		mmap.put("product", sysProductService.selectByPrimaryKey(id));
 
 		return prefix + "/edit";
 	}
@@ -333,14 +330,14 @@ public class ServiceRawController extends BaseController {
 	 * 修改保存服务
 	 * AjaxResult
 	 */
-	@RequiresPermissions("system:service:edit")
+	@RequiresPermissions("system:product:edit")
 	@PostMapping("/edit")
 	@ResponseBody
-	public AjaxResult editSave(Service service)throws IOException
+	public AjaxResult editSave(Product product)throws IOException
 	{
-		if(service.getContent()!=""){
+		if(product.getContent()!=""){
 			String contentsrc="";
-			JSONObject content = JSONObject.fromObject(service.getContent().substring(1,service.getContent().length()-1));
+			JSONObject content = JSONObject.fromObject(product.getContent().substring(1,product.getContent().length()-1));
 			Iterator it = content.keys();
 			while(it.hasNext()){
 				String hashkey = it.next().toString();
@@ -404,15 +401,15 @@ public class ServiceRawController extends BaseController {
 				}
 
 			}
-			service.setContent(contentsrc.substring(0,contentsrc.length()-1));
+			product.setContent(contentsrc.substring(0,contentsrc.length()-1));
 		}
-		if(service.getCover()!=""){
+		if(product.getCover()!=""){
 			String conversrc="";
-			JSONObject cover = JSONObject.fromObject(service.getCover().substring(1,service.getCover().length()-1));
+			JSONObject cover = JSONObject.fromObject(product.getCover().substring(1,product.getCover().length()-1));
 			String url = cover.getString("mm");
 			if(url.substring(0,4).equals("http")){
 				conversrc = "<img src='"+url+"'>";
-				service.setCover(conversrc);
+				product.setCover(conversrc);
 			}else {
 				String imageurl = url.replace("data:image/png;base64,", "");
 				imageurl=imageurl.replace("data:image/jpeg;base64,", "");
@@ -455,7 +452,7 @@ public class ServiceRawController extends BaseController {
 					System.out.println(putRet.key);
 					System.out.println(url);
 					conversrc = "<img src='" + qny + "/" + putRet.key + "'>";
-					service.setCover(conversrc);
+					product.setCover(conversrc);
 					System.out.println(putRet.hash);
 				} catch (QiniuException ex) {
 					Response r = ex.response;
@@ -468,7 +465,7 @@ public class ServiceRawController extends BaseController {
 				}
 			}
 		}
-		int b =sysServiceService.updateByPrimaryKey(service);
+		int b =sysProductService.updateByPrimaryKey(product);
 		if (b > 0) {
 			return success();
 		} else {
@@ -476,11 +473,10 @@ public class ServiceRawController extends BaseController {
 		}
 
 	}
-
 	@PostMapping("/down")
 	@ResponseBody
 	public AjaxResult down(String id) {
-		int b =sysServiceService.updateServiceDown(id);
+		int b =sysProductService.updateProductDown(id);
 		if (b > 0) {
 			return success();
 		} else {
@@ -490,11 +486,13 @@ public class ServiceRawController extends BaseController {
 	@PostMapping("/up")
 	@ResponseBody
 	public AjaxResult up(String id) {
-		int b =sysServiceService.updateServiceUp(id);
+		int b =sysProductService.updateProductUp(id);
 		if (b > 0) {
 			return success();
 		} else {
 			return error();
 		}
 	}
+
+
 }

@@ -224,11 +224,14 @@
       cover = #{cover,jdbcType=VARCHAR},
       price = #{price,jdbcType=VARCHAR},
       discount = #{discount,jdbcType=VARCHAR},
-      sale = #{sale,jdbcType=INTEGER},
       link = #{link,jdbcType=VARCHAR},
       other1 = #{other1,jdbcType=VARCHAR},
       other2 = #{other2,jdbcType=VARCHAR},
       other3 = #{other3,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+
+
 </mapper>

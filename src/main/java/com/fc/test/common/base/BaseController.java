@@ -32,6 +32,11 @@ public class BaseController
     @Autowired
     public SysServiceService sysServiceService;
 
+    //产品界面
+    @Autowired
+    public SysProductService sysProductService;
+
+
     //系统角色
 	@Autowired
 	public SysRoleService sysRoleService; 

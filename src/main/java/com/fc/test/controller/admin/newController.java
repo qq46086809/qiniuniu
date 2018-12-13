@@ -83,7 +83,7 @@ public class newController extends BaseController {
 		String cover = news.getCover();
 
 		String coverurl = cover.replace("data:image/png;base64,", "");
-
+		coverurl=coverurl.replace("data:image/jpeg;base64,", "");
 		BASE64Decoder decoder = new BASE64Decoder();
 		byte[] b = new byte[0];
 		try {
@@ -160,6 +160,7 @@ public class newController extends BaseController {
 		while (iterator.hasNext()) {
 			String url = iterator.next();
 			String imageurl = url.replace("data:image/png;base64,", "");
+			imageurl=imageurl.replace("data:image/jpeg;base64,", "");
 			 decoder = new BASE64Decoder();
 			 b = new byte[0];
 			try {
@@ -306,6 +307,7 @@ public class newController extends BaseController {
 		String cover = news.getCover();
 		if(cover.substring(0,1).equals("d")) {
 			String coverurl = cover.replace("data:image/png;base64,", "");
+			coverurl=coverurl.replace("data:image/jpeg;base64,", "");
 			BASE64Decoder decoder = new BASE64Decoder();
 			byte[] b = new byte[0];
 			try {
@@ -384,6 +386,7 @@ public class newController extends BaseController {
 			String url = iterator.next();
 			if(url.substring(0,1).equals("d")){
 				String imageurl =url.replace("data:image/png;base64,", "");
+				imageurl=imageurl.replace("data:image/jpeg;base64,", "");
 				BASE64Decoder decoder = new BASE64Decoder();
 				byte[] b = new byte[0];
 				try {

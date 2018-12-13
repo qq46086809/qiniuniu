@@ -26,4 +26,8 @@ public interface ServiceDao {
     String ServiceContentByPrimaryKey(String ids);
 
     int deleteSelective(String ids);
+
+    int updateServiceDown(String id);
+
+    int updateServiceUp(String id);
 }
